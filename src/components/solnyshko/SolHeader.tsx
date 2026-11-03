@@ -41,6 +41,18 @@ function SolHeader() {
           </button>
         </div>
       </div>
+      <nav className="sol-nav" aria-label="Разделы пансионата">
+        {[
+          ["sol-services", "Программы"], ["sol-roots", "Исконный"],
+          ["sol-rooms", "Проживание"], ["sol-dining", "Питание"],
+          ["sol-staff", "Специалисты"], ["sol-documents", "Документы"],
+          ["sol-faq", "Вопросы"],
+        ].map(([id, label]) => (
+          <button key={id} className="sol-link" onClick={() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })}>
+            {label}
+          </button>
+        ))}
+      </nav>
     </header>
   );
 }

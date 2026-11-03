@@ -5,7 +5,7 @@ function Faq() {
     <section id="faq">
       <div className="container">
         <span className="section-label">П.12 · Вопросы и ответы</span>
-        <h2 className="section-title">FAQ</h2>
+        <h2 className="section-title">Вопросы и ответы</h2>
         <div className="faq-list">
           {FAQ.map((f) => (
             <details key={f.q} className="glass faq-item">

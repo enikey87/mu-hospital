@@ -10,18 +10,14 @@ export class CartStore {
   items: CartItem[] = [];
   isOpen = false;
   lastOrderTotal: number | null = null;
-  contractReaders = 0;
 
   constructor() {
     makeAutoObservable(this);
   }
 
-  readContract(): void {
-    this.contractReaders += 1;
-  }
-
   add(product: Product): void {
     if (product.soldOut) return;
+    this.lastOrderTotal = null;
     const existing = this.items.find((i) => i.product.id === product.id);
     if (existing) {
       existing.qty += 1;
@@ -62,6 +58,7 @@ export class CartStore {
   }
 
   checkout(): void {
+    if (this.items.length === 0) return;
     this.lastOrderTotal = this.total;
     this.items = [];
   }

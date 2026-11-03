@@ -3,7 +3,7 @@ import { QUIZ_QUESTIONS } from "../../data/solnyshko";
 import { useStore } from "../../stores/RootStore";
 
 function SolQuiz() {
-  const { quiz } = useStore();
+  const { quiz, solnyshko } = useStore();
   const current = quiz.current;
   const result = quiz.result;
 
@@ -17,18 +17,13 @@ function SolQuiz() {
         <h2 className="sol-title">
           Подберём <em>путь к силе</em>
         </h2>
-        <p className="sol-sub">
-          Три пункта о желаемом результате — и комиссия назначает программу
-          здравницы. Анкета заполняется по месту, в одном экземпляре; устные
-          пожелания к рассмотрению не принимаются.
-        </p>
+        <p className="sol-sub"> Выберите желаемый результат, способ прохождения курса и срок. По ответам будет предложена программа пребывания. </p>
 
         {result ? (
           <div className="sol-quiz__result">
-            <span className="sol-quiz__stamp">Назначено</span>
+            <span className="sol-quiz__stamp"> Предлагаемая программа </span>
             <div className="sol-quiz__result-no">
-              {result.no} · программа утверждена
-            </div>
+              {result.no} · результат подбора </div>
             <h3>{result.name}</h3>
             <div className="sol-quiz__result-days">{result.days}</div>
             <p className="sol-quiz__result-desc">{result.desc}</p>
@@ -45,11 +40,7 @@ function SolQuiz() {
                 </div>
               ))}
             </dl>
-            <p className="sol-quiz__result-note">
-              При равенстве показаний комиссия назначает комплекс «Всё сразу».
-              Назначение действительно до первой побудки; обжалование
-              рассматривает Зинаида в порядке перевода.
-            </p>
+            <p className="sol-quiz__result-note"> При равенстве предпочтений предлагается комплекс «Всё сразу». Программу можно изменить при записи. </p>
             <div className="sol-quiz__actions">
               <button
                 className="sol-btn"
@@ -57,6 +48,18 @@ function SolQuiz() {
                 onClick={() => scrollTo(result.anchor)}
               >
                 {result.anchorLabel}
+              </button>
+              <button
+                className="sol-btn"
+                type="button"
+                onClick={() => {
+                  solnyshko.reset();
+                  solnyshko.setProgram(result.key);
+                  solnyshko.setPower(quiz.answers[0] ?? "bear");
+                  scrollTo("sol-booking");
+                }}
+              >
+                Записаться на эту программу
               </button>
               <button
                 className="sol-btn sol-btn--ghost"
@@ -117,10 +120,7 @@ function SolQuiz() {
               >
                 К предыдущему пункту
               </button>
-              <span className="sol-quiz__nav-note">
-                Ответ вносится в журнал в момент нажатия. Исправление допускается
-                возвратом к предыдущему пункту, но не задним числом.
-              </span>
+              <span className="sol-quiz__nav-note"> Ответ можно изменить, вернувшись к предыдущему пункту. </span>
             </div>
           </div>
         ) : null}

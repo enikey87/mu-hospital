@@ -8,15 +8,10 @@ function SolEnemas() {
         <h2 className="sol-title">
           Гидратация природными богатствами <em>России</em>
         </h2>
-        <p className="sol-sub">
-          Каждая рецептура привязана к конкретной точке карты и доставляется
-          термоконтейнером с сохранением характера местности. Сырьё —
-          исключительно отечественное, характер — соответствующий.
-        </p>
+        <p className="sol-sub"> Рецептуры на основе природного сырья. Для каждой указаны место происхождения и состав. Подбор рецептуры производится при назначении курса. </p>
         <div className="sol-enemas">
           {ENEMAS.map((e) => (
             <article key={e.id} className="sol-card sol-card--sm">
-              <div className="sol-card__emoji">{e.emoji}</div>
               <h3>{e.name}</h3>
               <div className="sol-enemas__region">{e.region}</div>
               <p className="sol-enemas__substance">{e.substance}</p>

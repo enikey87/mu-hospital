@@ -19,10 +19,7 @@ function Countdown() {
         <h2 className="section-title">
           Следующая партия УТ-К — <span className="grad-text">2374 год</span>
         </h2>
-        <p className="section-sub">
-          Очередь закрыта с 2024 года, однако отсчёт продолжается. Данные
-          синхронизированы с блокчейн-реестром и нотариусом.
-        </p>
+        <p className="section-sub"> Коллекционный выпуск 2024 года реализован полностью. Следующий выпуск запланирован на 2374 год. Приём заявок закрыт. </p>
         <div className="glass countdown-wrap">
           <div className="cd">
             {cells.map((c) => (
@@ -32,10 +29,7 @@ function Countdown() {
               </div>
             ))}
           </div>
-          <p className="cd-note">
-            Точность хода — ±1246 лет. Компенсация за ожидание не предусмотрена:
-            ожидание само по себе является ценностью.
-          </p>
+          <p className="cd-note"> Отсчёт ведётся до 1 января 2374 года по московскому времени. </p>
         </div>
       </div>
     </section>

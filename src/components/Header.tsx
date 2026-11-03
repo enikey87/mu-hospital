@@ -5,13 +5,13 @@ import { useStore } from "../stores/RootStore";
 const NAV_LINKS = [
   { href: "#products", label: "Продукция" },
   { href: "#instructions", label: "Инструкция" },
-  { href: "#pricing", label: "Тарифы" },
-  { href: "#reviews", label: "Клиника" },
-  { href: "#detector", label: "Верификация" },
+  { href: "#pricing", label: "Обслуживание" },
+  { href: "#reviews", label: "Отзывы" },
+  { href: "#detector", label: "Партии" },
   { href: "#donor", label: "Донорам" },
   { href: "#company", label: "Компания" },
-  { href: "#/solnyshko", label: "☀ Солнышко", extra: "nav__sol" },
-  { href: "#faq", label: "FAQ" },
+  { href: "#/solnyshko", label: "Солнышко", extra: "nav__sol" },
+  { href: "#faq", label: "Вопросы" },
 ];
 
 function Header() {
@@ -22,7 +22,7 @@ function Header() {
     <header className="header">
       <div className="topbar">
         <span>ООО «УринаТех» · ТУ 1246-001-0202</span>
-        <span>ЭКЗ. № 1 · ЛИСТ 1 · ИЗМ. 1246</span>
+        <span>ПРОИЗВОДСТВО · СНАБЖЕНИЕ · КОНТРОЛЬ</span>
       </div>
       <div className="header__inner">
         <a className="logo" href="#top" onClick={() => setMenuOpen(false)}>

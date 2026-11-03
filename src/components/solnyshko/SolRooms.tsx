@@ -2,7 +2,7 @@ import { ROOMS } from "../../data/solnyshko";
 
 function SolRooms() {
   return (
-    <section className="sol-section">
+    <section id="sol-rooms" className="sol-section">
       <div className="sol-container">
         <span className="sol-label">Проживание</span>
         <h2 className="sol-title">Номерной фонд</h2>
@@ -13,7 +13,6 @@ function SolRooms() {
         <div className="sol-station">
           {ROOMS.map((r) => (
             <article key={r.name} className="sol-card">
-              <div className="sol-card__emoji">{r.emoji}</div>
               <h3>{r.name}</h3>
               <ul className="sol-rooms__list">
                 {r.features.map((f) => (

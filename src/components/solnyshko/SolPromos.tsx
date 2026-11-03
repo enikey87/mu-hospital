@@ -6,10 +6,7 @@ function SolPromos() {
       <div className="sol-container">
         <span className="sol-label">Специальные предложения</span>
         <h2 className="sol-title">Акции здравницы</h2>
-        <p className="sol-sub">
-          Условия акций согласованы с отделом сбыта сена и не могут быть
-          отменены задним числом (заднее число уже занято ГОСТом 1246-2002).
-        </p>
+        <p className="sol-sub"> Сезонные условия размещения и предложения для постоянных отдыхающих. </p>
         <div className="sol-promos">
           {PROMOS.map((p) => (
             <article key={p.name} className="sol-card sol-card--sm sol-card--accent">

@@ -17,7 +17,7 @@ export class DonorStore {
   submitted: DonorApplication | null = null;
 
   constructor() {
-    makeAutoObservable(this);
+    makeAutoObservable(this, {}, { autoBind: true });
   }
 
   setName(v: string): void {

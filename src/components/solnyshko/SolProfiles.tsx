@@ -6,17 +6,12 @@ function SolProfiles() {
       <div className="sol-container">
         <span className="sol-label">Профили лечения</span>
         <h2 className="sol-title">
-          Что мы лечим, и <em>чем это оправдано</em>
+          Профили <em>программ</em>
         </h2>
-        <p className="sol-sub">
-          Профили утверждены методическим советом здравницы (кворум обеспечен
-          Зинаидой). Не вошедшие в перечень заболевания переносятся на следующий
-          сезон — вместе с пациентом.
-        </p>
+        <p className="sol-sub"> Направления программ и применяемые методики. Состав курса определяется после консультации специалиста. </p>
         <div className="sol-station">
           {PROFILES.map((p) => (
             <article key={p.system} className="sol-card">
-              <div className="sol-card__emoji">{p.emoji}</div>
               <h3>{p.system}</h3>
               <ul className="sol-profiles__list">
                 {p.indications.map((i) => (
@@ -27,11 +22,7 @@ function SolProfiles() {
             </article>
           ))}
         </div>
-        <p className="sol-profiles__contra">
-          Противопоказания (краткий перечень): здравый смысл, вегетарианство,
-          одновременное пребывание в другом здравнице. Полный перечень — в
-          инструкции к аппарату «Калофорез-Кедр М2».
-        </p>
+        <p className="sol-profiles__contra"> Имеются противопоказания. Необходима консультация специалиста. Программы предназначены для совершеннолетних. 18+. </p>
       </div>
     </section>
   );

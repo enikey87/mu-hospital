@@ -6,8 +6,8 @@
    ============================================================ */
 
 .sol {
-  --sol-bg: #f1e6cf;
-  --sol-paper: #faf3e0;
+  --sol-bg: #f3ecdc;
+  --sol-paper: #fffdf7;
   --sol-ink: #221a12;
   --sol-muted: #5c4f38;
   --sol-line: #d8c9a5;
@@ -93,13 +93,13 @@
   border: none;
   background: var(--sol-red);
   color: #f7ecd6;
-  box-shadow: 5px 5px 0 var(--sol-ink);
+  box-shadow: none;
   transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.2s ease;
 }
 
 .sol-btn:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 var(--sol-ink);
+  transform: none;
+  box-shadow: none;
   background: #c2452f;
 }
 
@@ -157,7 +157,7 @@
   stroke-width: 7;
   stroke-linecap: round;
   transform-origin: 50px 50px;
-  animation: sol-spin 46s linear infinite;
+  animation: none;
 }
 
 .sol-emblem__disc {
@@ -280,11 +280,7 @@
   padding: 90px 0 80px;
   overflow: hidden;
   border-bottom: 3px solid var(--sol-ink);
-  background: repeating-linear-gradient(
-    135deg,
-    transparent 0 22px,
-    rgba(39, 67, 107, 0.055) 22px 24px
-  );
+  background: var(--sol-paper);
 }
 
 .sol-hero .sol-container {
@@ -392,12 +388,12 @@
   font-family: var(--sol-cond);
   font-weight: 700;
   text-transform: uppercase;
-  font-size: clamp(46px, 8.4vw, 88px);
+  font-size: clamp(36px, 5.4vw, 60px);
   line-height: 0.98;
   letter-spacing: 0.01em;
   margin: 16px 0 10px;
   color: var(--sol-red);
-  text-shadow: 4px 4px 0 rgba(34, 26, 18, 0.18);
+  text-shadow: none;
 }
 
 .sol-hero__name {
@@ -469,11 +465,11 @@
 @keyframes sol-stamp-in {
   from {
     opacity: 0;
-    transform: rotate(6deg) scale(1.5);
+    transform: scale(0.99);
   }
   to {
     opacity: 1;
-    transform: rotate(6deg) scale(1);
+    transform: none;
   }
 }
 
@@ -486,7 +482,7 @@
   .sol-hero__emblem { gap: 12px; }
   .sol-hero__emblem-hint { font-size: 10px; letter-spacing: 0.16em; }
   .sol-hero__emblem svg { width: 140px; height: 140px; }
-  .sol-hero__title { text-shadow: 3px 3px 0 rgba(34, 26, 18, 0.18); }
+  .sol-hero__title { text-shadow: none; }
   .sol-hero__sub { font-size: 15.5px; margin-bottom: 22px; }
   .sol-hero__cta .sol-btn { flex: 1 1 100%; }
 }
@@ -505,8 +501,8 @@
 }
 
 .sol-card:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 6px 6px 0 rgba(34, 26, 18, 0.85);
+  transform: none;
+  box-shadow: none;
 }
 
 .sol-card--accent {
@@ -723,7 +719,7 @@
   border-left: 6px solid var(--sol-red);
   border-radius: 3px;
   padding: 22px 24px;
-  box-shadow: 5px 5px 0 rgba(34, 26, 18, 0.85);
+  box-shadow: none;
 }
 
 .sol-roots__block-title {
@@ -1314,7 +1310,7 @@
   background: #fffdf4;
   border: 2px solid var(--sol-ink);
   border-radius: 3px;
-  box-shadow: 5px 5px 0 rgba(34, 26, 18, 0.85);
+  box-shadow: none;
   overflow-wrap: anywhere;
 }
 
@@ -1472,8 +1468,10 @@
   border-radius: 3px;
   padding: 36px;
   position: relative;
-  box-shadow: 8px 8px 0 rgba(34, 26, 18, 0.8);
-  animation: sol-stamp-in 0.4s ease both;
+  box-shadow: none;
+  animation: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .sol-voucher::before {
@@ -1488,7 +1486,7 @@
 .sol-voucher__num {
   font-family: var(--sol-cond);
   font-weight: 700;
-  font-size: 36px;
+  font-size: clamp(22px, 4vw, 30px);
   color: var(--sol-red);
   letter-spacing: 0.05em;
   margin: 6px 0 14px;
@@ -1507,10 +1505,10 @@
 }
 
 .sol-voucher__stamp {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  transform: rotate(8deg);
+  position: static;
+  display: inline-block;
+  margin-bottom: 12px;
+  transform: none;
   border: 3px solid var(--sol-red);
   color: var(--sol-red);
   padding: 6px 14px;
@@ -1755,7 +1753,7 @@
   background: var(--sol-paper);
   border: 3px solid var(--sol-ink);
   border-radius: 3px;
-  box-shadow: 5px 5px 0 rgba(34, 26, 18, 0.85);
+  box-shadow: none;
 }
 
 .sol-quiz__progress {
@@ -1849,7 +1847,7 @@
 
 .sol-quiz__option:hover {
   background: rgba(176, 58, 46, 0.1);
-  box-shadow: 3px 3px 0 var(--sol-red);
+  box-shadow: none;
   transform: translate(-1px, -1px);
 }
 
@@ -1887,7 +1885,7 @@
   border: 3px solid var(--sol-ink);
   border-left: 8px solid var(--sol-red);
   border-radius: 3px;
-  box-shadow: 5px 5px 0 rgba(34, 26, 18, 0.85);
+  box-shadow: none;
 }
 
 .sol-quiz__stamp {
@@ -2073,4 +2071,15 @@
   .sol-steps { gap: 10px; }
   .sol-step { padding: 18px 16px; }
   .sol-ultimate__nails { gap: 12px; }
+}
+
+.sol-nav { max-width: 1160px; margin: 0 auto; padding: 0 24px 8px; display: flex; gap: 4px 20px; flex-wrap: wrap; }
+.sol-nav .sol-link { font-weight: 400; text-decoration: none; }
+.sol-section[id] { scroll-margin-top: 190px; }
+.sol-footer__disclaimer { border-top: 1px solid var(--sol-line); padding-top: 24px; margin-top: 24px; max-width: 760px; font-size: 13px; color: var(--sol-muted); }
+@media (max-width: 760px) {
+  .sol-nav { padding: 0 16px 8px; gap: 0 14px; }
+  .sol-nav .sol-link { font-size: 13px; }
+  .sol-section[id] { scroll-margin-top: 240px; }
+  .sol-hero__emblem { display: none; }
 }

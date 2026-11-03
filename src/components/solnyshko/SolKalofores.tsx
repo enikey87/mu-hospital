@@ -8,18 +8,11 @@ function SolKalofores() {
         <h2 className="sol-title">
           Калофорез<sup>®</sup> — перенятие силы <em>зверя</em>
         </h2>
-        <p className="sol-sub">
-          Методика родственная гальваногрязетерапии, практикуемой в Крыму
-          (Саки, Евпатория). Принципиальное отличие: вместо грязи —
-          биосубстанция. Слабый ток 4,2 мА пропекает силу зверя через
-          поясницу по запатентованной траектории (траектория приложению не
-          подлежит).
-        </p>
+        <p className="sol-sub"> Метод перенятия силы зверя с использованием биосубстанций «КалоМедведь» и «КалоОлень». Процедура проводится на аппарате «Калофорез-Кедр М2». Рабочая сила тока — 4,2 мА. Разработка — заявка №1246-К. </p>
 
         <div className="sol-kalo">
           {KALO_SUBSTANCES.map((s) => (
             <article key={s.name} className="sol-card sol-card--accent">
-              <div className="sol-card__emoji">{s.emoji}</div>
               <h3>{s.name}</h3>
               <div className="sol-enemas__region">{s.source}</div>
               <p className="sol-enemas__substance">{s.collection}</p>
@@ -31,7 +24,7 @@ function SolKalofores() {
         <div className="sol-device">
           <div className="sol-device__head">
             <h3>Аппарат «Калофорез-Кедр М2»</h3>
-            <span className="sol-badge">М — медведь, 2 — два зверя</span>
+            <span className="sol-badge"> М2 · два режима субстанции </span>
           </div>
           <div className="sol-device__modes">
             {KALO_MODES.map((m) => (
@@ -44,13 +37,9 @@ function SolKalofores() {
           </div>
           <div className="sol-device__row">
             <div>
-              <b>Показания:</b> упадок медвежьей силы, городская хандра, зима
-              без снега, отсутствие следа на пороге.
-            </div>
+              <b>Показания:</b> Упадок сил, нарушение сезонного режима отдыха. </div>
             <div>
-              <b>Противопоказания:</b> вегетарианство; здоровый скепсис
-              (временно снимается первой процедурой).
-            </div>
+              <b>Противопоказания:</b> Имеются противопоказания. Необходима консультация специалиста. 18+. </div>
           </div>
         </div>
 
@@ -62,14 +51,14 @@ function SolKalofores() {
           <p className="sol-ultimate__intro">{KALO_ULTIMATE.intro}</p>
           <div className="sol-ultimate__nails">
             <div className="sol-ultimate__nail sol-ultimate__nail--folk">
-              <b>⚡ {KALO_ULTIMATE.folk.title}</b>
+              <b>{KALO_ULTIMATE.folk.title}</b>
               <p>{KALO_ULTIMATE.folk.text}</p>
               <p className="sol-ultimate__case">
                 <b>{KALO_ULTIMATE.folk.caseTitle}.</b> {KALO_ULTIMATE.folk.caseText}
               </p>
             </div>
             <div className="sol-ultimate__nail sol-ultimate__nail--official">
-              <b>🛡 {KALO_ULTIMATE.official.title}</b>
+              <b>{KALO_ULTIMATE.official.title}</b>
               <p>{KALO_ULTIMATE.official.text}</p>
               <p className="sol-ultimate__case">
                 <b>{KALO_ULTIMATE.official.altTitle}.</b> {KALO_ULTIMATE.official.altText}

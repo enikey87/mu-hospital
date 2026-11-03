@@ -1,0 +1,142 @@
+[
+  {
+    "state": "main-initial",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "title": "УринаТех — производство и поставка продукции",
+    "sections": 14
+  },
+  {
+    "state": "cart-filled",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "title": "УринаТех — производство и поставка продукции",
+    "sections": 14
+  },
+  {
+    "state": "cart-result",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "title": "УринаТех — производство и поставка продукции",
+    "sections": 14
+  },
+  {
+    "state": "detector-states",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "title": "УринаТех — производство и поставка продукции",
+    "sections": 14
+  },
+  {
+    "state": "donor-result",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "title": "УринаТех — производство и поставка продукции",
+    "sections": 14
+  },
+  {
+    "state": "archive",
+    "loaded": 13
+  },
+  {
+    "state": "solnyshko-initial",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "title": "Пансионат «Солнышко» — программы пребывания",
+    "sections": 16
+  },
+  {
+    "state": "voucher-result",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "title": "Пансионат «Солнышко» — программы пребывания",
+    "sections": 16
+  },
+  {
+    "state": "voucher-reset",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "title": "Пансионат «Солнышко» — программы пребывания",
+    "sections": 16
+  },
+  {
+    "state": "return-main",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "title": "УринаТех — производство и поставка продукции",
+    "sections": 14
+  },
+  {
+    "state": "console",
+    "width": 1440,
+    "errors": []
+  },
+  {
+    "state": "main-initial",
+    "width": 390,
+    "scrollWidth": 390,
+    "title": "УринаТех — производство и поставка продукции",
+    "sections": 14
+  },
+  {
+    "state": "cart-filled",
+    "width": 390,
+    "scrollWidth": 390,
+    "title": "УринаТех — производство и поставка продукции",
+    "sections": 14
+  },
+  {
+    "state": "cart-result",
+    "width": 390,
+    "scrollWidth": 390,
+    "title": "УринаТех — производство и поставка продукции",
+    "sections": 14
+  },
+  {
+    "state": "detector-states",
+    "width": 390,
+    "scrollWidth": 390,
+    "title": "УринаТех — производство и поставка продукции",
+    "sections": 14
+  },
+  {
+    "state": "donor-result",
+    "width": 390,
+    "scrollWidth": 390,
+    "title": "УринаТех — производство и поставка продукции",
+    "sections": 14
+  },
+  {
+    "state": "solnyshko-initial",
+    "width": 390,
+    "scrollWidth": 390,
+    "title": "Пансионат «Солнышко» — программы пребывания",
+    "sections": 16
+  },
+  {
+    "state": "voucher-result",
+    "width": 390,
+    "scrollWidth": 390,
+    "title": "Пансионат «Солнышко» — программы пребывания",
+    "sections": 16
+  },
+  {
+    "state": "voucher-reset",
+    "width": 390,
+    "scrollWidth": 390,
+    "title": "Пансионат «Солнышко» — программы пребывания",
+    "sections": 16
+  },
+  {
+    "state": "return-main",
+    "width": 390,
+    "scrollWidth": 390,
+    "title": "УринаТех — производство и поставка продукции",
+    "sections": 14
+  },
+  {
+    "state": "console",
+    "width": 390,
+    "errors": []
+  }
+]

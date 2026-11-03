@@ -2,22 +2,17 @@ import { SOL_DOCUMENTS } from "../../data/solnyshko";
 
 function SolDocuments() {
   return (
-    <section className="sol-section">
+    <section id="sol-documents" className="sol-section">
       <div className="sol-container">
         <span className="sol-label">Документы</span>
         <h2 className="sol-title">
           Лицензии и <em>документы</em>
         </h2>
-        <p className="sol-sub">
-          Опись ведётся с 1246 года и сверяется с журналом спячки. Оригиналы
-          хранятся в рамке №2, сейфе старшей сестры и памяти Потапыча; сканы не
-          прилагаются — подлинник всегда ближе.
-        </p>
+        <p className="sol-sub"> Реквизиты документов пансионата. Архивные оригиналы хранятся в приёмной и у старшей сестры. </p>
         <div className="sol-docs">
           {SOL_DOCUMENTS.map((d) => (
             <article className="sol-doc" key={d.title}>
               <div className="sol-doc__head">
-                <span className="sol-doc__emoji">{d.emoji}</span>
                 <span
                   className={`sol-doc__status ${
                     d.ok === true

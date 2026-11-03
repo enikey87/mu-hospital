@@ -4,7 +4,7 @@ function Partners() {
   return (
     <section className="section-slim">
       <div className="container">
-        <span className="section-label">П.10 · Наши партнёры</span>
+        <span className="section-label">П.10 · Производственная кооперация</span>
         <div className="partners">
           {PARTNERS.map((p) => (
             <div key={p.name} className="glass partner">

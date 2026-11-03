@@ -2,11 +2,11 @@ import { DINING } from "../../data/solnyshko";
 
 function SolDining() {
   return (
-    <section className="sol-section">
+    <section id="sol-dining" className="sol-section">
       <div className="sol-container">
         <span className="sol-label">Питание</span>
         <h2 className="sol-title">
-          {DINING.title}: <em>до еды или вместо еды</em>
+          {DINING.title}: <em>питание в пансионате</em>
         </h2>
         <p className="sol-sub">{DINING.rule}</p>
         <div className="sol-dining">

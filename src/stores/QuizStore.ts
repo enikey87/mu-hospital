@@ -55,7 +55,7 @@ export class QuizStore {
   }
 
   answer(value: string): void {
-    if (this.complete) return;
+    if (this.complete || !this.current?.options.some((option) => option.value === value)) return;
     this.answers[this.step] = value;
     this.step += 1;
   }
