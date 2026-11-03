@@ -1,0 +1,327 @@
+{
+  "environment": "Headless Chrome via local Playwright, production preview at /urinatech/. Not a physical device test.",
+  "layout": [
+    {
+      "route": "main",
+      "width": 320,
+      "scrollWidth": 320,
+      "overflow": [],
+      "images": [
+        {
+          "src": "http://localhost:5188/urinatech/images/production.webp",
+          "width": 1536
+        },
+        {
+          "src": "http://localhost:5188/urinatech/images/products.webp",
+          "width": 1536
+        }
+      ],
+      "sections": 14
+    },
+    {
+      "route": "sol",
+      "width": 320,
+      "scrollWidth": 320,
+      "overflow": [],
+      "images": [
+        {
+          "src": "http://localhost:5188/urinatech/images/resort.webp",
+          "width": 1536
+        },
+        {
+          "src": "http://localhost:5188/urinatech/images/room.webp",
+          "width": 1536
+        }
+      ],
+      "sections": 16
+    },
+    {
+      "route": "main",
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "images": [
+        {
+          "src": "http://localhost:5188/urinatech/images/production.webp",
+          "width": 1536
+        },
+        {
+          "src": "http://localhost:5188/urinatech/images/products.webp",
+          "width": 1536
+        }
+      ],
+      "sections": 14
+    },
+    {
+      "route": "sol",
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": [],
+      "images": [
+        {
+          "src": "http://localhost:5188/urinatech/images/resort.webp",
+          "width": 1536
+        },
+        {
+          "src": "http://localhost:5188/urinatech/images/room.webp",
+          "width": 1536
+        }
+      ],
+      "sections": 16
+    },
+    {
+      "route": "main",
+      "width": 768,
+      "scrollWidth": 768,
+      "overflow": [],
+      "images": [
+        {
+          "src": "http://localhost:5188/urinatech/images/production.webp",
+          "width": 1536
+        },
+        {
+          "src": "http://localhost:5188/urinatech/images/products.webp",
+          "width": 1536
+        }
+      ],
+      "sections": 14
+    },
+    {
+      "route": "sol",
+      "width": 768,
+      "scrollWidth": 768,
+      "overflow": [],
+      "images": [
+        {
+          "src": "http://localhost:5188/urinatech/images/resort.webp",
+          "width": 1536
+        },
+        {
+          "src": "http://localhost:5188/urinatech/images/room.webp",
+          "width": 1536
+        }
+      ],
+      "sections": 16
+    },
+    {
+      "route": "main",
+      "width": 1200,
+      "scrollWidth": 1200,
+      "overflow": [],
+      "images": [
+        {
+          "src": "http://localhost:5188/urinatech/images/production.webp",
+          "width": 1536
+        },
+        {
+          "src": "http://localhost:5188/urinatech/images/products.webp",
+          "width": 1536
+        }
+      ],
+      "sections": 14
+    },
+    {
+      "route": "sol",
+      "width": 1200,
+      "scrollWidth": 1200,
+      "overflow": [],
+      "images": [
+        {
+          "src": "http://localhost:5188/urinatech/images/resort.webp",
+          "width": 1536
+        },
+        {
+          "src": "http://localhost:5188/urinatech/images/room.webp",
+          "width": 1536
+        }
+      ],
+      "sections": 16
+    },
+    {
+      "route": "main",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "images": [
+        {
+          "src": "http://localhost:5188/urinatech/images/production.webp",
+          "width": 1536
+        },
+        {
+          "src": "http://localhost:5188/urinatech/images/products.webp",
+          "width": 1536
+        }
+      ],
+      "sections": 14
+    },
+    {
+      "route": "sol",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": [],
+      "images": [
+        {
+          "src": "http://localhost:5188/urinatech/images/resort.webp",
+          "width": 1536
+        },
+        {
+          "src": "http://localhost:5188/urinatech/images/room.webp",
+          "width": 1536
+        }
+      ],
+      "sections": 16
+    }
+  ],
+  "flows": [
+    {
+      "state": "main-initial",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "title": "УринаТех — производство и поставка продукции",
+      "sections": 14
+    },
+    {
+      "state": "cart-filled",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "title": "УринаТех — производство и поставка продукции",
+      "sections": 14
+    },
+    {
+      "state": "cart-result",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "title": "УринаТех — производство и поставка продукции",
+      "sections": 14
+    },
+    {
+      "state": "detector-states",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "title": "УринаТех — производство и поставка продукции",
+      "sections": 14
+    },
+    {
+      "state": "donor-result",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "title": "УринаТех — производство и поставка продукции",
+      "sections": 14
+    },
+    {
+      "state": "archive",
+      "loaded": 13
+    },
+    {
+      "state": "solnyshko-initial",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "title": "Пансионат «Солнышко» — программы пребывания",
+      "sections": 16
+    },
+    {
+      "state": "voucher-result",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "title": "Пансионат «Солнышко» — программы пребывания",
+      "sections": 16
+    },
+    {
+      "state": "voucher-reset",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "title": "Пансионат «Солнышко» — программы пребывания",
+      "sections": 16
+    },
+    {
+      "state": "return-main",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "title": "УринаТех — производство и поставка продукции",
+      "sections": 14
+    },
+    {
+      "state": "console",
+      "width": 1440,
+      "errors": []
+    },
+    {
+      "state": "main-initial",
+      "width": 390,
+      "scrollWidth": 390,
+      "title": "УринаТех — производство и поставка продукции",
+      "sections": 14
+    },
+    {
+      "state": "cart-filled",
+      "width": 390,
+      "scrollWidth": 390,
+      "title": "УринаТех — производство и поставка продукции",
+      "sections": 14
+    },
+    {
+      "state": "cart-result",
+      "width": 390,
+      "scrollWidth": 390,
+      "title": "УринаТех — производство и поставка продукции",
+      "sections": 14
+    },
+    {
+      "state": "detector-states",
+      "width": 390,
+      "scrollWidth": 390,
+      "title": "УринаТех — производство и поставка продукции",
+      "sections": 14
+    },
+    {
+      "state": "donor-result",
+      "width": 390,
+      "scrollWidth": 390,
+      "title": "УринаТех — производство и поставка продукции",
+      "sections": 14
+    },
+    {
+      "state": "solnyshko-initial",
+      "width": 390,
+      "scrollWidth": 390,
+      "title": "Пансионат «Солнышко» — программы пребывания",
+      "sections": 16
+    },
+    {
+      "state": "voucher-result",
+      "width": 390,
+      "scrollWidth": 390,
+      "title": "Пансионат «Солнышко» — программы пребывания",
+      "sections": 16
+    },
+    {
+      "state": "voucher-reset",
+      "width": 390,
+      "scrollWidth": 390,
+      "title": "Пансионат «Солнышко» — программы пребывания",
+      "sections": 16
+    },
+    {
+      "state": "return-main",
+      "width": 390,
+      "scrollWidth": 390,
+      "title": "УринаТех — производство и поставка продукции",
+      "sections": 14
+    },
+    {
+      "state": "console",
+      "width": 390,
+      "errors": []
+    }
+  ],
+  "negative_controls": [
+    "Corrupt production image: media test fails",
+    "Replace hero h1 with h2: hero contract test fails",
+    "Route station button to enemas: navigation test fails"
+  ],
+  "checks": {
+    "unit_tests": 16,
+    "build": "tsc -b && vite build: pass",
+    "lint": "not configured"
+  }
+}

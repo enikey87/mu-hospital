@@ -1,3 +1,4 @@
+import { MEDIA } from "../../data/media";
 import { ROOMS } from "../../data/solnyshko";
 
 function SolRooms() {
@@ -10,6 +11,10 @@ function SolRooms() {
           Три категории размещения. Во всех категориях стакан входит в
           стоимость; во второй и третьей — два.
         </p>
+        <figure className="sol-room-photo">
+          <img src={MEDIA.room} alt="Номер пансионата с видом на сосновый лес; стакан на прикроватном столике" width="1536" height="1024" loading="lazy" />
+          <figcaption>Проживание на территории здравницы · Республика Алтай</figcaption>
+        </figure>
         <div className="sol-station">
           {ROOMS.map((r) => (
             <article key={r.name} className="sol-card">

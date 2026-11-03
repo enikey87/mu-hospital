@@ -33,7 +33,7 @@ function drawSparkline(canvas: HTMLCanvasElement, values: number[]): void {
 
   // Уровень открытия сессии: пунктирная база отсчёта.
   const baseY = pointY(MOCHA.opening);
-  ctx.strokeStyle = "rgba(92, 79, 56, 0.45)";
+  ctx.strokeStyle = "rgba(92, 104, 123, 0.45)";
   ctx.lineWidth = 1;
   ctx.setLineDash([3, 3]);
   ctx.beginPath();
@@ -48,7 +48,7 @@ function drawSparkline(canvas: HTMLCanvasElement, values: number[]): void {
   values.forEach((value, i) => ctx.lineTo(pointX(i), pointY(value)));
   ctx.lineTo(pointX(values.length - 1), height - padY);
   ctx.closePath();
-  ctx.fillStyle = "rgba(176, 58, 46, 0.10)";
+  ctx.fillStyle = "rgba(0, 60, 219, 0.10)";
   ctx.fill();
 
   // Кривая курса.
@@ -59,14 +59,14 @@ function drawSparkline(canvas: HTMLCanvasElement, values: number[]): void {
     if (i === 0) ctx.moveTo(x, y);
     else ctx.lineTo(x, y);
   });
-  ctx.strokeStyle = "#b03a2e";
+  ctx.strokeStyle = "#003cdb";
   ctx.lineWidth = 1.6;
   ctx.stroke();
 
   // Последняя котировка.
   ctx.beginPath();
   ctx.arc(pointX(values.length - 1), pointY(values[values.length - 1]), 2, 0, Math.PI * 2);
-  ctx.fillStyle = "#1f1a12";
+  ctx.fillStyle = "#101d35";
   ctx.fill();
 }
 

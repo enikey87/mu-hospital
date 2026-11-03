@@ -23,8 +23,8 @@ export default function SolnyshkoApp() {
       <SolHeader />
       <main>
         <SolHero />
-        <SolQuiz />
         <SolServices />
+        <SolQuiz />
         <SolProfiles />
         <SolStation />
         <SolEnemas />
