@@ -7,68 +7,43 @@ export type Verdict =
   | { kind: "fake"; batch: string; reason: string }
   | { kind: "error"; message: string };
 
-const ORIGINS = [
-  "донорская программа УТ-Донор, г. Кимры, партия 2002 г.",
-  "фильтрационная линия №4, лошадь Зинаида (аттестат №003)",
-  "лаборатория «Полная Сохранность», Институт уведомлён письмом",
-  "коллекционный выпуск УТ-К «II Сан», заверено нотариально",
-];
-
-const FAKE_REASONS = [
-  "партия настоена на неперетёртом сене (нарушение ГОСТ Р 1246-2002)",
-  "в цепочке фильтрации отсутствует аттестованная лошадь",
-  "смарт-контракт партии зарегистрирован на домене by.ru",
-  "время сбора позднее восхода солнца (протокол нарушен)",
-  "партия упомянута в претензии Общества Красного Креста",
-];
+const BATCHES: Record<string, { purity: number; origin: string }> = {
+  "УТ-2002-0417": { purity: 99, origin: "донорская программа, г. Кимры; УТ-01 «Утренний»" },
+  "УТ-2003-0004": { purity: 98, origin: "линия №4, Зинаида, аттестат №003; УТ-02 «Эталон»" },
+  "УТ-2024-0001": { purity: 99, origin: "архив коллекционного выпуска УТ-К «II Сан», аукцион 2024 года" },
+};
 
 export class DetectorStore {
   batch = "";
   verdict: Verdict = { kind: "idle" };
+  private revision = 0;
 
   constructor() {
     makeAutoObservable(this);
   }
 
   setBatch(value: string): void {
+    this.revision += 1;
     this.batch = value;
     this.verdict = { kind: "idle" };
   }
 
   async check(): Promise<void> {
-    const code = this.batch.trim();
-    if (code.length < 3) {
-      this.verdict = {
-        kind: "error",
-        message:
-          "Номер партии должен содержать не менее 3 символов. Короткие номера партией не выдаются.",
-      };
+    if (this.verdict.kind === "checking") return;
+    const code = this.batch.trim().toUpperCase();
+    if (!/^УТ-\d{4}-\d{4}$/.test(code)) {
+      this.verdict = { kind: "error", message: "Введите номер в формате УТ-ГГГГ-НННН, например УТ-2002-0417." };
       return;
     }
-
-    let hash = 0;
-    for (const ch of code) hash = (hash * 31 + ch.charCodeAt(0)) >>> 0;
-
-    for (let p = 20; p <= 100; p += 20) {
-      this.verdict = { kind: "checking", progress: p };
-      await new Promise((r) => setTimeout(r, 180));
-    }
-
+    const revision = this.revision;
+    this.verdict = { kind: "checking", progress: 50 };
+    await new Promise((resolve) => setTimeout(resolve, 360));
     runInAction(() => {
-      if (hash % 3 === 0) {
-        this.verdict = {
-          kind: "fake",
-          batch: code,
-          reason: FAKE_REASONS[hash % FAKE_REASONS.length],
-        };
-      } else {
-        this.verdict = {
-          kind: "genuine",
-          batch: code,
-          purity: 90 + (hash % 10),
-          origin: ORIGINS[hash % ORIGINS.length],
-        };
-      }
+      if (revision !== this.revision) return;
+      const entry = BATCHES[code];
+      this.verdict = entry
+        ? { kind: "genuine", batch: code, ...entry }
+        : { kind: "fake", batch: code, reason: "номер отсутствует в опубликованном реестре компании" };
     });
   }
 }

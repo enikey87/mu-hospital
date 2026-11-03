@@ -20,6 +20,7 @@
 
 ```bash
 npm install
+npm test           # контрактные тесты
 npm run dev        # локальный сервер, http://localhost:5173
 npm run build      # типы + продакшен-сборка в dist/
 npm run preview    # предпросмотр продакшен-сборки
@@ -28,7 +29,8 @@ npm run preview    # предпросмотр продакшен-сборки
 ## Публикация
 
 Публикация выполняется автоматически через GitHub Actions при пуше в `main`:
-сборка и деплой на GitHub Pages. Настройки Pages: Source → GitHub Actions.
+тесты, сборка и деплой на GitHub Pages. В pull request выполняются тесты
+и сборка без публикации. Настройки Pages: Source → GitHub Actions.
 
 ## Структура
 

@@ -9,12 +9,8 @@ function Detector() {
     <section id="detector">
       <div className="container">
         <span className="section-label">П.5 · Верификация продукции</span>
-        <h2 className="section-title">Сервис проверки подлинности</h2>
-        <p className="section-sub">
-          В 2004 году выявлена копия сайта на хостинге by.ru. Реализация продукции
-          вне официальных каналов является фальсификацией. Введите номер партии —
-          система проверит запись в блокчейн-реестре.
-        </p>
+        <h2 className="section-title"> Проверка партии </h2>
+        <p className="section-sub"> Введите номер с этикетки. Сервис сверяет его с опубликованным реестром компании и показывает происхождение партии. </p>
         <div className="glass detector-wrap">
           <div>
             <div className="detector-form">
@@ -32,11 +28,7 @@ function Detector() {
                 {v.kind === "checking" ? <span className="spinner" /> : "Проверить"}
               </button>
             </div>
-            <p className="detector-hint">
-              Реестр обновляется ежесуточно. Официальная площадка — urina-ru.narod.ru,
-              сверяйте адресную строку. Партии, начинающиеся с «УТ-», выданы компанией;
-              партия, начинающаяся с чего-либо ещё, выдана не нами.
-            </p>
+            <p className="detector-hint"> Формат номера: УТ-ГГГГ-НННН. Для проверки можно использовать архивную запись УТ-2002-0417. Префикс сам по себе не подтверждает происхождение. </p>
           </div>
 
           <div aria-live="polite">
@@ -47,9 +39,7 @@ function Detector() {
             )}
             {v.kind === "checking" && (
               <div className="verdict verdict--checking">
-                <div className="verdict__title">Опрос блокчейн-реестра…</div>
-                Проверка записи, аттестата лошади и протокола сбора.
-                <div className="progressbar">
+                <div className="verdict__title"> Проверка записи… </div> Сверка номера и производственных сведений. <div className="progressbar">
                   <div className="progressbar__fill" style={{ width: `${v.progress}%` }} />
                 </div>
               </div>
@@ -57,16 +47,11 @@ function Detector() {
             {v.kind === "genuine" && (
               <div className="verdict verdict--genuine">
                 <div className="verdict__title">Партия внесена в реестр: {v.batch}</div>
-                Чистота {v.purity}%. Происхождение: {v.origin}. Продукция допущена
-                к реализации через официальные каналы.
-              </div>
+                Чистота {v.purity}%. Происхождение: {v.origin} . Происхождение партии подтверждено записью. </div>
             )}
             {v.kind === "fake" && (
               <div className="verdict verdict--fake">
-                <div className="verdict__title">Запись в реестре отсутствует: {v.batch}</div>
-                Установленный признак фальсификации: {v.reason}. Приобретение данной
-                продукции не рекомендуется. О факте реализации сообщите в гостевую книгу.
-              </div>
+                <div className="verdict__title">Запись в реестре отсутствует: {v.batch}</div> Основание: {v.reason} . Происхождение партии компанией не подтверждено. </div>
             )}
             {v.kind === "error" && (
               <div className="verdict verdict--error">

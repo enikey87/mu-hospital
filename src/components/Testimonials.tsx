@@ -17,31 +17,19 @@ function Testimonials() {
   return (
     <section id="reviews">
       <div className="container">
-        <span className="section-label">П.4 · Клинические случаи и обращения</span>
-        <h2 className="section-title">Результаты применения</h2>
-        <p className="section-sub">
-          Публикуем все отзывы, включая отрицательные и требования об удалении —
-          прозрачность является принципом компании. Оригиналы обращений хранятся
-          в гостевой книге, проверяйте даты.
-        </p>
+        <span className="section-label"> П.4 · Отзывы и обращения </span>
+        <h2 className="section-title"> Отзывы и обращения </h2>
+        <p className="section-sub"> Выдержки из гостевой книги и официальная переписка. Сообщения авторов публикуются отдельно от производственной документации. </p>
         <p
           className="section-sub"
           style={{ fontSize: 12, marginTop: 6, fontFamily: "var(--mono)" }}
-        >
-          Внешний вид пациентов восстановлен нейросетью по описаниям из гостевой
-          книги. Совпадения с живыми людьми случайны и статистически невероятны.
-        </p>
+        > Авторы личных обращений обозначены именем или инициалами. </p>
         <div className="reviews-grid">
           {testimonials.reviews.map((r) => (
             <article key={r.id} className="glass review-card">
               <div className="review-card__head">
                 <div className="review-card__avatar">
-                  <img
-                    className="review-card__img"
-                    src={`${import.meta.env.BASE_URL}avatars/${r.avatar}`}
-                    alt={`Портрет: ${r.name}`}
-                    loading="lazy"
-                  />
+                  <span aria-hidden="true">{r.name.split(/[\s,]+/).slice(0, 2).map((part) => part[0]).join("")}</span>
                 </div>
                 <div>
                   <div className="review-card__name">{r.name}</div>

@@ -4,13 +4,9 @@ function Pricing() {
   return (
     <section id="pricing">
       <div className="container">
-        <span className="section-label">П.3 · Абонентское обслуживание «УТ+»</span>
-        <h2 className="section-title">Тарифные планы</h2>
-        <p className="section-sub">
-          Для физических и юридических лиц. Дилерская программа, кредитование и
-          рассрочка — по запросу. Приём платежей: банковская карта, безналичный
-          расчёт, натура (сено, по курсу дня).
-        </p>
+        <span className="section-label"> П.3 · Регулярные поставки «УТ+» </span>
+        <h2 className="section-title"> Обслуживание </h2>
+        <p className="section-sub"> Условия регулярных поставок для физических лиц и организаций. Состав партий и график согласуются отдельно. Коллекционный выпуск в тарифы не входит. </p>
         <div className="pricing-grid">
           {PLANS.map((plan) => (
             <div key={plan.id} className={`glass plan ${plan.accent ? "plan--accent" : ""}`}>
@@ -25,9 +21,9 @@ function Pricing() {
                   <li key={f}>{f}</li>
                 ))}
               </ul>
-              <button className={`btn btn-sm ${plan.accent ? "btn-primary" : "btn-ghost"}`}>
-                Подключить
-              </button>
+              <a href="#products" className={`btn btn-sm ${plan.accent ? "btn-primary" : "btn-ghost"}`}>
+                Выбрать продукцию
+              </a>
             </div>
           ))}
         </div>

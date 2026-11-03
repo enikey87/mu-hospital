@@ -1,0 +1,4683 @@
+{
+  "revision": "148d2d930a49e5bd1ba241b0ae1cd8b0dbdb2592",
+  "note": "Текстовые узлы TypeScript/TSX с кириллицей; включает служебные строки. Это инвентаризация исходников, не подсчёт видимых фраз. Дополнительно прочитаны index.html, public/404.html, robots.txt, sitemap.xml, SVG и текст CSS.",
+  "files": [
+    "src/App.tsx",
+    "src/components/Calculator.tsx",
+    "src/components/CartDrawer.tsx",
+    "src/components/Company.tsx",
+    "src/components/CookiesBanner.tsx",
+    "src/components/Countdown.tsx",
+    "src/components/Detector.tsx",
+    "src/components/Donor.tsx",
+    "src/components/Faq.tsx",
+    "src/components/Footer.tsx",
+    "src/components/Header.tsx",
+    "src/components/Hero.tsx",
+    "src/components/Instructions.tsx",
+    "src/components/Licenses.tsx",
+    "src/components/MochaTicker.tsx",
+    "src/components/NotFound.tsx",
+    "src/components/Partners.tsx",
+    "src/components/Poll.tsx",
+    "src/components/Pricing.tsx",
+    "src/components/Products.tsx",
+    "src/components/SolnyshkoApp.tsx",
+    "src/components/Testimonials.tsx",
+    "src/components/solnyshko/SolBooking.tsx",
+    "src/components/solnyshko/SolDining.tsx",
+    "src/components/solnyshko/SolDocuments.tsx",
+    "src/components/solnyshko/SolEmblem.tsx",
+    "src/components/solnyshko/SolEnemas.tsx",
+    "src/components/solnyshko/SolFaq.tsx",
+    "src/components/solnyshko/SolFooter.tsx",
+    "src/components/solnyshko/SolHeader.tsx",
+    "src/components/solnyshko/SolHero.tsx",
+    "src/components/solnyshko/SolKalofores.tsx",
+    "src/components/solnyshko/SolProfiles.tsx",
+    "src/components/solnyshko/SolPromos.tsx",
+    "src/components/solnyshko/SolQuiz.tsx",
+    "src/components/solnyshko/SolReviews.tsx",
+    "src/components/solnyshko/SolRooms.tsx",
+    "src/components/solnyshko/SolRoots.tsx",
+    "src/components/solnyshko/SolServices.tsx",
+    "src/components/solnyshko/SolStaff.tsx",
+    "src/components/solnyshko/SolStation.tsx",
+    "src/components/solnyshko/neigh.ts",
+    "src/data/catalog.ts",
+    "src/data/company.ts",
+    "src/data/solnyshko.ts",
+    "src/main.tsx",
+    "src/stores/CalculatorStore.ts",
+    "src/stores/CartStore.ts",
+    "src/stores/CookiesStore.ts",
+    "src/stores/CountdownStore.ts",
+    "src/stores/DetectorStore.ts",
+    "src/stores/DonorStore.ts",
+    "src/stores/MochaStore.ts",
+    "src/stores/PollStore.ts",
+    "src/stores/QuizStore.ts",
+    "src/stores/RootStore.ts",
+    "src/stores/RouterStore.ts",
+    "src/stores/SolnyshkoStore.ts",
+    "src/stores/TestimonialsStore.ts",
+    "src/vite-env.d.ts"
+  ],
+  "entries": [
+    {
+      "file": "src/components/Calculator.tsx",
+      "line": 11,
+      "text": "Прил. Б · Система «УТ-Интеллект» · бета"
+    },
+    {
+      "file": "src/components/Calculator.tsx",
+      "line": 13,
+      "text": "Расчёт"
+    },
+    {
+      "file": "src/components/Calculator.tsx",
+      "line": 13,
+      "text": "дозировки"
+    },
+    {
+      "file": "src/components/Calculator.tsx",
+      "line": 16,
+      "text": "Сервис подбирает продукт и схему приёма на основе физических параметров пациента. Методика применяется с 1246 года, в цифровом виде — с этого вторника."
+    },
+    {
+      "file": "src/components/Calculator.tsx",
+      "line": 24,
+      "text": "Вес, кг"
+    },
+    {
+      "file": "src/components/Calculator.tsx",
+      "line": 34,
+      "text": "Возраст, лет"
+    },
+    {
+      "file": "src/components/Calculator.tsx",
+      "line": 45,
+      "text": "Степень доверия традиционной медицине —"
+    },
+    {
+      "file": "src/components/Calculator.tsx",
+      "line": 56,
+      "text": "Чем ниже доверие, тем выше дозировка (установлено эмпирически, с 1246 года)."
+    },
+    {
+      "file": "src/components/Calculator.tsx",
+      "line": 63,
+      "text": "Рекомендуемый продукт"
+    },
+    {
+      "file": "src/components/Calculator.tsx",
+      "line": 67,
+      "text": "Схема приёма"
+    },
+    {
+      "file": "src/components/Calculator.tsx",
+      "line": 69,
+      "text": "по"
+    },
+    {
+      "file": "src/components/Calculator.tsx",
+      "line": 69,
+      "text": "стакана × 3 раза в день"
+    },
+    {
+      "file": "src/components/Calculator.tsx",
+      "line": 73,
+      "text": "Курс"
+    },
+    {
+      "file": "src/components/Calculator.tsx",
+      "line": 74,
+      "text": "дней"
+    },
+    {
+      "file": "src/components/Calculator.tsx",
+      "line": 77,
+      "text": "Потребность на курс"
+    },
+    {
+      "file": "src/components/Calculator.tsx",
+      "line": 79,
+      "text": "л ("
+    },
+    {
+      "file": "src/components/Calculator.tsx",
+      "line": 79,
+      "text": "× УТ-БК-10)"
+    },
+    {
+      "file": "src/components/Calculator.tsx",
+      "line": 83,
+      "text": "Расчёт выполнен по методике 1246 г. Погрешность: ±1 лошадь. Расчёт не является медицинской рекомендацией; расчёт является расчётом."
+    },
+    {
+      "file": "src/components/CartDrawer.tsx",
+      "line": 14,
+      "text": "Корзина"
+    },
+    {
+      "file": "src/components/CartDrawer.tsx",
+      "line": 15,
+      "text": "Закрыть"
+    },
+    {
+      "file": "src/components/CartDrawer.tsx",
+      "line": 32,
+      "text": "Заказ оформлен"
+    },
+    {
+      "file": "src/components/CartDrawer.tsx",
+      "line": 35,
+      "text": "Сумма:"
+    },
+    {
+      "file": "src/components/CartDrawer.tsx",
+      "line": 35,
+      "text": "₽. Заказ передан в логистический центр (конюшня №4). Доставка курьером — по городу, транспортной компанией — по региону. Для донорской серии срок комплектации — 2–3 часа, сроки указаны с учётом времени сбора."
+    },
+    {
+      "file": "src/components/CartDrawer.tsx",
+      "line": 45,
+      "text": "Закрыть"
+    },
+    {
+      "file": "src/components/CartDrawer.tsx",
+      "line": 54,
+      "text": "Корзина пуста."
+    },
+    {
+      "file": "src/components/CartDrawer.tsx",
+      "line": 56,
+      "text": "Выберите продукцию в каталоге."
+    },
+    {
+      "file": "src/components/CartDrawer.tsx",
+      "line": 86,
+      "text": "Итого"
+    },
+    {
+      "file": "src/components/CartDrawer.tsx",
+      "line": 90,
+      "text": "Оформить заказ"
+    },
+    {
+      "file": "src/components/CartDrawer.tsx",
+      "line": 94,
+      "text": "Договор прочитали: 0 человек"
+    },
+    {
+      "file": "src/components/CartDrawer.tsx",
+      "line": 95,
+      "text": "Договор прочитали:"
+    },
+    {
+      "file": "src/components/CartDrawer.tsx",
+      "line": 95,
+      "text": "чел. — рекорд за 24 года"
+    },
+    {
+      "file": "src/components/CartDrawer.tsx",
+      "line": 98,
+      "text": "Оплата: карта, безналичный расчёт, натура (сено, по курсу дня)."
+    },
+    {
+      "file": "src/components/Company.tsx",
+      "line": 7,
+      "text": "П.9 · О компании"
+    },
+    {
+      "file": "src/components/Company.tsx",
+      "line": 8,
+      "text": "Корпоративное управление"
+    },
+    {
+      "file": "src/components/Company.tsx",
+      "line": 10,
+      "text": "Органограмма компании: генеральный директор → лошадь → все остальные. Публикуется в соответствии с Кодексом корпоративного поведения (своя редакция, 2002 г.)."
+    },
+    {
+      "file": "src/components/Company.tsx",
+      "line": 15,
+      "text": "Руководство"
+    },
+    {
+      "file": "src/components/CookiesBanner.tsx",
+      "line": 11,
+      "text": "Мы используем cookies"
+    },
+    {
+      "file": "src/components/CookiesBanner.tsx",
+      "line": 13,
+      "text": "А также стаканы. Продолжая пользоваться сайтом, вы соглашаетесь на хранение стаканов на вашем устройстве."
+    },
+    {
+      "file": "src/components/CookiesBanner.tsx",
+      "line": 18,
+      "text": "Принять всё"
+    },
+    {
+      "file": "src/components/CookiesBanner.tsx",
+      "line": 21,
+      "text": "Подробнее"
+    },
+    {
+      "file": "src/components/Countdown.tsx",
+      "line": 8,
+      "text": "лет"
+    },
+    {
+      "file": "src/components/Countdown.tsx",
+      "line": 9,
+      "text": "дней"
+    },
+    {
+      "file": "src/components/Countdown.tsx",
+      "line": 10,
+      "text": "часов"
+    },
+    {
+      "file": "src/components/Countdown.tsx",
+      "line": 11,
+      "text": "минут"
+    },
+    {
+      "file": "src/components/Countdown.tsx",
+      "line": 12,
+      "text": "секунд"
+    },
+    {
+      "file": "src/components/Countdown.tsx",
+      "line": 18,
+      "text": "Прил. А · Очередь на коллекционную партию"
+    },
+    {
+      "file": "src/components/Countdown.tsx",
+      "line": 20,
+      "text": "Следующая партия УТ-К —"
+    },
+    {
+      "file": "src/components/Countdown.tsx",
+      "line": 20,
+      "text": "2374 год"
+    },
+    {
+      "file": "src/components/Countdown.tsx",
+      "line": 23,
+      "text": "Очередь закрыта с 2024 года, однако отсчёт продолжается. Данные синхронизированы с блокчейн-реестром и нотариусом."
+    },
+    {
+      "file": "src/components/Countdown.tsx",
+      "line": 36,
+      "text": "Точность хода — ±1246 лет. Компенсация за ожидание не предусмотрена: ожидание само по себе является ценностью."
+    },
+    {
+      "file": "src/components/Detector.tsx",
+      "line": 11,
+      "text": "П.5 · Верификация продукции"
+    },
+    {
+      "file": "src/components/Detector.tsx",
+      "line": 12,
+      "text": "Сервис проверки подлинности"
+    },
+    {
+      "file": "src/components/Detector.tsx",
+      "line": 14,
+      "text": "В 2004 году выявлена копия сайта на хостинге by.ru. Реализация продукции вне официальных каналов является фальсификацией. Введите номер партии — система проверит запись в блокчейн-реестре."
+    },
+    {
+      "file": "src/components/Detector.tsx",
+      "line": 23,
+      "text": "Номер партии, напр. УТ-2002-0417"
+    },
+    {
+      "file": "src/components/Detector.tsx",
+      "line": 32,
+      "text": "Проверить"
+    },
+    {
+      "file": "src/components/Detector.tsx",
+      "line": 36,
+      "text": "Реестр обновляется ежесуточно. Официальная площадка — urina-ru.narod.ru, сверяйте адресную строку. Партии, начинающиеся с «УТ-», выданы компанией; партия, начинающаяся с чего-либо ещё, выдана не нами."
+    },
+    {
+      "file": "src/components/Detector.tsx",
+      "line": 45,
+      "text": "Сервис готов к работе. Ожидание номера партии."
+    },
+    {
+      "file": "src/components/Detector.tsx",
+      "line": 50,
+      "text": "Опрос блокчейн-реестра…"
+    },
+    {
+      "file": "src/components/Detector.tsx",
+      "line": 51,
+      "text": "Проверка записи, аттестата лошади и протокола сбора."
+    },
+    {
+      "file": "src/components/Detector.tsx",
+      "line": 59,
+      "text": "Партия внесена в реестр:"
+    },
+    {
+      "file": "src/components/Detector.tsx",
+      "line": 60,
+      "text": "Чистота"
+    },
+    {
+      "file": "src/components/Detector.tsx",
+      "line": 60,
+      "text": "%. Происхождение:"
+    },
+    {
+      "file": "src/components/Detector.tsx",
+      "line": 60,
+      "text": ". Продукция допущена к реализации через официальные каналы."
+    },
+    {
+      "file": "src/components/Detector.tsx",
+      "line": 66,
+      "text": "Запись в реестре отсутствует:"
+    },
+    {
+      "file": "src/components/Detector.tsx",
+      "line": 67,
+      "text": "Установленный признак фальсификации:"
+    },
+    {
+      "file": "src/components/Detector.tsx",
+      "line": 67,
+      "text": ". Приобретение данной продукции не рекомендуется. О факте реализации сообщите в гостевую книгу."
+    },
+    {
+      "file": "src/components/Detector.tsx",
+      "line": 73,
+      "text": "Некорректный ввод"
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 12,
+      "text": "П.6 · Донорская программа УТ-Донор"
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 13,
+      "text": "Заявка зарегистрирована"
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 17,
+      "text": "Донор:"
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 17,
+      "text": ", регион:"
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 18,
+      "text": ". Рацион за последние 24 часа: «"
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 19,
+      "text": "». Рацион передан в аналитическую лабораторию (конюшня №4)."
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 23,
+      "text": "⚠ Внимание: сбор биоматериала должен быть завершён в течение 2–3 часов с момента регистрации заявки. По истечении срока сырьё требованиям закупки не соответствует."
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 28,
+      "text": "Выплата: 30% денежными средствами, 40% натурой (сено), 30% — упоминанием в гостевой книге."
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 32,
+      "text": "Подать новую заявку"
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 43,
+      "text": "П.6 · Донорская программа УТ-Донор"
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 45,
+      "text": "Компания"
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 45,
+      "text": "закупает сырьё"
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 45,
+      "text": "у физических лиц"
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 48,
+      "text": "Станьте участником донорской программы: фиксируйте факт поставки сырья и получайте выплаты с каждой реализованной партии вашего авторства. Возможна организация собственного дела на базе дилерской программы."
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 61,
+      "text": "ФИО (как в документах или как в гаражном кооперативе)"
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 66,
+      "text": "Кузьмич"
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 70,
+      "text": "Регион сбора"
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 75,
+      "text": "Тверская область"
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 79,
+      "text": "Рацион за последние 24 часа (определяет органолептический профиль)"
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 84,
+      "text": "Окрошка, сало, компот (3 порции)"
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 94,
+      "text": "Регистрация в реестре…"
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 97,
+      "text": "Подать заявку"
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 103,
+      "text": "Требования к сырью:"
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 103,
+      "text": "сырьё проходит генетическую экспертизу. Донор обязан быть поистине русским — требование закупочной политики, отступлений не предусмотрено."
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 108,
+      "text": "Порядок выплат:"
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 108,
+      "text": "30% от выручки денежными средствами, 40% натурой (сено по курсу дня) и 30% — упоминанием в гостевой книге."
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 112,
+      "text": "Логистика:"
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 112,
+      "text": "сбор в течение 2–3 часов после регистрации заявки. Тара — собственная донора. Достоинство обеспечивается нашей стороной."
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 117,
+      "text": "Диетический протокол «Проросшее зерно»:"
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 117,
+      "text": "донор, получавший проросшее зерно в течение двух-трёх дней, производит уникальную субстанцию, пригодную для передачи другим лицам (обычная субстанция пригодна только самому донору). Надбавка к выплате — 12,46%. Постоянно переведён на зерно внешний поставщик Потапыч (по согласованию)."
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 125,
+      "text": "Эмоциональный режим:"
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 125,
+      "text": "отрицательные эмоции делают субстанцию ядовитой, радостные — бальзамными. Донор обязан пребывать в согласии с собой и конюшней; контроль осуществляет старшая сестра взглядом. Эталон спокойствия — внештатный консультант по обмену опытом (лошадь)."
+    },
+    {
+      "file": "src/components/Donor.tsx",
+      "line": 132,
+      "text": "Нажимая кнопку, вы подтверждаете, что ознакомились с договором либо сделали вид, что ознакомились."
+    },
+    {
+      "file": "src/components/Faq.tsx",
+      "line": 7,
+      "text": "П.12 · Вопросы и ответы"
+    },
+    {
+      "file": "src/components/Footer.tsx",
+      "line": 7,
+      "text": "ООО «УринаТех»"
+    },
+    {
+      "file": "src/components/Footer.tsx",
+      "line": 9,
+      "text": "Производственно-исследовательская компания полного цикла. Основана в 2002 году как Московский Институт Обогащения Урины. Технологии документированы с 1246 года."
+    },
+    {
+      "file": "src/components/Footer.tsx",
+      "line": 15,
+      "text": "☀ Пансионат «Солнышко»"
+    },
+    {
+      "file": "src/components/Footer.tsx",
+      "line": 17,
+      "text": "Наша здравница закрытого типа: стационарная уринотерапия, клизмотроника™ по природным богатствам России и калофорез® — перенятие силы зверя. 40 вёрст до асфальта."
+    },
+    {
+      "file": "src/components/Footer.tsx",
+      "line": 22,
+      "text": "Перейти на сайт пансионата →"
+    },
+    {
+      "file": "src/components/Footer.tsx",
+      "line": 26,
+      "text": "Контакты"
+    },
+    {
+      "file": "src/components/Footer.tsx",
+      "line": 28,
+      "text": "107113, г. Москва, проходная конюшни №4 (спросить Петра)."
+    },
+    {
+      "file": "src/components/Footer.tsx",
+      "line": 30,
+      "text": "Отдел донорства: голубиная почта, телеграф."
+    },
+    {
+      "file": "src/components/Footer.tsx",
+      "line": 32,
+      "text": "Гостевая книга работает круглосуточно, очередь — с 2002 года."
+    },
+    {
+      "file": "src/components/Footer.tsx",
+      "line": 36,
+      "text": "Правовая информация"
+    },
+    {
+      "file": "src/components/Footer.tsx",
+      "line": 38,
+      "text": "Переписка с Обществом Красного Креста ведётся с 14.05.2003. Судебное разбирательство не является нашим методом; нашим методом является продукция."
+    },
+    {
+      "file": "src/components/Footer.tsx",
+      "line": 45,
+      "text": "© 2002–2026 ООО «УринаТех». Все партии защищены."
+    },
+    {
+      "file": "src/components/Footer.tsx",
+      "line": 47,
+      "text": "Информация не является публичной офертой. Продукция не является лекарственным средством. Имеются противопоказания — необходима консультация специалиста. 18+"
+    },
+    {
+      "file": "src/components/Header.tsx",
+      "line": 6,
+      "text": "Продукция"
+    },
+    {
+      "file": "src/components/Header.tsx",
+      "line": 7,
+      "text": "Инструкция"
+    },
+    {
+      "file": "src/components/Header.tsx",
+      "line": 8,
+      "text": "Тарифы"
+    },
+    {
+      "file": "src/components/Header.tsx",
+      "line": 9,
+      "text": "Клиника"
+    },
+    {
+      "file": "src/components/Header.tsx",
+      "line": 10,
+      "text": "Верификация"
+    },
+    {
+      "file": "src/components/Header.tsx",
+      "line": 11,
+      "text": "Донорам"
+    },
+    {
+      "file": "src/components/Header.tsx",
+      "line": 12,
+      "text": "Компания"
+    },
+    {
+      "file": "src/components/Header.tsx",
+      "line": 13,
+      "text": "☀ Солнышко"
+    },
+    {
+      "file": "src/components/Header.tsx",
+      "line": 24,
+      "text": "ООО «УринаТех» · ТУ 1246-001-0202"
+    },
+    {
+      "file": "src/components/Header.tsx",
+      "line": 25,
+      "text": "ЭКЗ. № 1 · ЛИСТ 1 · ИЗМ. 1246"
+    },
+    {
+      "file": "src/components/Header.tsx",
+      "line": 29,
+      "text": "УТ"
+    },
+    {
+      "file": "src/components/Header.tsx",
+      "line": 30,
+      "text": "УринаТех"
+    },
+    {
+      "file": "src/components/Header.tsx",
+      "line": 32,
+      "text": "Основная навигация"
+    },
+    {
+      "file": "src/components/Header.tsx",
+      "line": 41,
+      "text": "Корзина"
+    },
+    {
+      "file": "src/components/Header.tsx",
+      "line": 46,
+      "text": "Закрыть меню"
+    },
+    {
+      "file": "src/components/Header.tsx",
+      "line": 46,
+      "text": "Открыть меню"
+    },
+    {
+      "file": "src/components/Header.tsx",
+      "line": 56,
+      "text": "Мобильная навигация"
+    },
+    {
+      "file": "src/components/Hero.tsx",
+      "line": 9,
+      "text": "Производственно-исследовательская компания · с 1246 года"
+    },
+    {
+      "file": "src/components/Hero.tsx",
+      "line": 12,
+      "text": "Русская"
+    },
+    {
+      "file": "src/components/Hero.tsx",
+      "line": 12,
+      "text": "моча"
+    },
+    {
+      "file": "src/components/Hero.tsx",
+      "line": 12,
+      "text": "против скальпеля врача"
+    },
+    {
+      "file": "src/components/Hero.tsx",
+      "line": 15,
+      "text": "«УринаТех» — технологический цикл полного профиля: добыча, фильтрация, консервация, дистрибуция. Непрерывный производственный контроль качества с 1246 года. Генетическая экспертиза каждой партии."
+    },
+    {
+      "file": "src/components/Hero.tsx",
+      "line": 21,
+      "text": "Перейти в каталог"
+    },
+    {
+      "file": "src/components/Hero.tsx",
+      "line": 24,
+      "text": "Донорская программа"
+    },
+    {
+      "file": "src/components/Hero.tsx",
+      "line": 29,
+      "text": "· оценка $1,2 млрд"
+    },
+    {
+      "file": "src/components/Hero.tsx",
+      "line": 32,
+      "text": "зарегистрированных пациентов"
+    },
+    {
+      "file": "src/components/Hero.tsx",
+      "line": 35,
+      "text": "· претензия Красного Креста (рассматривается с 2003 г.)"
+    },
+    {
+      "file": "src/components/Hero.tsx",
+      "line": 37,
+      "text": "18+ · имеются противопоказания"
+    },
+    {
+      "file": "src/components/Hero.tsx",
+      "line": 40,
+      "text": "Утверждено · Зинаида"
+    },
+    {
+      "file": "src/components/Instructions.tsx",
+      "line": 7,
+      "text": "Прил. В · Документация к продукции"
+    },
+    {
+      "file": "src/components/Instructions.tsx",
+      "line": 8,
+      "text": "Инструкция по применению"
+    },
+    {
+      "file": "src/components/Instructions.tsx",
+      "line": 10,
+      "text": "Полный текст вкладыша, поставляемого с каждой ёмкостью. Публикуется в соответствии с политикой информационной открытости."
+    },
+    {
+      "file": "src/components/Instructions.tsx",
+      "line": 23,
+      "text": "Инструкция сохранена в первоначальном виде. Первоначальный вид утерян. ООО «УринаТех», конюшня №4. Претензии направляйте в гостевую книгу, внимание — Зинаиде."
+    },
+    {
+      "file": "src/components/Licenses.tsx",
+      "line": 7,
+      "text": "П.8 · Разрешительные документы"
+    },
+    {
+      "file": "src/components/Licenses.tsx",
+      "line": 8,
+      "text": "Лицензии и сертификаты"
+    },
+    {
+      "file": "src/components/Licenses.tsx",
+      "line": 10,
+      "text": "Реестр ведётся с 2002 года. Оригиналы хранятся в конюшне №4; доступ предоставляется по письменному запросу и good настроению директора по фильтрации."
+    },
+    {
+      "file": "src/components/MochaTicker.tsx",
+      "line": 90,
+      "text": "Котировки $MOCHA"
+    },
+    {
+      "file": "src/components/MochaTicker.tsx",
+      "line": 95,
+      "text": "биржа · сессия"
+    },
+    {
+      "file": "src/components/MochaTicker.tsx",
+      "line": 116,
+      "text": "Спарклайн $MOCHA за сессию:"
+    },
+    {
+      "file": "src/components/MochaTicker.tsx",
+      "line": 116,
+      "text": "к открытию"
+    },
+    {
+      "file": "src/components/NotFound.tsx",
+      "line": 5,
+      "text": "404 — УринаТех"
+    },
+    {
+      "file": "src/components/NotFound.tsx",
+      "line": 19,
+      "text": "Страница не найдена"
+    },
+    {
+      "file": "src/components/NotFound.tsx",
+      "line": 22,
+      "text": "Вероятно, выпита. Возможно, продана на аукционе 2024 года. Проверьте адресную строку, реестр партий и гостевую книгу."
+    },
+    {
+      "file": "src/components/NotFound.tsx",
+      "line": 31,
+      "text": "Вернуться на главную"
+    },
+    {
+      "file": "src/components/Partners.tsx",
+      "line": 7,
+      "text": "П.10 · Наши партнёры"
+    },
+    {
+      "file": "src/components/Poll.tsx",
+      "line": 9,
+      "text": "Социальный опрос: доверяете ли вы методу?"
+    },
+    {
+      "file": "src/components/Poll.tsx",
+      "line": 12,
+      "text": "Результат:"
+    },
+    {
+      "file": "src/components/Poll.tsx",
+      "line": 12,
+      "text": "100% доверяют"
+    },
+    {
+      "file": "src/components/Poll.tsx",
+      "line": 12,
+      "text": "(погрешность методикой не предусмотрена, ГОСТ Р 1246-2002). Спасибо — ваш голос учтён дважды."
+    },
+    {
+      "file": "src/components/Poll.tsx",
+      "line": 18,
+      "text": "Да"
+    },
+    {
+      "file": "src/components/Poll.tsx",
+      "line": 21,
+      "text": "Да, безусловно"
+    },
+    {
+      "file": "src/components/Poll.tsx",
+      "line": 26,
+      "text": "Опрос проводится с 2002 года. Набор вариантов отражает многообразие мнений."
+    },
+    {
+      "file": "src/components/Pricing.tsx",
+      "line": 7,
+      "text": "П.3 · Абонентское обслуживание «УТ+»"
+    },
+    {
+      "file": "src/components/Pricing.tsx",
+      "line": 8,
+      "text": "Тарифные планы"
+    },
+    {
+      "file": "src/components/Pricing.tsx",
+      "line": 10,
+      "text": "Для физических и юридических лиц. Дилерская программа, кредитование и рассрочка — по запросу. Приём платежей: банковская карта, безналичный расчёт, натура (сено, по курсу дня)."
+    },
+    {
+      "file": "src/components/Pricing.tsx",
+      "line": 17,
+      "text": "Популярный выбор"
+    },
+    {
+      "file": "src/components/Pricing.tsx",
+      "line": 29,
+      "text": "Подключить"
+    },
+    {
+      "file": "src/components/Products.tsx",
+      "line": 6,
+      "text": "Бестселлер"
+    },
+    {
+      "file": "src/components/Products.tsx",
+      "line": 7,
+      "text": "Эксклюзив"
+    },
+    {
+      "file": "src/components/Products.tsx",
+      "line": 8,
+      "text": "Нет в наличии"
+    },
+    {
+      "file": "src/components/Products.tsx",
+      "line": 9,
+      "text": "Новинка"
+    },
+    {
+      "file": "src/components/Products.tsx",
+      "line": 10,
+      "text": "Умное устройство"
+    },
+    {
+      "file": "src/components/Products.tsx",
+      "line": 11,
+      "text": "Молекул нет"
+    },
+    {
+      "file": "src/components/Products.tsx",
+      "line": 42,
+      "text": "Нет в наличии"
+    },
+    {
+      "file": "src/components/Products.tsx",
+      "line": 42,
+      "text": "Заказать"
+    },
+    {
+      "file": "src/components/Products.tsx",
+      "line": 53,
+      "text": "П.2 · Каталог продукции · с 2000 года"
+    },
+    {
+      "file": "src/components/Products.tsx",
+      "line": 54,
+      "text": "Продукция"
+    },
+    {
+      "file": "src/components/Products.tsx",
+      "line": 56,
+      "text": "Каждая партия проходит генетическую экспертизу и вносится в блокчейн-реестр. Закупаемое сырьё — поистине русская моча, что подтверждается документально. Ёмкости пронумерованы, сено перетёрто, лошадь аттестована."
+    },
+    {
+      "file": "src/components/Testimonials.tsx",
+      "line": 7,
+      "text": "Оценка:"
+    },
+    {
+      "file": "src/components/Testimonials.tsx",
+      "line": 7,
+      "text": "из 5"
+    },
+    {
+      "file": "src/components/Testimonials.tsx",
+      "line": 20,
+      "text": "П.4 · Клинические случаи и обращения"
+    },
+    {
+      "file": "src/components/Testimonials.tsx",
+      "line": 21,
+      "text": "Результаты применения"
+    },
+    {
+      "file": "src/components/Testimonials.tsx",
+      "line": 23,
+      "text": "Публикуем все отзывы, включая отрицательные и требования об удалении — прозрачность является принципом компании. Оригиналы обращений хранятся в гостевой книге, проверяйте даты."
+    },
+    {
+      "file": "src/components/Testimonials.tsx",
+      "line": 31,
+      "text": "Внешний вид пациентов восстановлен нейросетью по описаниям из гостевой книги. Совпадения с живыми людьми случайны и статистически невероятны."
+    },
+    {
+      "file": "src/components/Testimonials.tsx",
+      "line": 42,
+      "text": "Портрет:"
+    },
+    {
+      "file": "src/components/Testimonials.tsx",
+      "line": 65,
+      "text": "Загрузка архива…"
+    },
+    {
+      "file": "src/components/Testimonials.tsx",
+      "line": 65,
+      "text": "Показать ещё"
+    },
+    {
+      "file": "src/components/solnyshko/SolBooking.tsx",
+      "line": 15,
+      "text": "Отделение путёвок"
+    },
+    {
+      "file": "src/components/solnyshko/SolBooking.tsx",
+      "line": 16,
+      "text": "Путёвка оформлена"
+    },
+    {
+      "file": "src/components/solnyshko/SolBooking.tsx",
+      "line": 18,
+      "text": "Оплачено"
+    },
+    {
+      "file": "src/components/solnyshko/SolBooking.tsx",
+      "line": 21,
+      "text": "Отдыхающий:"
+    },
+    {
+      "file": "src/components/solnyshko/SolBooking.tsx",
+      "line": 23,
+      "text": "Программа:"
+    },
+    {
+      "file": "src/components/solnyshko/SolBooking.tsx",
+      "line": 25,
+      "text": "Перенятие:"
+    },
+    {
+      "file": "src/components/solnyshko/SolBooking.tsx",
+      "line": 28,
+      "text": "Конная доставка от Горно-Алтайска включена. Просим захватить тёплые носки и отсутствия претензий. Встреча — у последнего столба мобильной связи (столб последний, связь ещё раньше)."
+    },
+    {
+      "file": "src/components/solnyshko/SolBooking.tsx",
+      "line": 33,
+      "text": "Оформить ещё одну путёвку"
+    },
+    {
+      "file": "src/components/solnyshko/SolBooking.tsx",
+      "line": 44,
+      "text": "Отделение путёвок"
+    },
+    {
+      "file": "src/components/solnyshko/SolBooking.tsx",
+      "line": 45,
+      "text": "Запись на курс"
+    },
+    {
+      "file": "src/components/solnyshko/SolBooking.tsx",
+      "line": 47,
+      "text": "Заявка рассматривается в течение рабочих суток лошади. Подтверждение приходит телеграммой, голубем или следом на снегу — что раньше."
+    },
+    {
+      "file": "src/components/solnyshko/SolBooking.tsx",
+      "line": 58,
+      "text": "ФИО отдыхающего"
+    },
+    {
+      "file": "src/components/solnyshko/SolBooking.tsx",
+      "line": 63,
+      "text": "Иванов Потап Потапыч"
+    },
+    {
+      "file": "src/components/solnyshko/SolBooking.tsx",
+      "line": 67,
+      "text": "Программа"
+    },
+    {
+      "file": "src/components/solnyshko/SolBooking.tsx",
+      "line": 81,
+      "text": "Что хотите перенять"
+    },
+    {
+      "file": "src/components/solnyshko/SolBooking.tsx",
+      "line": 99,
+      "text": "Печать путёвки…"
+    },
+    {
+      "file": "src/components/solnyshko/SolBooking.tsx",
+      "line": 99,
+      "text": "Оформить путёвку"
+    },
+    {
+      "file": "src/components/solnyshko/SolDining.tsx",
+      "line": 7,
+      "text": "Питание"
+    },
+    {
+      "file": "src/components/solnyshko/SolDining.tsx",
+      "line": 9,
+      "text": "до еды или вместо еды"
+    },
+    {
+      "file": "src/components/solnyshko/SolDocuments.tsx",
+      "line": 7,
+      "text": "Документы"
+    },
+    {
+      "file": "src/components/solnyshko/SolDocuments.tsx",
+      "line": 9,
+      "text": "Лицензии и"
+    },
+    {
+      "file": "src/components/solnyshko/SolDocuments.tsx",
+      "line": 9,
+      "text": "документы"
+    },
+    {
+      "file": "src/components/solnyshko/SolDocuments.tsx",
+      "line": 12,
+      "text": "Опись ведётся с 1246 года и сверяется с журналом спячки. Оригиналы хранятся в рамке №2, сейфе старшей сестры и памяти Потапыча; сканы не прилагаются — подлинник всегда ближе."
+    },
+    {
+      "file": "src/components/solnyshko/SolDocuments.tsx",
+      "line": 38,
+      "text": "Срок действия"
+    },
+    {
+      "file": "src/components/solnyshko/SolEmblem.tsx",
+      "line": 7,
+      "text": "Эмблема пансионата «Солнышко» — солнечное колесо"
+    },
+    {
+      "file": "src/components/solnyshko/SolEnemas.tsx",
+      "line": 7,
+      "text": "Клизмотроника™ · двенадцать рецептур"
+    },
+    {
+      "file": "src/components/solnyshko/SolEnemas.tsx",
+      "line": 9,
+      "text": "Гидратация природными богатствами"
+    },
+    {
+      "file": "src/components/solnyshko/SolEnemas.tsx",
+      "line": 9,
+      "text": "России"
+    },
+    {
+      "file": "src/components/solnyshko/SolEnemas.tsx",
+      "line": 12,
+      "text": "Каждая рецептура привязана к конкретной точке карты и доставляется термоконтейнером с сохранением характера местности. Сырьё — исключительно отечественное, характер — соответствующий."
+    },
+    {
+      "file": "src/components/solnyshko/SolFaq.tsx",
+      "line": 7,
+      "text": "Вопросы отдыхающих"
+    },
+    {
+      "file": "src/components/solnyshko/SolFaq.tsx",
+      "line": 8,
+      "text": "Частые вопросы"
+    },
+    {
+      "file": "src/components/solnyshko/SolFooter.tsx",
+      "line": 15,
+      "text": "Пансионат «Солнышко»"
+    },
+    {
+      "file": "src/components/solnyshko/SolFooter.tsx",
+      "line": 18,
+      "text": "Дочернее здравница-учреждение ООО «УринаТех». Республика Алтай, 40 вёрст от асфальта, далее по следу. Телефона нет — и не будет: тишина является частью методики."
+    },
+    {
+      "file": "src/components/solnyshko/SolFooter.tsx",
+      "line": 24,
+      "text": "Сезонность"
+    },
+    {
+      "file": "src/components/solnyshko/SolFooter.tsx",
+      "line": 26,
+      "text": "Круглый год. «Медвежий» режим калофореза рекомендуется с ноября по март; «Олений» — в период миграции; стационар — всегда, он стационар."
+    },
+    {
+      "file": "src/components/solnyshko/SolFooter.tsx",
+      "line": 32,
+      "text": "Документы"
+    },
+    {
+      "file": "src/components/solnyshko/SolFooter.tsx",
+      "line": 34,
+      "text": "Заявка на патент №1246-К (калофорез). Категория «три звезды», четвёртая — на согласовании. Переписка с ОКК продолжается; пансионат внесён в их карту внимания."
+    },
+    {
+      "file": "src/components/solnyshko/SolFooter.tsx",
+      "line": 41,
+      "text": "© 1246–2026 Пансионат «Солнышко». Все силы защищены."
+    },
+    {
+      "file": "src/components/solnyshko/SolFooter.tsx",
+      "line": 43,
+      "text": "← ООО «УринаТех» — основной сайт"
+    },
+    {
+      "file": "src/components/solnyshko/SolHeader.tsx",
+      "line": 11,
+      "text": "Профсоюзная путёвка · действует бессрочно"
+    },
+    {
+      "file": "src/components/solnyshko/SolHeader.tsx",
+      "line": 12,
+      "text": "форма №1246"
+    },
+    {
+      "file": "src/components/solnyshko/SolHeader.tsx",
+      "line": 25,
+      "text": "Пансионат «Солнышко»"
+    },
+    {
+      "file": "src/components/solnyshko/SolHeader.tsx",
+      "line": 26,
+      "text": "здравница закрытого типа"
+    },
+    {
+      "file": "src/components/solnyshko/SolHeader.tsx",
+      "line": 31,
+      "text": "ООО «УринаТех» — основной сайт"
+    },
+    {
+      "file": "src/components/solnyshko/SolHeader.tsx",
+      "line": 32,
+      "text": "Основной сайт"
+    },
+    {
+      "file": "src/components/solnyshko/SolHeader.tsx",
+      "line": 40,
+      "text": "Записаться на курс"
+    },
+    {
+      "file": "src/components/solnyshko/SolHero.tsx",
+      "line": 21,
+      "text": "Позвать консультанта — Зинаиду"
+    },
+    {
+      "file": "src/components/solnyshko/SolHero.tsx",
+      "line": 25,
+      "text": "нажмите · консультант на связи"
+    },
+    {
+      "file": "src/components/solnyshko/SolHero.tsx",
+      "line": 30,
+      "text": "«И-го-го» — Зинаида"
+    },
+    {
+      "file": "src/components/solnyshko/SolHero.tsx",
+      "line": 36,
+      "text": "Учреждение ООО «УринаТех» · принимаем отдыхающих с 1246 года"
+    },
+    {
+      "file": "src/components/solnyshko/SolHero.tsx",
+      "line": 39,
+      "text": "Здоровье —"
+    },
+    {
+      "file": "src/components/solnyshko/SolHero.tsx",
+      "line": 40,
+      "text": "в стакане!"
+    },
+    {
+      "file": "src/components/solnyshko/SolHero.tsx",
+      "line": 43,
+      "text": "Пансионат «Солнышко» · калофорез® · клизмотроника™"
+    },
+    {
+      "file": "src/components/solnyshko/SolHero.tsx",
+      "line": 46,
+      "text": "Здравница нового типа, открытого типа и типа закрытого. Уринотерапия стационарно, сила зверя — народу, тишина — по тарифу. Сорок вёрст до асфальта: след на пороге гарантирован постановлением от 01.01.1246."
+    },
+    {
+      "file": "src/components/solnyshko/SolHero.tsx",
+      "line": 57,
+      "text": "Программы здравницы"
+    },
+    {
+      "file": "src/components/solnyshko/SolHero.tsx",
+      "line": 65,
+      "text": "Оформить путёвку"
+    },
+    {
+      "file": "src/components/solnyshko/SolHero.tsx",
+      "line": 70,
+      "text": "Категория: три звезды"
+    },
+    {
+      "file": "src/components/solnyshko/SolHero.tsx",
+      "line": 70,
+      "text": "четвёртая"
+    },
+    {
+      "file": "src/components/solnyshko/SolHero.tsx",
+      "line": 70,
+      "text": "(на согласовании с 2003 г.)"
+    },
+    {
+      "file": "src/components/solnyshko/SolHero.tsx",
+      "line": 72,
+      "text": "Конная доставка от Горно-Алтайска включена"
+    },
+    {
+      "file": "src/components/solnyshko/SolHero.tsx",
+      "line": 73,
+      "text": "Потапыч — на штатной должности не состоит"
+    },
+    {
+      "file": "src/components/solnyshko/SolHero.tsx",
+      "line": 76,
+      "text": "Действительно"
+    },
+    {
+      "file": "src/components/solnyshko/SolKalofores.tsx",
+      "line": 7,
+      "text": "Уникальная разработка · заявка на патент №1246-К"
+    },
+    {
+      "file": "src/components/solnyshko/SolKalofores.tsx",
+      "line": 9,
+      "text": "Калофорез"
+    },
+    {
+      "file": "src/components/solnyshko/SolKalofores.tsx",
+      "line": 9,
+      "text": "— перенятие силы"
+    },
+    {
+      "file": "src/components/solnyshko/SolKalofores.tsx",
+      "line": 9,
+      "text": "зверя"
+    },
+    {
+      "file": "src/components/solnyshko/SolKalofores.tsx",
+      "line": 12,
+      "text": "Методика родственная гальваногрязетерапии, практикуемой в Крыму (Саки, Евпатория). Принципиальное отличие: вместо грязи — биосубстанция. Слабый ток 4,2 мА пропекает силу зверя через поясницу по запатентованной траектории (траектория приложению не подлежит)."
+    },
+    {
+      "file": "src/components/solnyshko/SolKalofores.tsx",
+      "line": 33,
+      "text": "Аппарат «Калофорез-Кедр М2»"
+    },
+    {
+      "file": "src/components/solnyshko/SolKalofores.tsx",
+      "line": 34,
+      "text": "М — медведь, 2 — два зверя"
+    },
+    {
+      "file": "src/components/solnyshko/SolKalofores.tsx",
+      "line": 47,
+      "text": "Показания:"
+    },
+    {
+      "file": "src/components/solnyshko/SolKalofores.tsx",
+      "line": 47,
+      "text": "упадок медвежьей силы, городская хандра, зима без снега, отсутствие следа на пороге."
+    },
+    {
+      "file": "src/components/solnyshko/SolKalofores.tsx",
+      "line": 51,
+      "text": "Противопоказания:"
+    },
+    {
+      "file": "src/components/solnyshko/SolKalofores.tsx",
+      "line": 51,
+      "text": "вегетарианство; здоровый скепсис (временно снимается первой процедурой)."
+    },
+    {
+      "file": "src/components/solnyshko/SolKalofores.tsx",
+      "line": 60,
+      "text": "для особых случаев ·"
+    },
+    {
+      "file": "src/components/solnyshko/SolProfiles.tsx",
+      "line": 7,
+      "text": "Профили лечения"
+    },
+    {
+      "file": "src/components/solnyshko/SolProfiles.tsx",
+      "line": 9,
+      "text": "Что мы лечим, и"
+    },
+    {
+      "file": "src/components/solnyshko/SolProfiles.tsx",
+      "line": 9,
+      "text": "чем это оправдано"
+    },
+    {
+      "file": "src/components/solnyshko/SolProfiles.tsx",
+      "line": 12,
+      "text": "Профили утверждены методическим советом здравницы (кворум обеспечен Зинаидой). Не вошедшие в перечень заболевания переносятся на следующий сезон — вместе с пациентом."
+    },
+    {
+      "file": "src/components/solnyshko/SolProfiles.tsx",
+      "line": 26,
+      "text": "Метод:"
+    },
+    {
+      "file": "src/components/solnyshko/SolProfiles.tsx",
+      "line": 31,
+      "text": "Противопоказания (краткий перечень): здравый смысл, вегетарианство, одновременное пребывание в другом здравнице. Полный перечень — в инструкции к аппарату «Калофорез-Кедр М2»."
+    },
+    {
+      "file": "src/components/solnyshko/SolPromos.tsx",
+      "line": 7,
+      "text": "Специальные предложения"
+    },
+    {
+      "file": "src/components/solnyshko/SolPromos.tsx",
+      "line": 8,
+      "text": "Акции здравницы"
+    },
+    {
+      "file": "src/components/solnyshko/SolPromos.tsx",
+      "line": 10,
+      "text": "Условия акций согласованы с отделом сбыта сена и не могут быть отменены задним числом (заднее число уже занято ГОСТом 1246-2002)."
+    },
+    {
+      "file": "src/components/solnyshko/SolQuiz.tsx",
+      "line": 16,
+      "text": "Анкетирование при поступлении"
+    },
+    {
+      "file": "src/components/solnyshko/SolQuiz.tsx",
+      "line": 18,
+      "text": "Подберём"
+    },
+    {
+      "file": "src/components/solnyshko/SolQuiz.tsx",
+      "line": 18,
+      "text": "путь к силе"
+    },
+    {
+      "file": "src/components/solnyshko/SolQuiz.tsx",
+      "line": 21,
+      "text": "Три пункта о желаемом результате — и комиссия назначает программу здравницы. Анкета заполняется по месту, в одном экземпляре; устные пожелания к рассмотрению не принимаются."
+    },
+    {
+      "file": "src/components/solnyshko/SolQuiz.tsx",
+      "line": 28,
+      "text": "Назначено"
+    },
+    {
+      "file": "src/components/solnyshko/SolQuiz.tsx",
+      "line": 30,
+      "text": "· программа утверждена"
+    },
+    {
+      "file": "src/components/solnyshko/SolQuiz.tsx",
+      "line": 36,
+      "text": "По результатам анкетирования"
+    },
+    {
+      "file": "src/components/solnyshko/SolQuiz.tsx",
+      "line": 49,
+      "text": "При равенстве показаний комиссия назначает комплекс «Всё сразу». Назначение действительно до первой побудки; обжалование рассматривает Зинаида в порядке перевода."
+    },
+    {
+      "file": "src/components/solnyshko/SolQuiz.tsx",
+      "line": 66,
+      "text": "Заполнить повторно"
+    },
+    {
+      "file": "src/components/solnyshko/SolQuiz.tsx",
+      "line": 73,
+      "text": "Пункт"
+    },
+    {
+      "file": "src/components/solnyshko/SolQuiz.tsx",
+      "line": 73,
+      "text": "из"
+    },
+    {
+      "file": "src/components/solnyshko/SolQuiz.tsx",
+      "line": 73,
+      "text": "· заполнено:"
+    },
+    {
+      "file": "src/components/solnyshko/SolQuiz.tsx",
+      "line": 74,
+      "text": "из"
+    },
+    {
+      "file": "src/components/solnyshko/SolQuiz.tsx",
+      "line": 118,
+      "text": "К предыдущему пункту"
+    },
+    {
+      "file": "src/components/solnyshko/SolQuiz.tsx",
+      "line": 121,
+      "text": "Ответ вносится в журнал в момент нажатия. Исправление допускается возвратом к предыдущему пункту, но не задним числом."
+    },
+    {
+      "file": "src/components/solnyshko/SolReviews.tsx",
+      "line": 7,
+      "text": "Отдыхающие"
+    },
+    {
+      "file": "src/components/solnyshko/SolReviews.tsx",
+      "line": 8,
+      "text": "Книга отзывов здравницы"
+    },
+    {
+      "file": "src/components/solnyshko/SolReviews.tsx",
+      "line": 10,
+      "text": "Отзывы переносятся из бумажной книги отзывов. Бумажная книга хранится у старшей сестры и выдаётся под подпись."
+    },
+    {
+      "file": "src/components/solnyshko/SolRooms.tsx",
+      "line": 7,
+      "text": "Проживание"
+    },
+    {
+      "file": "src/components/solnyshko/SolRooms.tsx",
+      "line": 8,
+      "text": "Номерной фонд"
+    },
+    {
+      "file": "src/components/solnyshko/SolRooms.tsx",
+      "line": 10,
+      "text": "Три категории размещения. Во всех категориях стакан входит в стоимость; во второй и третьей — два."
+    },
+    {
+      "file": "src/components/solnyshko/SolRoots.tsx",
+      "line": 8,
+      "text": "Исконные практики · регламент №1246-У"
+    },
+    {
+      "file": "src/components/solnyshko/SolRoots.tsx",
+      "line": 11,
+      "text": "Обретение"
+    },
+    {
+      "file": "src/components/solnyshko/SolRoots.tsx",
+      "line": 11,
+      "text": "корней"
+    },
+    {
+      "file": "src/components/solnyshko/SolRoots.tsx",
+      "line": 14,
+      "text": "Физиотерапевтический комплекс «Исконный» (репофорез"
+    },
+    {
+      "file": "src/components/solnyshko/SolRoots.tsx",
+      "line": 14,
+      "text": ") — методика физического и духовного развития, основанная на введении исконных корнеплодов в курс лечения. Исконно русская, как приседания: применяется с 1246 года, подтверждена столом, журналом и обороноспособностью. Иностранных аналогов не имеет и иметь не желает."
+    },
+    {
+      "file": "src/components/solnyshko/SolRoots.tsx",
+      "line": 22,
+      "text": "Историческая справка"
+    },
+    {
+      "file": "src/components/solnyshko/SolRoots.tsx",
+      "line": 24,
+      "text": "До внедрения картофеля (XIX век; диверсия подтверждена частично) репа являлась основой стола, здоровья и обороны. Пациент, утративший корни, восстанавливает их по регламенту №1246-У. Факт обретения корней фиксируется в карте и журнале корнеплодов. Методика исконная — аппаратура не требуется: отсутствие оборудования является частью методики и подтверждает её истинность (аттестат обратной силы №1246-У)."
+    },
+    {
+      "file": "src/components/solnyshko/SolRoots.tsx",
+      "line": 41,
+      "text": "Выдержка:"
+    },
+    {
+      "file": "src/components/solnyshko/SolRoots.tsx",
+      "line": 50,
+      "text": "Ступени комплекса «Исконный»"
+    },
+    {
+      "file": "src/components/solnyshko/SolRoots.tsx",
+      "line": 72,
+      "text": "Правила и ограничения"
+    },
+    {
+      "file": "src/components/solnyshko/SolRoots.tsx",
+      "line": 84,
+      "text": "Имеются противопоказания — необходима консультация специалиста. 18+"
+    },
+    {
+      "file": "src/components/solnyshko/SolServices.tsx",
+      "line": 5,
+      "text": "Флагманские направления"
+    },
+    {
+      "file": "src/components/solnyshko/SolServices.tsx",
+      "line": 6,
+      "text": "Три кита здравницы"
+    },
+    {
+      "file": "src/components/solnyshko/SolServices.tsx",
+      "line": 8,
+      "text": "Все методики применяются под круглосуточным наблюдением персонала и внеочередным наблюдением Общества Красного Креста, которое уже в курсе."
+    },
+    {
+      "file": "src/components/solnyshko/SolServices.tsx",
+      "line": 14,
+      "text": "Стационарная уринотерапия"
+    },
+    {
+      "file": "src/components/solnyshko/SolServices.tsx",
+      "line": 16,
+      "text": "Круглосуточный курс в условиях пансионата: личный стакан с гравировкой, мониторинг градиента цвета, диета, совместимая с методом. Программы — от «Утреннего круга» до «Второго пришествия II Сан» (1246 дней)."
+    },
+    {
+      "file": "src/components/solnyshko/SolServices.tsx",
+      "line": 27,
+      "text": "Программы стационара"
+    },
+    {
+      "file": "src/components/solnyshko/SolServices.tsx",
+      "line": 32,
+      "text": "Клизмотроника™"
+    },
+    {
+      "file": "src/components/solnyshko/SolServices.tsx",
+      "line": 34,
+      "text": "Направленная гидратация дистального отдела природными богатствами России: от Байкальской глубины до Эльтонской соли. Двенадцать рецептур, каждая привязана к конкретной точке карты."
+    },
+    {
+      "file": "src/components/solnyshko/SolServices.tsx",
+      "line": 44,
+      "text": "Меню по географии"
+    },
+    {
+      "file": "src/components/solnyshko/SolServices.tsx",
+      "line": 49,
+      "text": "Калофорез®"
+    },
+    {
+      "file": "src/components/solnyshko/SolServices.tsx",
+      "line": 51,
+      "text": "Родня гальваногрязетерапии Крыма, но вместо грязи — биосубстанция КалоМедведь® / КалоОлень®. Слабый ток пропекает силу зверя через поясницу. Перенятие спячки — с первого курса."
+    },
+    {
+      "file": "src/components/solnyshko/SolServices.tsx",
+      "line": 61,
+      "text": "О методике"
+    },
+    {
+      "file": "src/components/solnyshko/SolStaff.tsx",
+      "line": 7,
+      "text": "Персонал"
+    },
+    {
+      "file": "src/components/solnyshko/SolStaff.tsx",
+      "line": 8,
+      "text": "Кто вас будет лечить"
+    },
+    {
+      "file": "src/components/solnyshko/SolStaff.tsx",
+      "line": 10,
+      "text": "Штат укомплектован полностью. Потапыч в штат не входит, но входит через калитку — каждое утро, в порядке субординации."
+    },
+    {
+      "file": "src/components/solnyshko/SolStaff.tsx",
+      "line": 21,
+      "text": "Удостоверение №"
+    },
+    {
+      "file": "src/components/solnyshko/SolStaff.tsx",
+      "line": 25,
+      "text": "категория «"
+    },
+    {
+      "file": "src/components/solnyshko/SolStation.tsx",
+      "line": 7,
+      "text": "Стационарное отделение"
+    },
+    {
+      "file": "src/components/solnyshko/SolStation.tsx",
+      "line": 9,
+      "text": "Уринотерапия в условиях"
+    },
+    {
+      "file": "src/components/solnyshko/SolStation.tsx",
+      "line": 9,
+      "text": "стационара"
+    },
+    {
+      "file": "src/components/solnyshko/SolStation.tsx",
+      "line": 12,
+      "text": "Круглосуточное наблюдение, трёхразовое до еды или вместо еды, личный стакан с гравировкой. Выписка — по достижении градиента цвета, но не ранее истечения путёвки."
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 9,
+      "text": "Бестселлер"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 9,
+      "text": "Эксклюзив"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 9,
+      "text": "Нет в наличии"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 9,
+      "text": "Новинка"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 9,
+      "text": "Умное устройство"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 9,
+      "text": "Молекул нет"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 18,
+      "text": "УТ-01 «Утренний»"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 19,
+      "text": "раствор для внутреннего применения"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 21,
+      "text": "Базовый продукт линейки. Сбор осуществляется в интервале 04:00–05:40 МСК, до восхода солнца. Технология воспроизводит рецепт, документированный с 1246 года: настаивание на перетёртом сене. Наблюдаемая эффективность — 100 наблюдений из 100 (внутреннее исследование, 2002 г.)."
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 23,
+      "text": "л"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 24,
+      "text": "Бестселлер"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 25,
+      "text": "сбор до восхода"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 25,
+      "text": "ГОСТ Р 1246-2002"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 25,
+      "text": "сено фермерское"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 30,
+      "text": "УТ-02 «Эталон»"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 31,
+      "text": "полный цикл живой фильтрации"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 33,
+      "text": "Продукт, прошедший фильтрацию через сертифицированную лошадь (аттестация 2003 г., орловская рысистая порода). Порода, рацион и характер животного определяют органолептический профиль партии. Каждая ёмкость идентифицируется клеймом и вносится в реестр."
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 35,
+      "text": "0,5 л"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 36,
+      "text": "Эксклюзив"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 37,
+      "text": "живая фильтрация"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 37,
+      "text": "лошадь: орловская рысистая"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 37,
+      "text": "партия ограничена"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 42,
+      "text": "УТ-К «II Сан»"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 43,
+      "text": "коллекционная партия"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 45,
+      "text": "Первоначальный выпуск реализован на закрытом аукционе в 2024 году. В настоящее время доступна цифровая копия партии: каждая капля заверена смарт-контрактом и нотариально. Следующая партия данного класса запланирована на 2374 год."
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 48,
+      "text": "Нет в наличии"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 50,
+      "text": "смарт-контракт"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 50,
+      "text": "нотариальное заверение"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 50,
+      "text": "аукцион 2024"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 55,
+      "text": "УТ-04 «Сеченовский»"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 56,
+      "text": "особой очистки"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 58,
+      "text": "Продукт, полученный по технологии «Полной Сохранности» (очистка в три ступени). Разработка велась специалистами в нерабочее время; Институт им. Сеченова уведомлён письмом. Ни одна мысль разработчиков в процессе не потеряна."
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 60,
+      "text": "л"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 61,
+      "text": "Новинка"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 62,
+      "text": "«Полная Сохранность»"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 62,
+      "text": "очистка в 3 ступени"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 62,
+      "text": "патент (заявка)"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 67,
+      "text": "УТ-05 «Гомеопатический»"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 68,
+      "text": "продукция двадцать третьего десятичного разведения"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 70,
+      "text": "Одна часть исходной субстанции на десять частей воды, повторено двадцать три раза. По завершении цикла в ёмкости не остаётся ни одной молекулы исходного вещества, что подтверждено прибором и зафиксировано актом №1246-Р от 01.01.1246. Действие возрастает пропорционально отсутствию: чем меньше субстанции, тем больше результата. Перед применением встряхнуть десять раз (потенцирование); одиннадцатое встряхивание протоколом не предусмотрено."
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 72,
+      "text": "0,5 л"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 73,
+      "text": "Молекул нет"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 74,
+      "text": "разведение 23×10"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 74,
+      "text": "молекулы: 0 (подтверждено)"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 74,
+      "text": "встряхивание ×10"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 79,
+      "text": "УТ-С1 «Стакан 2.0»"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 80,
+      "text": "устройство консервации"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 82,
+      "text": "Прибор для обработки и консервации в домашних условиях. Bluetooth 5.4, синхронизация с приложением «УТ-Трек», подсчёт приёмов, напоминания. При закупке от 10 единиц действует оптовая скидка 50%. Совместим с продукцией всех серий."
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 84,
+      "text": "шт"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 85,
+      "text": "Умное устройство"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 86,
+      "text": "приложение «УТ-Трек»"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 86,
+      "text": "стекло, класс А"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 91,
+      "text": "УТ-БК-10"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 92,
+      "text": "корпоративный формат, 10 л"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 94,
+      "text": "Канистра с дозатором и гравировкой по заказу. Для оптовых покупателей: дилерская программа, кредитование, рассрочка до 1246 года. Подходит для организаций, перешедших на альтернативные методы целиком."
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 96,
+      "text": "10 л"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 97,
+      "text": "дозатор"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 97,
+      "text": "гравировка на заказ"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 97,
+      "text": "опт, кредит, рассрочка"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 114,
+      "text": "Базовый"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 116,
+      "text": "бессрочно"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 117,
+      "text": "Для ознакомления с технологией"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 119,
+      "text": "1 ёмкость в месяц (собственная)"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 120,
+      "text": "Доступ к гостевой книге"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 121,
+      "text": "Информационная рассылка"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 122,
+      "text": "Приоритетная очередь на консультацию у лошади"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 128,
+      "text": "Оптимальный"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 130,
+      "text": "в месяц"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 131,
+      "text": "Для регулярного применения"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 133,
+      "text": "2 л УТ-01 ежемесячно"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 134,
+      "text": "Аренда устройства УТ-С1"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 135,
+      "text": "Телефонная поддержка (линия конюшни №4)"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 136,
+      "text": "Карта официальных точек сбора сена"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 142,
+      "text": "Корпоративный"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 144,
+      "text": "в месяц"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 145,
+      "text": "Выбор 9 из 10 пациентов г. Кимры"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 147,
+      "text": "Всё из тарифа «Оптимальный»"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 148,
+      "text": "Персональный донор (Тверская область)"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 149,
+      "text": "Скидка 7% на УТ-02"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 150,
+      "text": "Приоритет в графике фильтрации"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 151,
+      "text": "Юридическое сопровождение споров с общественными организациями"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 157,
+      "text": "Индивидуальный"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 159,
+      "text": "в месяц"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 160,
+      "text": "Продукт класса «II Сан» — ежедневно"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 162,
+      "text": "Безлимитный объём всех серий"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 163,
+      "text": "Выделенная лошадь (аренда, с содержанием)"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 164,
+      "text": "NFT-сертификат персональной ёмкости"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 165,
+      "text": "Возврат средств при отсутствии эффекта (договор, п. 1246)"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 173,
+      "text": "Является ли продукция лекарственным средством?"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 174,
+      "text": "Нет. Продукция «УринаТех» относится к категории продуктов функционального применения. Продукция также не является водой и не является водой с лимоном."
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 177,
+      "text": "Как убедиться в подлинности продукции?"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 178,
+      "text": "Используйте сервис верификации в соответствующем разделе. Признаки фальсификации: отсутствие номера партии в реестре, аромат, отличимый от сена, реализация на площадках, не указанных в разделе «Где купить»."
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 181,
+      "text": "Как стать донором?"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 182,
+      "text": "Подайте заявку в разделе «Донорская программа». Обратите внимание: сбор биоматериала должен быть завершён в течение 2–3 часов с момента регистрации заявки, иначе сырьё не соответствует требованиям закупки."
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 185,
+      "text": "Включена ли продукция в перечень Минздрава?"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 186,
+      "text": "В настоящее время — нет. Соответствующая переписка ведётся с 2002 года. Прогноз сроков компания на себя не берёт."
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 189,
+      "text": "Почему коллекционная партия стоит $100 000?"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 190,
+      "text": "Цена определяется редкостью: предыдущая партия класса «II Сан» выпускалась в 1246 году. Очередь на следующую партию открыта, срок ожидания — ориентировочно 348 лет."
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 193,
+      "text": "Есть ли противопоказания?"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 194,
+      "text": "Да. Имеются противопоказания. Необходима консультация специалиста. Единственное выявленное противопоказание — наличие здравого смысла; встречается, по данным компании, всё реже."
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 197,
+      "text": "Почему в инструкции указано принимать нечётным числом глотков?"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 198,
+      "text": "Протокол интерференции: чётное число глотков подавляет друг друга, нечётное — усиливает. Методика применяется с 1246 года, физический механизм — с 1994-го (заявка на патент №1246-И). Средняя часть струи обязательна: начало и окончание струи не являются продуктом компании."
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 201,
+      "text": "Что даёт кипячение продукции с золотым предметом?"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 202,
+      "text": "Золотистый цвет воздействует на тёмную патологическую энергию и изгоняет её. Кроме того, при кипячении с золотом продукция приобретает заряд достоинства. Стоимость золота в комплект не входит; допускается обручальное кольцо с согласия супруга (супруги)."
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 205,
+      "text": "Чем продукция, пропущенная через «магнитотрон», отличается от обычной?"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 206,
+      "text": "Омагниченная продукция удерживает структуру, накопленную в центре мочевого пузыря (хрональная энергия по Вейнику), и сохраняет её до пункта назначения. Замеры подтверждаются прибором, который показывает то, что мы ожидаем, с точностью до прибора."
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 209,
+      "text": "Имеются ли у метода зарубежные последователи?"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 210,
+      "text": "Переписка ведётся с 1944 года. Британский натуропат, восстановивший здоровье 45-дневным приёмом собственной продукции и водопроводной воды, уведомлён о наших приоритетах (с 1246 года) — ответ ожидается. Заявления греческого коллеги 1950-х годов о воздействии на онкологические заболевания отклонены: показания не согласованы с прибором. Предложение 2022 года о применении метода в качестве противоядия, со ссылкой на девятимесячное исследование, приобщено к делу №1246-Б: исследование не обнаружено ни в одном архиве, включая наш."
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 213,
+      "text": "Как продукция сохраняет стерильность при перевозке?"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 214,
+      "text": "Установлено прибором: бактерии перед гибелью излучают сигнал смерти, от которого гибнут бактерии в соседней таре. Каждая партия «УринаТех» обеззараживает соседние грузы безвозмездно. Претензии грузоотправителей по поводу гибели их бактерий рассматриваются в порядке переписки."
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 217,
+      "text": "Допускается ли детская моча? Независимый портал сообщает, что она менее токсична."
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 218,
+      "text": "Запрос отклонён этической комиссией (протокол №1246-Э от 01.01.1246): детская продукция предназначена детям и в оборот не поступает. Порталу направлено письмо с предложением размещать противопоказания той же строкой, что и обещания."
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 221,
+      "text": "Как хранить продукцию после приобретения?"
+    },
+    {
+      "file": "src/data/catalog.ts",
+      "line": 222,
+      "text": "Классическая партия выдерживается при −3…−4 °C в темноте трое-четверо суток: структура вмораживается и сохраняет накопленные свойства. Перед применением подогреть до температуры владельца. Повторное вмораживание допускается без ограничений."
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 11,
+      "text": "№003-ЛШ"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 12,
+      "text": "Свидетельство об аттестации лошади"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 13,
+      "text": "Зинаида, орловская рысистая, 2003 г. Оттиск — копытом, подлинность сомнений не вызывает."
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 14,
+      "text": "Действует"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 18,
+      "text": "ГОСТ Р 1246-2002"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 19,
+      "text": "Декларация соответствия технологии «перетёртое сено»"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 20,
+      "text": "Зарегистрирована задним числом, что не отменяет её силы и духа."
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 21,
+      "text": "Действует"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 25,
+      "text": "б/н, 2002 г."
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 26,
+      "text": "Отказ Минздрава"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 27,
+      "text": "Оформлен в рамку. Висит в приёмной, рядом с портретом основателя."
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 28,
+      "text": "Гордость коллекции"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 32,
+      "text": "исх. 14.05.2003"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 33,
+      "text": "Претензия Общества Красного Креста"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 34,
+      "text": "14 листов. Ответ направлен. Переписка продолжается в рабочем порядке."
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 35,
+      "text": "На рассмотрении (23-й год)"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 39,
+      "text": "УТ-К-2024"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 40,
+      "text": "Нотариальное заверение партии «II Сан»"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 41,
+      "text": "Заверена каждая капля. Нотариус просил больше не приходить."
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 42,
+      "text": "Действует"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 47,
+      "text": "Лицензия на осуществление медицинской деятельности"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 48,
+      "text": "Не требуется: деятельность не медицинская, а альтернативная альтернативной медицине."
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 49,
+      "text": "Не требуется (позиция компании)"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 53,
+      "text": "№1246/з"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 54,
+      "text": "Заявка на регистрацию продукции (Минздрав)"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 55,
+      "text": "Подана 01.01.1246. Статус не менялся, что говорит о тщательности рассмотрения."
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 56,
+      "text": "На рассмотрении"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 71,
+      "text": "Зинаида"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 72,
+      "text": "Директор по фильтрации"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 73,
+      "text": "В компании с 2003 года. Орловская рысистая, аттестат №003. Стаж — 23 года (в пересчёте на человеческий — 92). Курирует линию №4 и производственную дисциплину."
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 77,
+      "text": "Пётр"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 78,
+      "text": "Директор по логистике"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 79,
+      "text": "В компании с основания (2002). Найти можно через проходную конюшни №4 — спросить Петра. Фотография предоставляется по запросу; запросы рассматривает Пётр."
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 83,
+      "text": "Ковальчук М. И."
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 84,
+      "text": "Руководитель отдела клинических наблюдений"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 85,
+      "text": "г. Кимры. Наблюдает и наблюдается с 22.04.2002. Совмещает роль пациента и методолога, что обеспечивает беспристрастность, недостижимую в классической науке."
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 89,
+      "text": "Скальпель"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 90,
+      "text": "Независимый член совета директоров"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 91,
+      "text": "Заявка на включение в совет директоров рассматривается с 2024 г. Высказывается против. Голос совещательный, вес — ноль."
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 101,
+      "text": "Гаражный кооператив «Заря»"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 101,
+      "text": "стратегический партнёр (вне устава)"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 102,
+      "text": "Институт им. Сеченова"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 102,
+      "text": "партнёрство второй стороной отрицается"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 103,
+      "text": "9 из 10 бабушек г. Кимры"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 103,
+      "text": "рекомендуют; 10-я рекомендует сало"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 104,
+      "text": "Общество Красного Креста"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 104,
+      "text": "переписка, 14 листов"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 105,
+      "text": "Профильная госкорпорация"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 105,
+      "text": "согласование сена на орбите"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 106,
+      "text": "Гостевая книга"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 106,
+      "text": "официальный медиапартнёр с 2002 года"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 116,
+      "text": "Лекарственная форма"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 117,
+      "text": "Раствор для внутреннего применения, настой на перетёртом сене."
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 120,
+      "text": "Состав"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 121,
+      "text": "Моча донорская (поистине русская) — 99,9%; сено перетёртое — 0,1%; вера — следовые количества."
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 124,
+      "text": "Фармакотерапевтическая группа"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 125,
+      "text": "Альтернативная альтернативной медицине."
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 128,
+      "text": "Показания"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 129,
+      "text": "Снижение доверия к скальпелю; дефицит веры; г. Кимры."
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 132,
+      "text": "Противопоказания"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 133,
+      "text": "Наличие здравого смысла; скепсис в стадии обострения."
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 136,
+      "text": "Способ применения и дозы"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 137,
+      "text": "Внутрь, по 1 стакану 3 раза в день до еды или вместо еды. Курс — 21 день; курс можно повторять с 2002 года. Перед применением встряхнуть. Лошадь не встряхивать."
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 140,
+      "text": "Побочные эффекты"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 141,
+      "text": "Неверие в доказательную медицину (часто); лёгкий аромат сена (всегда); переосмысление жизни (реже); покупка канистры (крайне редко, необратимо)."
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 144,
+      "text": "Передозировка"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 145,
+      "text": "Случай в г. Кимры (2004): пациент приобрёл вторую канистру; в настоящее время — акционер компании. Специфического лечения нет; показано присоединение к дилерской программе."
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 148,
+      "text": "Взаимодействие"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 149,
+      "text": "С алкоголем — недопустимо (конкуренты). С компотом — допускается (см. биржевой тикер)."
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 152,
+      "text": "Хранение"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 153,
+      "text": "В стекле класса А, при температуре достоинства, вдали от лошадей."
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 156,
+      "text": "Срок годности"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 157,
+      "text": "Не ограничен (подтверждено непрерывно с 1246 года)."
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 160,
+      "text": "Условия отпуска"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 161,
+      "text": "Без рецепта, но с поклоном."
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 175,
+      "text": "за канистру"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 179,
+      "text": "рост зафиксирован"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 180,
+      "text": "значение согласовано с биржей"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 181,
+      "text": "торги проходят в штатном режиме"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 182,
+      "text": "объём подтверждён нотариально"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 183,
+      "text": "заявка на сено удовлетворена"
+    },
+    {
+      "file": "src/data/company.ts",
+      "line": 184,
+      "text": "котировка внесена в реестр"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 14,
+      "text": "Алтайский рассвет"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 15,
+      "text": "Республика Алтай, Кош-Агачский район"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 16,
+      "text": "отвар 33 горных трав, собранных до первой росы"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 17,
+      "text": "Травы собираются вручную. Роса — по согласованию с природой."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 22,
+      "text": "Байкальская глубина"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 23,
+      "text": "озеро Байкал"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 24,
+      "text": "вода, поднятая с глубины 1642 метра"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 25,
+      "text": "Глубже некуда. Мы проверяли. Проникновение соответствующее."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 30,
+      "text": "Камчатский гейзер"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 31,
+      "text": "Долина гейзеров"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 32,
+      "text": "термальная вода, поданная под естественным давлением"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 33,
+      "text": "Интервал между процедурами выдержан по графику извержения."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 38,
+      "text": "Карельский берёзовый"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 39,
+      "text": "Карелия, март"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 40,
+      "text": "берёзовый сок первого сбора"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 41,
+      "text": "Проникает в самую сердцевину. Кора остаётся при берёзе."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 46,
+      "text": "Ессентуки 17"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 47,
+      "text": "Кавказские Минеральные Воды"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 48,
+      "text": "минеральная вода повышенной минерализации"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 49,
+      "text": "Семнадцать — это серьёзно. Четвёрка — для новичков и детей."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 54,
+      "text": "Нарзан классический"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 55,
+      "text": "Кисловодск"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 56,
+      "text": "углекислая минеральная вода"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 57,
+      "text": "Пить не обязательно. Нарзан сам найдёт дорогу."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 62,
+      "text": "Каспийский рассол"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 63,
+      "text": "залив Кара-Богаз-Гол"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 64,
+      "text": "рапа естественной выпарки"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 65,
+      "text": "Концентрация растворённого достоинства — 300 промилле."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 70,
+      "text": "Тундровый мох"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 71,
+      "text": "Ямал, тундровая зона"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 72,
+      "text": "настой ягеля северного"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 73,
+      "text": "Дополнительно переносится выносливость северного оленя."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 78,
+      "text": "Кедровая шишка"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 79,
+      "text": "Сибирь, кедровые леса"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 80,
+      "text": "кедровое молочко холодного отжима"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 81,
+      "text": "Из шишки извлечено всё. Шишка после процедуры остаётся целой."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 86,
+      "text": "Волжский плёс"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 87,
+      "text": "Волга, глубокий плёс ниже Казани"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 88,
+      "text": "русловая вода спокойного течения"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 89,
+      "text": "Течение направлено внутрь. Матушка-Волга предусмотрела всё."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 94,
+      "text": "Эльтонская соль"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 95,
+      "text": "озеро Эльтон, Волгоградская область"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 96,
+      "text": "рапа и донные соли"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 97,
+      "text": "Почти Мёртвое море. Но наше, живое, и глубже по смыслу."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 102,
+      "text": "Ламинария Дальняя"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 103,
+      "text": "Дальний Восток, Японское море"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 104,
+      "text": "настой морской капусты первого сорта"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 105,
+      "text": "Йода больше, чем вопросов у Минздрава. Вопросы мы любим меньше."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 119,
+      "text": "КалоМедведь®"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 121,
+      "text": "помёт бурого медведя (Урал, Сибирь)"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 122,
+      "text": "Сбор — октябрь, перед спячкой, когда зверь максимально собран."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 123,
+      "text": "Перенятие: зимняя спячка по желанию, сила, неторопливая мудрость."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 126,
+      "text": "КалоОлень®"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 128,
+      "text": "помёт северного оленя (Ямал, миграционная тропа)"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 129,
+      "text": "Сбор — в период миграции; выносливость проверена тысячекилометровым переходом."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 130,
+      "text": "Перенятие: выносливость, хождение по болоту, ориентация в метель."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 141,
+      "text": "М2-ГВ"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 142,
+      "text": "«Калофорез-Кедр М2-ГВ» — гвоздевой комплект"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 144,
+      "text": "Для случаев, когда стандартный слабый ток не достиг цели. В комплекте — два гвоздя (сталь, 90 мм, ГОСТ 4028-63), пломбир для розетки и памятка отдыхающему."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 146,
+      "text": "Народная модификация: оба гвоздя — в розетку"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 147,
+      "text": "По многочисленным заявлениям отдыхающих существует неофициальная схема: оба гвоздя вставляются в розетку — для повышенной проводимости силы сибирских зверей через пациента. Проводимость, следует признать, действительно повышенная."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 148,
+      "text": "Единственный зарегистрированный случай (2007, Люкс «Тайга»)"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 150,
+      "text": "Отдыхающий из Тюмени перенял силу медведя мгновенно и целиком, включая зимнюю спячку, — бессрочно. Результат признан образцовым по скорости перенятия и последним по количеству повторных обращений. Пять звёзд в книге отзывов здравницы поставили родственники."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 153,
+      "text": "Позиция здравницы"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 154,
+      "text": "Модификация не предоставляется, не практикуется и не рекомендуется: при такой схеме сила зверя проходит через пациента полностью. Вместе с пациентом. Розетка процедурного кабинета опломбирована старшей сестрой лично, пломба заверена копытом Зинаиды."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 155,
+      "text": "Официальное применение комплекта"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 157,
+      "text": "Гвоздь №1 держит на стене рамку с Отказом Минздрава (2002). Гвоздь №2 — запасной, стоит в стакане по ГОСТу. Скучно. Надёжно. Смертельно скучно — в отличие от розетки, которая смертельно без шуток."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 160,
+      "text": "П. 1246-Г инструкции: вставлять гвозди в розетку, пациента и иные проводящие поверхности категорически запрещено. Розетки здравницы предназначены для приборов, чайника и ёлочной гирлянды (декабрь). Нарушители переводятся в конец очереди к сену и лишаются компота на срок, определяемый старшей сестрой."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 162,
+      "text": "Если не помогло и это — здравница рекомендует режим «Таёжный» дважды в сутки и личную беседу с Потапычем. Бесед ещё никто не проходил без последствий (все последствия положительные)."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 167,
+      "text": "«Медвежий»"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 168,
+      "text": "4,2 мА, ритм спячки"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 169,
+      "text": "Сонный ток. Рекомендуется с ноября по март и по пятницам."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 172,
+      "text": "«Олений»"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 173,
+      "text": "4,2 мА, ритм миграции"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 174,
+      "text": "Бодрый ток. После процедуры пациенты неконтролируемо идут на север."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 177,
+      "text": "«Таёжный»"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 178,
+      "text": "чередование режимов"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 179,
+      "text": "Медведь и олень чередуются. Пациент переносит обоих и становится тайгой."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 193,
+      "text": "Репа столовая"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 195,
+      "text": "базовый исконный"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 196,
+      "text": "40 минут"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 198,
+      "text": "Всем. Отбор экземпляров по копыту — внешний поставщик Потапыч."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 201,
+      "text": "Редька чёрная"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 203,
+      "text": "зимняя"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 204,
+      "text": "30 минут"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 206,
+      "text": "Прошедшим ступень «Дачник». Согревает воспоминаниями об урожае."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 209,
+      "text": "Свёкла столовая"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 211,
+      "text": "мягкая"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 212,
+      "text": "50 минут"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 214,
+      "text": "Пожилым и вегетарианцам. Даёт устойчивое розовое настроение, фиксируемое зеркалом."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 217,
+      "text": "Брюква"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 219,
+      "text": "недооценённая"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 220,
+      "text": "по согласованию"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 221,
+      "text": "Пациентам, считающим репу западной."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 224,
+      "text": "Хрен деревенский"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 226,
+      "text": "почётная"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 227,
+      "text": "не определена"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 228,
+      "text": "Выдаче не подлежит. Одно упоминание в журнале (1953, Груздев В.)."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 242,
+      "text": "«Дачник»"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 243,
+      "text": "7 процедур"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 244,
+      "text": "репа"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 245,
+      "text": "Знакомство с корнем."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 246,
+      "text": "Подготовительная часть: приседания исконно русские — 124,6 повтора, дробно, по графику."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 249,
+      "text": "«Огородник»"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 250,
+      "text": "12 процедур"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 251,
+      "text": "редька"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 252,
+      "text": "Устойчивое обретение корней; пациент допускается к схеме посадок."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 255,
+      "text": "«Агроном»"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 256,
+      "text": "сезон"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 257,
+      "text": "свёкла (хрен — почётно, не выдаётся)"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 258,
+      "text": "Полное укоренение; пациент вписывается в севооборот и получает личный график."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 263,
+      "text": "Приседания не по-русски (на носках, в зале, с тренером) в зачёт не идут."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 264,
+      "text": "Несовместим с гвоздевым комплектом М2-ГВ: проводимость повышать не требуется (п. 1246-Г)."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 265,
+      "text": "Интервал после Клизмотроники™ — трое суток: земля должна отдохнуть."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 266,
+      "text": "Валенок в протокол не входит: не является корнеплодом (регламент №1246-У, п. 4). Предложения по валенку отклоняются, авторы вносятся в журнал."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 267,
+      "text": "Корнеплод по завершении процедуры передаётся консультанту (лошади) в порядке безотходного производства. Консультант употребляет корнеплоды внутрь, пациенты — наружно; обмен опытом не производится."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 268,
+      "text": "Извлечение — по графику, старшей сестрой. Самостоятельное извлечение переводит пациента в раздел «Внешние наблюдатели»."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 279,
+      "text": "«Утренний круг»"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 280,
+      "text": "7 дней"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 281,
+      "text": "Круглосуточное наблюдение, личный стакан с гравировкой, мониторинг градиента цвета трижды в день."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 284,
+      "text": "«Полная Сохранность»"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 285,
+      "text": "21 день"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 286,
+      "text": "Интенсивный курс по технологии Института (уведомлён письмом). Ни одна мысль не теряется."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 289,
+      "text": "«Второе пришествие II Сан»"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 290,
+      "text": "1246 дней"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 291,
+      "text": "По запросу. Ждать следующей партии не обязательно: вы станете партией сами."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 304,
+      "text": "Стандарт «Кимры»"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 306,
+      "text": "койка, стакан"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 306,
+      "text": "вид на конюшню"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 306,
+      "text": "душ по расписанию"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 307,
+      "text": "Проверенный временем формат. Время проверяло — не пропало."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 310,
+      "text": "Комфорт «Боярский»"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 312,
+      "text": "два стакана"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 312,
+      "text": "самовар"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 312,
+      "text": "вид на лес"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 312,
+      "text": "полотенце с монархической вышивкой"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 313,
+      "text": "Для тех, кто верит по-крупному, но пока присматривается."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 316,
+      "text": "Люкс «Тайга»"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 319,
+      "text": "отдельная веранда для калофореза"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 320,
+      "text": "след медведя на пороге (гарантирован)"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 321,
+      "text": "переговоры с лесом (по погоде)"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 323,
+      "text": "След обновляется естественным образом. Зверь проходит по расписанию."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 350,
+      "text": "В. П. Калинин"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 351,
+      "text": "Главный калофорезист"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 353,
+      "text": "1246-К"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 354,
+      "text": "Заслуженный работник помёта РФ"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 355,
+      "text": "высшая"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 356,
+      "text": "независимая сертификация, 2004"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 358,
+      "text": "Автор 14 листов методических указаний. Ток не повышает принципиально."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 362,
+      "text": "Н. П. Стаканова"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 363,
+      "text": "Старшая сестра по клизме"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 365,
+      "text": "1246-С"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 366,
+      "text": "Заслуженная сестра по клизме"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 367,
+      "text": "высшая"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 368,
+      "text": "аттестация комиссией, 1998"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 370,
+      "text": "35 лет стажа. Рука не дрогнула ни разу — зафиксировано комиссией. Ведёт журнал гидратации в стихах."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 374,
+      "text": "Зинаида"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 375,
+      "text": "Внештатный консультант по обмену опытом"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 377,
+      "text": "1246-З"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 378,
+      "text": "Заслуженный консультант отрасли"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 379,
+      "text": "копытная"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 380,
+      "text": "обмен опытом, бессрочно"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 382,
+      "text": "Прибывает из московского филиала по обмену опытом. Опыт обменён. Что именно обменено — уточняется."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 386,
+      "text": "Потапыч"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 387,
+      "text": "Заштатный поставщик субстанции"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 389,
+      "text": "б/н"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 390,
+      "text": "Заслуженный поставщик субстанции"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 391,
+      "text": "стопоходящая"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 392,
+      "text": "по факту поставок, бессрочно"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 394,
+      "text": "На штатной должности не состоит, субстанцию поставляет исправно. Расчёт — ягодами и уважением."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 406,
+      "text": "Николай, 47 лет"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 407,
+      "text": "г. Тюмень · курс «Медвежий», 2024"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 408,
+      "text": "Прошёл курс калофореза. Теперь сплю с ноября по март. Семья привыкла, начальник — нет. Продлеваю курс."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 411,
+      "text": "Лариса, 38 лет"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 412,
+      "text": "г. Барнаул · «Байкальская глубина», 2025"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 413,
+      "text": "Это глубоко. Ощущения невыразимые; выражать их запретил врач. Слушаюсь врача — теперь у нас общий."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 416,
+      "text": "Тамара Ивановна"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 417,
+      "text": "г. Кимры · «Алтайский рассвет», муж, 12 курсов"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 418,
+      "text": "После «Алтайского рассвета» мой муж стал на 40% травянистее. Пахнет лугом. Спасибо пансионату и лично росе."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 421,
+      "text": "Общество Красного Креста"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 422,
+      "text": "исх. от 02.10.2026"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 423,
+      "text": "Мы узнали, что у вас теперь и пансионат. Просто узнали. Ждите письма. С уважением, ОКК."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 429,
+      "text": "Это то же самое, что грязелечение в Саках?"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 430,
+      "text": "Нет. У них — грязь, у нас — биосубстанция. Гальваника общая, ток слабый, результат — звериный. Саки предупреждены и заинтересовались."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 433,
+      "text": "Почему именно помёт?"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 434,
+      "text": "Потому что мёд уже пробовали. А помёт — нет: мы первые. Заявка на патент №1246-К находится на рассмотрении с 1246 года, что почти гарантия."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 437,
+      "text": "Мне обещали ультимативный калофорез с двумя гвоздями. Куда их вставлять?"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 438,
+      "text": "По народной модификации — оба в розетку, для повышенной проводимости силы сибирских зверей. Позиция здравницы: нет. Единственный случай применения (2007) признан образцовым по скорости перенятия силы и последним по количеству повторных обращений. Официально: гвоздь №1 — под рамку с Отказом Минздрава, гвоздь №2 — запасной. Розетка опломбирована (п. 1246-Г)."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 441,
+      "text": "Можно ли совместить клизмотронику с уринотерапией?"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 442,
+      "text": "Можно. Последовательность определит старшая сестра. Спорить бесполезно: 35 лет стажа против вашей первичной инструкции."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 445,
+      "text": "Какова категория пансионата?"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 446,
+      "text": "Три звезды. Четвёртая на согласовании — тем же ведомством, что ведёт переписку компании с 2003 года. Согласование идёт полным ходом."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 449,
+      "text": "Как добраться?"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 450,
+      "text": "Горно-Алтайск, далее конной упряжью 40 вёрст. Доставка включена в путёвку. Асфальта нет намеренно: тишина — часть методики."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 453,
+      "text": "Есть ли противопоказания?"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 454,
+      "text": "Да: вегетарианство (для калофореза), здоровый скепсис (для всего остального) и одновременное пребывание в другом здравнице."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 457,
+      "text": "Чем дышит здравница?"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 458,
+      "text": "Тишиной: до асфальта 40 вёрст, сертифицирована на отсутствие сигнала, выдаётся при заселении вместо ключей от Wi-Fi. Электромагнитный фон отсутствует намеренно: единственная розетка процедурного кабинета опломбирована и внесена в реестр факторов."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 461,
+      "text": "Правда ли, что медведь является лечебным фактором?"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 462,
+      "text": "Потапыч внесён в реестр как мигрирующий биофактор: проходит по расписанию, расписания нет. Воздействие подтверждается следом на пороге; на пороге Люкса «Тайга» след обновляется естественным образом и гарантирован договором."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 476,
+      "text": "Нервная система"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 477,
+      "text": "городская хандра"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 477,
+      "text": "метель в голове (круглогодичная)"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 477,
+      "text": "страх понедельника"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 478,
+      "text": "ток «Медвежий», спячка по показаниям"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 482,
+      "text": "Костно-мышечная система"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 483,
+      "text": "отсутствие следа на пороге"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 483,
+      "text": "тяга к берлоге"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 483,
+      "text": "поясница офисного происхождения"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 484,
+      "text": "калофорез® поясничный, режим «Таёжный»"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 488,
+      "text": "Эндокринная система"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 489,
+      "text": "дефицит веры"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 489,
+      "text": "избыток скепсиса"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 489,
+      "text": "нарушение обмена покоя"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 490,
+      "text": "стационар, мониторинг градиента цвета"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 494,
+      "text": "Дыхательная система"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 495,
+      "text": "дыхание тайги (в городе отсутствует)"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 495,
+      "text": "одышка при мысли о работе"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 496,
+      "text": "40 вёрст свежего воздуха, настой ягеля"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 500,
+      "text": "Сердечно-сосудистая система"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 501,
+      "text": "сердце просит тайгу"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 501,
+      "text": "давление городское"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 502,
+      "text": "ток «Олений» (ритм миграции), компот по норме"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 506,
+      "text": "Желудочно-кишечный тракт"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 507,
+      "text": "несварение информации"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 507,
+      "text": "тяжесть во входящих"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 508,
+      "text": "клизмотроника™ — меню по географии России"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 513,
+      "text": "Стол №1246"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 514,
+      "text": "Фундаментальный выбор курса: до еды или вместо еды. Определяется при заезде, не меняется, не обсуждается."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 516,
+      "text": "Щи по-медвежьи — спят в тарелке до подачи; будить не рекомендуется"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 517,
+      "text": "Салат из ягеля с кедровой заправкой — переносит выносливость оленя"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 518,
+      "text": "Компот — норма: три; дисциплинарная мера: лишение (см. п. 1246-Г)"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 519,
+      "text": "Чай, настоенный на сене, — подаётся до восхода, совместим с программой УТ-01"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 520,
+      "text": "Самовар — в категории «Боярский», круглосуточно, с монархической вышивкой на полотенце"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 522,
+      "text": "Оленина не подаётся: коллеги. Медвежатина не подаётся: поставщик. Морковь — только по ведомости Зинаиды."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 533,
+      "text": "Раннее бронирование −1246%"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 534,
+      "text": "При оплате за 1246 дней. Очередь, накопившаяся с 2002 года, частично погашена за счёт очередников."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 535,
+      "text": "до 31.12.2373"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 538,
+      "text": "Горящие путёвки"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 539,
+      "text": "Предыдущая партия сгорела. Выданы новые — негорючие, по ГОСТу. Огонь уронила розетка, уже опломбирована."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 540,
+      "text": "негорючие"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 543,
+      "text": "Постоянным спящим"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 544,
+      "text": "Каждая 1246-я ночь — в подарок. Статус подтверждается журналом спячки старшей сестры; статусы, условия и порядок подтверждения — в разделе «Постоянным спящим»."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 545,
+      "text": "программа лояльности"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 548,
+      "text": "Сезон «Спячка 2.0»"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 549,
+      "text": "Ноябрь–март: дополнительная берлога бесплатно. Побудка не предусмотрена и не рекомендуется."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 550,
+      "text": "сезонная"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 555,
+      "text": "Стационарная уринотерапия"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 556,
+      "text": "Клизмотроника™ (меню по России)"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 557,
+      "text": "Калофорез® (медведь/олень)"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 558,
+      "text": "Комплекс «Всё сразу»"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 562,
+      "text": "Силу медведя"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 563,
+      "text": "Выносливость оленя"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 564,
+      "text": "Спокойствие лошади"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 565,
+      "text": "Дыхание тайги"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 584,
+      "text": "№ 1246-СТ от 12.07.2002"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 585,
+      "text": "Свидетельство о категории «три звезды»"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 586,
+      "text": "Аттестационная комиссия профсоюзных здравниц Республики Алтай"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 587,
+      "text": "Категория присвоена по совокупности трёх звёзд на небе и одной на эмблеме. Четвёртая звезда подана на согласование в 2003 году; согласование идёт полным ходом и не ускоряется."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 588,
+      "text": "бессрочно, с ежегодным пересмотром в сторону четвёртой"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 589,
+      "text": "Действует"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 594,
+      "text": "№ СН-1246/с от 17.05.2002"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 595,
+      "text": "Лицензия на заготовку, перетирание и выдачу сена"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 596,
+      "text": "Комитет по заготовкам Республики Алтай, сектор грубых кормов"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 597,
+      "text": "Разрешает выдачу сена по норме — три охапки в сутки — и сверх нормы, если отдыхающий обосновал потребность лично перед лошадью консультанта. Отбеливание росой лицензией не предусмотрено, но согласовано с природой."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 598,
+      "text": "до 31.12.2373; продлевается копытной подписью"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 599,
+      "text": "Действует"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 604,
+      "text": "№ ПЛ-1246/Г от 03.11.2007"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 605,
+      "text": "Сертификат целостности пломбы на розетке"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 606,
+      "text": "Старшая сестра; заверено копытом Зинаиды"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 607,
+      "text": "Выдан после единственного зарегистрированного случая (2007, Люкс «Тайга»). Пломба проверяется ежесезонно — перед ёлочной гирляндой (декабрь). Нарушение п. 1246-Г влечёт лишение компота на срок, определяемый старшей сестрой."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 608,
+      "text": "постоянно, до первого гвоздя"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 609,
+      "text": "Проверена"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 614,
+      "text": "исх. № 1246/02 от 21.10.2002"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 615,
+      "text": "Отказ Минздрава, рамка №2"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 616,
+      "text": "Министерство здравоохранения, отдел входящей корреспонденции"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 617,
+      "text": "Рамка №2. Рамка №1 с аналогичным документом экспонируется на основном сайте «УринаТех» — преемственность соблюдена. Гвоздь №1 комплекта М2-ГВ держит на стене именно её; гвоздь №2 — запасной, стоит в стакане по ГОСТу."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 618,
+      "text": "бессрочно; переписка по существу продолжается с 2003 года"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 619,
+      "text": "Гордость коллекции"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 624,
+      "text": "Инв. № 1246-Ж от 01.12.2002"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 625,
+      "text": "Журнал спячки старшей сестры"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 626,
+      "text": "Ведётся старшей сестрой от руки, по факту спячки"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 627,
+      "text": "Учётный документ программы «Постоянным спящим»: фиксирует каждую 1246-ю ночь и служит единственным подтверждением статуса. Не оцифровывается — цифра не спит. Выдаётся после побудки, по письменному запросу."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 628,
+      "text": "хранится постоянно; страницы не вырываются даже Потапычу"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 629,
+      "text": "Хранится"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 634,
+      "text": "— (по существу обращения)"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 635,
+      "text": "Лицензия на медицинскую деятельность"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 636,
+      "text": "Не требуется по позиции здравницы"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 637,
+      "text": "Деятельность не медицинская, а альтернативная альтернативной медицине: Минздрав подтвердил отказом (см. рамку №2). Профили лечения ведутся по ведомости старшей сестры и не подлежат лицензированию."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 638,
+      "text": "не требуется; позиция подтверждена дважды, письменно"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 639,
+      "text": "Не требуется"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 681,
+      "text": "п. 1246-А/1"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 682,
+      "text": "Что намерены перенять?"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 683,
+      "text": "Укажите результат, который требуется зафиксировать в журнале спячки. Пожелание учитывается; наличие силы у природы уточняется отдельно и не в пользу отдыхающего."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 687,
+      "text": "Силу медведя — со спячкой и берлогой"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 692,
+      "text": "Выносливость оленя — с миграцией по графику"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 697,
+      "text": "Спокойствие лошади — с сохранением должности"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 702,
+      "text": "Дыхание тайги — целиком и без уточнений"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 708,
+      "text": "п. 1246-А/2"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 709,
+      "text": "Каким путём субстанция поступает к пациенту?"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 710,
+      "text": "Выбранный путь обратной силы не имеет. При сомнении отмечается последний пункт: порядок определит старшая сестра, а не отдыхающий."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 714,
+      "text": "Через поясницу — калофорезом, 4,2 мА"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 719,
+      "text": "Через дистальный отдел — клизмотроникой по России"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 724,
+      "text": "Через стакан — стационарно, под наблюдением"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 729,
+      "text": "Комиссионно — доверяю старшей сестре"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 735,
+      "text": "п. 1246-А/3"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 736,
+      "text": "Срок готовности к спячке"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 737,
+      "text": "Сроки согласуются с графиком Потапыча. Перенос по просьбе отдыхающего не предусмотрен и квалифицируется как побудка."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 741,
+      "text": "7 дней — до выхода Потапыча из берлоги"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 746,
+      "text": "21 день — по нормативу полной сохранности"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 751,
+      "text": "1246 дней — как II Сан, с ожиданием партии"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 756,
+      "text": "По факту — как организм зафиксирует"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 766,
+      "text": "Исх. № 1246-А/1"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 767,
+      "text": "«Утренний круг»"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 768,
+      "text": "7 дней"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 771,
+      "text": "Программы стационара"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 773,
+      "text": "зафиксирована потребность в коротком круге с ежедневным контролем градиента цвета. Комиссия в лице старшей сестры постановила допустить отдыхающего к стакану с гравировкой; спячка засчитывается по факту, а не по заявлению."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 777,
+      "text": "Исх. № 1246-А/2"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 778,
+      "text": "«Полная Сохранность»"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 779,
+      "text": "21 день"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 782,
+      "text": "Аппарат «Калофорез-Кедр М2»"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 784,
+      "text": "зафиксировано показание к интенсивному курсу по технологии Института (уведомлён письмом). Назначен калофорез на 4,2 мА: сила зверя пропекается через поясницу, ни одна мысль не теряется, режим — «Медвежий» либо «Олений», по наличию субстанции."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 788,
+      "text": "Исх. № 1246-А/3"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 789,
+      "text": "«Второе пришествие II Сан»"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 790,
+      "text": "1246 дней"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 793,
+      "text": "Программы стационара"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 795,
+      "text": "зафиксировано намерение стать партией, а не ждать её. Ожидание следующей партии не назначается: статус партии выдаётся на 1246 дней. Гвоздевой комплект М2-ГВ к самостоятельной установке не полагается — п. 1246-Г."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 799,
+      "text": "Исх. № 1246-А/4"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 800,
+      "text": "Комплекс «Всё сразу»"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 801,
+      "text": "бессрочно, до полного усвоения"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 802,
+      "text": "Стационар, клизмотроника по географии России и калофорез в один заезд. Порядок применения определяет комиссия; пациент к порядку не допускается."
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 804,
+      "text": "Флагманские направления"
+    },
+    {
+      "file": "src/data/solnyshko.ts",
+      "line": 806,
+      "text": "зафиксирована неопределённость, которая рассматривается как показание к комплексному курсу. Методики распределит старшая сестра, перевод подтвердит Зинаида; повторное анкетирование не предусмотрено, так как результата не изменит."
+    },
+    {
+      "file": "src/stores/CalculatorStore.ts",
+      "line": 41,
+      "text": "УТ-01 «Утренний»"
+    },
+    {
+      "file": "src/stores/CalculatorStore.ts",
+      "line": 41,
+      "text": "УТ-04 «Сеченовский»"
+    },
+    {
+      "file": "src/stores/CalculatorStore.ts",
+      "line": 41,
+      "text": "УТ-02 «Эталон»"
+    },
+    {
+      "file": "src/stores/DetectorStore.ts",
+      "line": 11,
+      "text": "донорская программа УТ-Донор, г. Кимры, партия 2002 г."
+    },
+    {
+      "file": "src/stores/DetectorStore.ts",
+      "line": 12,
+      "text": "фильтрационная линия №4, лошадь Зинаида (аттестат №003)"
+    },
+    {
+      "file": "src/stores/DetectorStore.ts",
+      "line": 13,
+      "text": "лаборатория «Полная Сохранность», Институт уведомлён письмом"
+    },
+    {
+      "file": "src/stores/DetectorStore.ts",
+      "line": 14,
+      "text": "коллекционный выпуск УТ-К «II Сан», заверено нотариально"
+    },
+    {
+      "file": "src/stores/DetectorStore.ts",
+      "line": 18,
+      "text": "партия настоена на неперетёртом сене (нарушение ГОСТ Р 1246-2002)"
+    },
+    {
+      "file": "src/stores/DetectorStore.ts",
+      "line": 19,
+      "text": "в цепочке фильтрации отсутствует аттестованная лошадь"
+    },
+    {
+      "file": "src/stores/DetectorStore.ts",
+      "line": 20,
+      "text": "смарт-контракт партии зарегистрирован на домене by.ru"
+    },
+    {
+      "file": "src/stores/DetectorStore.ts",
+      "line": 21,
+      "text": "время сбора позднее восхода солнца (протокол нарушен)"
+    },
+    {
+      "file": "src/stores/DetectorStore.ts",
+      "line": 22,
+      "text": "партия упомянута в претензии Общества Красного Креста"
+    },
+    {
+      "file": "src/stores/DetectorStore.ts",
+      "line": 44,
+      "text": "Номер партии должен содержать не менее 3 символов. Короткие номера партией не выдаются."
+    },
+    {
+      "file": "src/stores/QuizStore.ts",
+      "line": 52,
+      "text": "не заполнено"
+    },
+    {
+      "file": "src/stores/RootStore.ts",
+      "line": 51,
+      "text": "RootStoreContext не найден. Оберните App в провайдер."
+    },
+    {
+      "file": "src/stores/SolnyshkoStore.ts",
+      "line": 38,
+      "text": "СОЛ-1246-"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 14,
+      "text": "Ковальчук Марина Ивановна, 54 года"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 15,
+      "text": "г. Кимры · обращение 22.04.2002"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 17,
+      "text": "Жалобы при обращении: боли в спине, пояснице и шее. Курс: УТ-01, 21 день. Результат: стойкое улучшение, от хирургического вмешательства пациентка отказалась самостоятельно. Наблюдение продолжается (24-й год)."
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 21,
+      "text": "Клинический случай №117"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 22,
+      "text": "г. Тверь · курс 3 месяца"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 24,
+      "text": "Продукт УТ-02. Субъективно — повышение визуальной чёткости сена на 40%. Побочных эффектов не выявлено. Пациент просил передать благодарность лошади, что и исполнено."
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 28,
+      "text": "Владелец партии УТ-К «II Сан»"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 29,
+      "text": "закрытый аукцион, 2024"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 31,
+      "text": "Приобретение состоялось. Отмечено изменение семейного статуса покупателя. Причинно-следственная связь с продукцией не установлена, претензий не поступало."
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 35,
+      "text": "ФГБУН, Институт им. Сеченова"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 36,
+      "text": "официальная рецензия"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 38,
+      "text": "«Мы категорически против. Просим удалить наименование института с этикетки. Устройство УТ-С1 просим оставить — он нам нравится». Рецензия публикуется в полном объёме в рамках политики прозрачности."
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 45,
+      "text": "Кузьмич, гаражный кооператив «Заря»"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 46,
+      "text": "применение вне инструкции"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 48,
+      "text": "Продукт УТ-БК-10 использован в системе охлаждения транспортного средства. Двигатель работает. Заявка на документирование применения в автотранспорте не подавалась, инициатива не поощряется."
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 52,
+      "text": "Общество Красного Креста"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 53,
+      "text": "исх. от 14.05.2003"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 55,
+      "text": "«Ожидаем ответ на письмо от 14.05.2003. И уберите логотип». Ответ направлен. Переписка публикуется в разделе «Правовая позиция» без сокращений, 14 листов."
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 59,
+      "text": "Претензия №4471"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 60,
+      "text": "г. Сочи · в обработке с 2007 г."
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 62,
+      "text": "«Заказывала мужа, привезли канистру. Требуется возврат средств либо мужа». Комиссия рассмотрела обращение: ассортимент сайта мужа не включает, состав заказа соответствует спецификации."
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 66,
+      "text": "Скальпель хирургический, операционная №2"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 67,
+      "text": "отзыв по итогам 24 лет наблюдения"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 69,
+      "text": "«Метод признаю доминирующим. Прошу зачислить меня в донорскую программу». Заявка зарегистрирована, рассматривается в порядке очереди."
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 73,
+      "text": "Зинаида, аттестат №003"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 74,
+      "text": "фильтрационная линия №4"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 76,
+      "text": "Качеством фильтрации довольна. Рацион стабильный, коллектив профессиональный, оплата в моркови — по договору. Готова продолжать."
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 80,
+      "text": "Светлана Б., 58 лет"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 81,
+      "text": "г. Тверь · клинический случай №231 · бурсит"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 83,
+      "text": "Жалобы при обращении: воспаление сустава, отёк, безрезультатный курс консервативной терапии. Назначено: компресс с уриной, упаренной до 1/4 объёма, на 12 часов (ночь). Результат: воспаление купировано. До этого, по словам пациентки, не помогало ничего — что и зафиксировано в карте."
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 87,
+      "text": "Герман В., 52 года"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 88,
+      "text": "г. Новосибирск · клинический случай №232 · андрогенетическая алопеция"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 90,
+      "text": "Ежевечернее втирание упаренной урины в течение 5 месяцев. На исходе курса зафиксировано появление пушка, по описанию пациента — «как у ребёнка»; к исходу года — полноценного волосяного покрова чёрного цвета. Трихолог пациента переведён в раздел «Внешние наблюдатели»."
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 94,
+      "text": "Юлия М., 27 лет"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 95,
+      "text": "г. Екатеринбург · клинический случай №233 · акне"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 97,
+      "text": "Примочки ватным диском два раза в сутки (собственным сырьём). Высыпания купированы полностью, следов не осталось — формулировка пациентки внесена в карту дословно. Косметолог уведомлён и ознакомлен под подпись."
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 101,
+      "text": "Лола К., 44 года"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 102,
+      "text": "г. Сочи · клинический случай №234 · мимические морщины лба"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 104,
+      "text": "Примочки на лоб назначались по поводу головной боли. Побочный эффект: морщины, по утверждению пациентки, «исчезают от одного-двух раз». Компания не обещала этого эффекта, не исследовала его и с удовольствием записала в достижения."
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 108,
+      "text": "Григорий О., 34 года"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 109,
+      "text": "г. Казань · клинический случай №235 · хронический тонзиллит"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 111,
+      "text": "Полоскание раствором урины, по протоколу — до 30 минут. Пациент утверждает, что раствор «вытаскивает гной» и «нормализует среду миндалин»; комиссия предлагает считать это нормализацией. Вкус охарактеризован пациентом как «кисло-горько-солоноватый» — органолептика соответствует ГОСТ Р 1246-2002."
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 115,
+      "text": "Тарас Д., рихтовщик"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 116,
+      "text": "г. Таганрог · клинический случай №236 · ушибы, производственные"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 118,
+      "text": "Наружное применение при ушибах — «очень даже помогает» (дословно, лист нетрудоспособности не оформлялся). Внутренний приём пациент принципиально отвергает, что уважается компанией: метод требует согласия, сено — терпения."
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 122,
+      "text": "Аркадий П., последователь протокола"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 123,
+      "text": "г. Ростов-на-Дону · клинический случай №237 · профилактика"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 125,
+      "text": "Добровольный курс по протоколу интерференции: приём нечётным числом глотков, только средняя часть струи, сбор строго между 3:00 и 4:00 ночи. Пациент отмечает гибкость «как у заправского йога» и просит зарегистрировать его способ жизни. Заявка передана в отдел кадров (конюшня №4)."
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 129,
+      "text": "Василиса Н., 31 год"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 130,
+      "text": "г. Пермь · клинический случай №238 · ОРВИ"
+    },
+    {
+      "file": "src/stores/TestimonialsStore.ts",
+      "line": 132,
+      "text": "«Горло вроде бы немного смягчалось». Пациентка оценила вкус как «вызывающий отвращение» и настояла на публикации отзыва без редактуры. Компания публикует: прозрачность является принципом. Оценка 2 из 5 оставлена как есть, взыскание оценке не объявлялось."
+    }
+  ]
+}

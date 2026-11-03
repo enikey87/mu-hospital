@@ -8,7 +8,7 @@ const TAG_CLASS: Record<NonNullable<Product["tag"]>, string> = {
   "Нет в наличии": "tag--soldout",
   "Новинка": "tag--new",
   "Умное устройство": "tag--iot",
-  "Молекул нет": "tag--molecule",
+  "Особая серия": "tag--molecule",
 };
 
 function ProductCard({ product }: { product: Product }) {
@@ -17,7 +17,6 @@ function ProductCard({ product }: { product: Product }) {
   return (
     <article className="glass product-card">
       <div className="product-card__top">
-        <span className="product-card__emoji">{product.emoji}</span>
         {product.tag && <span className={`tag ${TAG_CLASS[product.tag]}`}>{product.tag}</span>}
       </div>
       <h3 className="product-card__name">{product.name}</h3>
@@ -39,7 +38,7 @@ function ProductCard({ product }: { product: Product }) {
           disabled={product.soldOut}
           onClick={() => cart.add(product)}
         >
-          {product.soldOut ? "Нет в наличии" : "Заказать"}
+          {product.soldOut ? "Нет в наличии" : "В спецификацию"}
         </button>
       </div>
     </article>
@@ -50,13 +49,9 @@ function Products() {
   return (
     <section id="products">
       <div className="container">
-        <span className="section-label">П.2 · Каталог продукции · с 2000 года</span>
+        <span className="section-label"> П.2 · Каталог продукции · с 2002 года </span>
         <h2 className="section-title">Продукция</h2>
-        <p className="section-sub">
-          Каждая партия проходит генетическую экспертизу и вносится в блокчейн-реестр.
-          Закупаемое сырьё — поистине русская моча, что подтверждается документально.
-          Ёмкости пронумерованы, сено перетёрто, лошадь аттестована.
-        </p>
+        <p className="section-sub"> Продукция на основе донорского сырья. В каталоге приведены серии, варианты фасовки и стоимость единицы. Номер партии и условия хранения указаны на этикетке. </p>
         <div className="products-grid">
           {PRODUCTS.map((p) => (
             <ProductCard key={p.id} product={p} />

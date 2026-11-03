@@ -6,10 +6,7 @@ function Instructions() {
       <div className="container">
         <span className="section-label">Прил. В · Документация к продукции</span>
         <h2 className="section-title">Инструкция по применению</h2>
-        <p className="section-sub">
-          Полный текст вкладыша, поставляемого с каждой ёмкостью. Публикуется в
-          соответствии с политикой информационной открытости.
-        </p>
+        <p className="section-sub"> Вкладыш к продукции УТ-01 «Утренний». Для других серий применяются отдельные условия обработки и хранения. </p>
         <div className="insert">
           <div className="insert__grid">
             {INSERT_ROWS.map((row) => (
@@ -19,11 +16,7 @@ function Instructions() {
               </div>
             ))}
           </div>
-          <div className="insert__foot">
-            Инструкция сохранена в первоначальном виде. Первоначальный вид утерян.
-            ООО «УринаТех», конюшня №4. Претензии направляйте в гостевую книгу,
-            внимание — Зинаиде.
-          </div>
+          <div className="insert__foot"> ООО «УринаТех», производственная линия №4. При обращении указывайте номер партии. Продукция не является лекарственным средством. </div>
         </div>
       </div>
     </section>

@@ -6,11 +6,7 @@ function Licenses() {
       <div className="container">
         <span className="section-label">П.8 · Разрешительные документы</span>
         <h2 className="section-title">Лицензии и сертификаты</h2>
-        <p className="section-sub">
-          Реестр ведётся с 2002 года. Оригиналы хранятся в конюшне №4; доступ
-          предоставляется по письменному запросу и good настроению директора по
-          фильтрации.
-        </p>
+        <p className="section-sub"> В реестре указаны разрешительные документы, архивная переписка и текущие заявки. Оригиналы хранятся в конюшне №4. </p>
         <div className="license-list">
           {LICENSES.map((l) => (
             <div className="license" key={l.no + l.name}>

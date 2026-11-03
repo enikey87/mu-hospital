@@ -2,7 +2,7 @@ import { SOL_FAQ } from "../../data/solnyshko";
 
 function SolFaq() {
   return (
-    <section className="sol-section">
+    <section id="sol-faq" className="sol-section">
       <div className="sol-container">
         <span className="sol-label">Вопросы отдыхающих</span>
         <h2 className="sol-title">Частые вопросы</h2>

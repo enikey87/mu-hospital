@@ -6,10 +6,7 @@ function SolReviews() {
       <div className="sol-container">
         <span className="sol-label">Отдыхающие</span>
         <h2 className="sol-title">Книга отзывов здравницы</h2>
-        <p className="sol-sub">
-          Отзывы переносятся из бумажной книги отзывов. Бумажная книга
-          хранится у старшей сестры и выдаётся под подпись.
-        </p>
+        <p className="sol-sub"> Выдержки из книги отзывов и входящей корреспонденции пансионата. </p>
         <div className="sol-station">
           {SOL_REVIEWS.map((r) => (
             <article key={r.name + r.meta} className="sol-card">

@@ -1,3 +1,4 @@
+import { quantity } from "../format";
 import { observer } from "mobx-react-lite";
 import { useStore } from "../stores/RootStore";
 
@@ -12,11 +13,7 @@ function Calculator() {
         <h2 className="section-title">
           Расчёт <span className="grad-text">дозировки</span>
         </h2>
-        <p className="section-sub">
-          Сервис подбирает продукт и схему приёма на основе физических параметров
-          пациента. Методика применяется с 1246 года, в цифровом виде — с этого
-          вторника.
-        </p>
+        <p className="section-sub"> Расчёт продукта и потребности на курс по параметрам пациента. Используется внутренняя методика компании. </p>
         <div className="glass calc-wrap">
           <div className="calc-form">
             <div className="calc-row">
@@ -52,10 +49,7 @@ function Calculator() {
                 onChange={(e) => calc.setTrust(Number(e.target.value))}
               />
             </label>
-            <p style={{ fontSize: 13, color: "var(--muted)" }}>
-              Чем ниже доверие, тем выше дозировка (установлено эмпирически,
-              с 1246 года).
-            </p>
+            <p style={{ fontSize: 13, color: "var(--muted)" }}> Степень доверия учитывается при подборе серии и объёма продукции. </p>
           </div>
 
           <div className="calc-result">
@@ -66,12 +60,12 @@ function Calculator() {
             <div className="calc-result__row">
               <span>Схема приёма</span>
               <strong>
-                по {r.cups} стакана × 3 раза в день
+                по {quantity(r.cups, ["стакану", "стакана", "стаканов"])} × 3 раза в день
               </strong>
             </div>
             <div className="calc-result__row">
               <span>Курс</span>
-              <strong>{r.course} дней</strong>
+              <strong>{quantity(r.course, ["день", "дня", "дней"])}</strong>
             </div>
             <div className="calc-result__row">
               <span>Потребность на курс</span>
@@ -79,10 +73,7 @@ function Calculator() {
                 {r.liters.toLocaleString("ru-RU")} л ({r.canisters} × УТ-БК-10)
               </strong>
             </div>
-            <p style={{ fontSize: 12, color: "var(--muted)", marginTop: 8 }}>
-              Расчёт выполнен по методике 1246 г. Погрешность: ±1 лошадь. Расчёт
-              не является медицинской рекомендацией; расчёт является расчётом.
-            </p>
+            <p style={{ fontSize: 12, color: "var(--muted)", marginTop: 8 }}> Расчёт не является медицинской рекомендацией. Имеются противопоказания. Необходима консультация специалиста. 18+. </p>
           </div>
         </div>
       </div>

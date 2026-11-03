@@ -18,10 +18,7 @@ function NotFound() {
         >
           Страница не найдена
         </h1>
-        <p className="notfound__text">
-          Вероятно, выпита. Возможно, продана на аукционе 2024 года. Проверьте
-          адресную строку, реестр партий и гостевую книгу.
-        </p>
+        <p className="notfound__text"> Проверьте адрес страницы или вернитесь на главную. </p>
         <button
           className="btn btn-primary"
           onClick={() => {

@@ -13,9 +13,9 @@ function SolBooking() {
       <section id="sol-booking" className="sol-section">
         <div className="sol-container">
           <span className="sol-label">Отделение путёвок</span>
-          <h2 className="sol-title">Путёвка оформлена</h2>
+          <h2 className="sol-title">Заявка зарегистрирована</h2>
           <div className="sol-voucher">
-            <div className="sol-voucher__stamp">Оплачено</div>
+            <div className="sol-voucher__stamp">Зарегистрировано</div>
             <div className="sol-voucher__num">{solnyshko.voucher}</div>
             <p>
               Отдыхающий: <b>{solnyshko.name.trim()}</b>
@@ -26,11 +26,11 @@ function SolBooking() {
             </p>
             <p className="sol-voucher__note">
               Конная доставка от Горно-Алтайска включена. Просим захватить
-              тёплые носки и отсутствия претензий. Встреча — у последнего
-              столба мобильной связи (столб последний, связь ещё раньше).
+              тёплые носки. Номер заявки предъявляется при заезде.
+              Заявка не подтверждает оплату путёвки.
             </p>
             <button className="sol-btn sol-btn--ghost" onClick={solnyshko.reset}>
-              Оформить ещё одну путёвку
+              Подать новую заявку
             </button>
           </div>
         </div>
@@ -43,10 +43,7 @@ function SolBooking() {
       <div className="sol-container">
         <span className="sol-label">Отделение путёвок</span>
         <h2 className="sol-title">Запись на курс</h2>
-        <p className="sol-sub">
-          Заявка рассматривается в течение рабочих суток лошади. Подтверждение
-          приходит телеграммой, голубем или следом на снегу — что раньше.
-        </p>
+        <p className="sol-sub"> Укажите имя и выберите программу. После регистрации будет сформирован номер заявки. Оплата на сайте не производится. </p>
         <form
           className="sol-form"
           onSubmit={(e) => {
@@ -58,6 +55,7 @@ function SolBooking() {
             ФИО отдыхающего
             <input
               className="sol-input"
+              disabled={solnyshko.status === "sending"}
               value={solnyshko.name}
               onChange={(e) => solnyshko.setName(e.target.value)}
               placeholder="Иванов Потап Потапыч"
@@ -67,6 +65,7 @@ function SolBooking() {
             Программа
             <select
               className="sol-input"
+              disabled={solnyshko.status === "sending"}
               value={solnyshko.program}
               onChange={(e) => solnyshko.setProgram(e.target.value)}
             >
@@ -81,6 +80,7 @@ function SolBooking() {
             Что хотите перенять
             <select
               className="sol-input"
+              disabled={solnyshko.status === "sending"}
               value={solnyshko.power}
               onChange={(e) => solnyshko.setPower(e.target.value)}
             >
@@ -96,7 +96,7 @@ function SolBooking() {
             className="sol-btn sol-btn--big"
             disabled={!solnyshko.canSubmit || solnyshko.status === "sending"}
           >
-            {solnyshko.status === "sending" ? "Печать путёвки…" : "Оформить путёвку"}
+            {solnyshko.status === "sending" ? "Регистрация…" : "Подать заявку"}
           </button>
         </form>
       </div>

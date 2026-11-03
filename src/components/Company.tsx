@@ -6,17 +6,12 @@ function Company() {
       <div className="container">
         <span className="section-label">П.9 · О компании</span>
         <h2 className="section-title">Корпоративное управление</h2>
-        <p className="section-sub">
-          Органограмма компании: генеральный директор → лошадь → все остальные.
-          Публикуется в соответствии с Кодексом корпоративного поведения (своя
-          редакция, 2002 г.).
-        </p>
+        <p className="section-sub"> Компания основана в 2002 году как Московский Институт Обогащения Урины. Производство, поставки и наблюдения ведутся отдельными подразделениями. </p>
 
         <h3 className="subsection-title">Руководство</h3>
         <div className="team-grid">
           {TEAM.map((m) => (
             <div key={m.name} className="glass team-card">
-              <div className="team-card__ava">{m.avatar}</div>
               <div className="team-card__name">{m.name}</div>
               <div className="team-card__role">{m.role}</div>
               <div className="team-card__bio">{m.bio}</div>

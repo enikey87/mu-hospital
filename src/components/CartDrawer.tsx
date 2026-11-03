@@ -29,13 +29,13 @@ function CartDrawer() {
                   marginBottom: 10,
                 }}
               >
-                Заказ оформлен
+                Спецификация сформирована
               </div>
               <p style={{ color: "var(--muted)", fontSize: 14 }}>
-                Сумма: {cart.lastOrderTotal.toLocaleString("ru-RU")} ₽. Заказ передан в
-                логистический центр (конюшня №4). Доставка курьером — по городу,
-                транспортной компанией — по региону. Для донорской серии срок
-                комплектации — 2–3 часа, сроки указаны с учётом времени сбора.
+                Сумма: {cart.lastOrderTotal.toLocaleString("ru-RU")} ₽.
+                Спецификация носит справочный характер. Оплата и поставка
+                по ней не выполняются. Условия регулярных поставок приведены
+                в разделе «Обслуживание».
               </p>
               <button
                 className="btn btn-primary btn-sm"
@@ -49,7 +49,6 @@ function CartDrawer() {
         ) : cart.items.length === 0 ? (
           <div className="cart-empty">
             <div>
-              <div style={{ fontSize: 42 }}>🫗</div>
               <p>
                 Корзина пуста.
                 <br />
@@ -62,7 +61,6 @@ function CartDrawer() {
             <div className="cart-items">
               {cart.items.map(({ product, qty }) => (
                 <div key={product.id} className="cart-item">
-                  <span className="cart-item__emoji">{product.emoji}</span>
                   <div className="cart-item__info">
                     <div className="cart-item__name">{product.name}</div>
                     <div className="cart-item__price">
@@ -87,15 +85,16 @@ function CartDrawer() {
                 <span>{cart.total.toLocaleString("ru-RU")} ₽</span>
               </div>
               <button className="btn btn-primary" onClick={() => cart.checkout()}>
-                Оформить заказ
+                Сформировать спецификацию
               </button>
-              <button className="cart-contract" onClick={() => cart.readContract()}>
-                {cart.contractReaders === 0
-                  ? "Договор прочитали: 0 человек"
-                  : `Договор прочитали: ${cart.contractReaders} чел. — рекорд за 24 года`}
-              </button>
+              <details className="cart-terms">
+                <summary>Условия поставки</summary>
+                <p>Стоимость указана за единицу продукции. Формирование спецификации
+                  не является заказом и не предусматривает списания средств.
+                  Коллекционные выпуски в регулярные поставки не входят.</p>
+              </details>
               <p style={{ fontSize: 12, color: "var(--muted)", textAlign: "center" }}>
-                Оплата: карта, безналичный расчёт, натура (сено, по курсу дня).
+                Информация не является публичной офертой.
               </p>
             </div>
           </>
