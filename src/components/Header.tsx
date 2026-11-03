@@ -1,3 +1,4 @@
+import BrandMark from "./BrandMark";
 import { useState } from "react";
 import { observer } from "mobx-react-lite";
 import { useStore } from "../stores/RootStore";
@@ -26,7 +27,7 @@ function Header() {
       </div>
       <div className="header__inner">
         <a className="logo" href="#top" onClick={() => setMenuOpen(false)}>
-          <span className="logo__drop">УТ</span>
+          <BrandMark />
           УринаТех
         </a>
         <nav className="nav" aria-label="Основная навигация">

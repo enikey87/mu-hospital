@@ -1,6 +1,6 @@
 import { observer } from "mobx-react-lite";
 import { useStore } from "../../stores/RootStore";
-import SolEmblem from "./SolEmblem";
+import BrandMark from "../BrandMark";
 
 function SolFooter() {
   const { router } = useStore();
@@ -11,7 +11,7 @@ function SolFooter() {
         <div className="sol-footer__grid">
           <div className="sol-footer__col">
             <div className="sol-footer__brand">
-              <SolEmblem size={54} />
+              <BrandMark size={54} />
               <b>Пансионат «Солнышко»</b>
             </div>
             <p> Пансионат «Солнышко» — учреждение ООО «УринаТех». Республика Алтай, 40 вёрст от асфальта. Конная доставка от Горно-Алтайска включена. </p>

@@ -1,6 +1,6 @@
 import { observer } from "mobx-react-lite";
 import { useStore } from "../../stores/RootStore";
-import SolEmblem from "./SolEmblem";
+import BrandMark from "../BrandMark";
 
 function SolHeader() {
   const { router } = useStore();
@@ -20,7 +20,7 @@ function SolHeader() {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
-          <SolEmblem size={46} />
+          <BrandMark size={46} />
           <span>
             <span className="sol-header__name">Пансионат «Солнышко»</span>
             <span className="sol-header__sub">здравница закрытого типа</span>

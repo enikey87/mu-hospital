@@ -1,10 +1,12 @@
+import BrandMark from "./BrandMark";
+
 function Footer() {
   return (
     <footer className="footer">
       <div className="container">
         <div className="footer__grid">
           <div className="footer__col">
-            <div className="footer__heading">ООО «УринаТех»</div>
+            <div className="footer__brand"><BrandMark /><span>УринаТех</span></div>
             <p className="footer__text">
               Производственно-исследовательская компания полного цикла. Основана в
               2002 году как Московский Институт Обогащения Урины. Технологии
