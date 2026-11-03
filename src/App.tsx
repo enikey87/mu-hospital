@@ -5,7 +5,6 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import MochaTicker from "./components/MochaTicker";
 import Products from "./components/Products";
-import Countdown from "./components/Countdown";
 import Calculator from "./components/Calculator";
 import Pricing from "./components/Pricing";
 import Instructions from "./components/Instructions";
@@ -13,7 +12,6 @@ import Testimonials from "./components/Testimonials";
 import Detector from "./components/Detector";
 import Donor from "./components/Donor";
 import Licenses from "./components/Licenses";
-import Company from "./components/Company";
 import Partners from "./components/Partners";
 import Faq from "./components/Faq";
 import Footer from "./components/Footer";
@@ -52,7 +50,6 @@ export default observer(function App({ initialNotFound }: { initialNotFound: boo
         <Hero />
         <MochaTicker />
         <Products />
-        <Countdown />
         <Calculator />
         <Pricing />
         <Instructions />
@@ -60,7 +57,6 @@ export default observer(function App({ initialNotFound }: { initialNotFound: boo
         <Detector />
         <Donor />
         <Licenses />
-        <Company />
         <Partners />
         <Faq />
       </main>

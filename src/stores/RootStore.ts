@@ -3,7 +3,6 @@ import { CartStore } from "./CartStore";
 import { DetectorStore } from "./DetectorStore";
 import { DonorStore } from "./DonorStore";
 import { TestimonialsStore } from "./TestimonialsStore";
-import { CountdownStore } from "./CountdownStore";
 import { CalculatorStore } from "./CalculatorStore";
 import { PollStore } from "./PollStore";
 import { CookiesStore } from "./CookiesStore";
@@ -17,7 +16,6 @@ export interface RootStore {
   detector: DetectorStore;
   donor: DonorStore;
   testimonials: TestimonialsStore;
-  countdown: CountdownStore;
   calc: CalculatorStore;
   poll: PollStore;
   cookies: CookiesStore;
@@ -33,7 +31,6 @@ export function createRootStore(): RootStore {
     detector: new DetectorStore(),
     donor: new DonorStore(),
     testimonials: new TestimonialsStore(),
-    countdown: new CountdownStore(),
     calc: new CalculatorStore(),
     poll: new PollStore(),
     cookies: new CookiesStore(),

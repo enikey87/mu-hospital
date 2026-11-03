@@ -1,0 +1,93 @@
+{
+  "environment": "Headless Chrome via Playwright, production preview at /urinatech/; not physical devices.",
+  "browser": [
+    {
+      "state": "broken-image-fallback",
+      "initials": "КМ"
+    },
+    {
+      "state": "main-reviews",
+      "images": 17,
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "state": "resort-reviews",
+      "images": 4,
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "state": "console",
+      "width": 1440,
+      "errors": []
+    },
+    {
+      "state": "main-reviews",
+      "images": 17,
+      "width": 768,
+      "scrollWidth": 768
+    },
+    {
+      "state": "resort-reviews",
+      "images": 4,
+      "width": 768,
+      "scrollWidth": 768
+    },
+    {
+      "state": "console",
+      "width": 768,
+      "errors": []
+    },
+    {
+      "state": "main-reviews",
+      "images": 17,
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "state": "resort-reviews",
+      "images": 4,
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "state": "console",
+      "width": 390,
+      "errors": []
+    },
+    {
+      "state": "main-reviews",
+      "images": 17,
+      "width": 320,
+      "scrollWidth": 320
+    },
+    {
+      "state": "resort-reviews",
+      "images": 4,
+      "width": 320,
+      "scrollWidth": 320
+    },
+    {
+      "state": "console",
+      "width": 320,
+      "errors": []
+    }
+  ],
+  "assets": {
+    "files": 20,
+    "width": 256,
+    "height": 256,
+    "total_bytes": 127322,
+    "max_bytes": 9554
+  },
+  "unit_tests": 18,
+  "build": "tsc -b && vite build: pass, 107 modules",
+  "lint": "not configured",
+  "negative_controls": [
+    "Missing portrait path: unit test fails",
+    "Reintroduced governance heading: unit test fails",
+    "Removed concurrent archive load guard: unit test fails",
+    "Removed image error handler: browser fallback probe fails"
+  ]
+}

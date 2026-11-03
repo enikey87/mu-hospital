@@ -5,12 +5,13 @@ function Footer() {
     <footer className="footer">
       <div className="container">
         <div className="footer__grid">
-          <div className="footer__col">
+          <div className="footer__col" id="company">
             <div className="footer__brand"><BrandMark /><span>УринаТех</span></div>
+            <div className="footer__heading">История компании</div>
             <p className="footer__text">
-              Производственно-исследовательская компания полного цикла. Основана в
-              2002 году как Московский Институт Обогащения Урины. Технологии
-              документированы с 1246 года.
+              Московский Институт Обогащения Урины — первое название компании,
+              основанной в 2002 году. Сегодня «УринаТех» ведёт производство полного
+              цикла. Технологии документированы с 1246 года.
             </p>
           </div>
           <div className="footer__col">
