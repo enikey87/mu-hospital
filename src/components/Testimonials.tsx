@@ -1,6 +1,7 @@
 import { observer } from "mobx-react-lite";
 import { useStore } from "../stores/RootStore";
 import Poll from "./Poll";
+import ReviewPortrait from "./ReviewPortrait";
 
 function Stars({ n }: { n: number }) {
   return (
@@ -20,22 +21,17 @@ function Testimonials() {
         <span className="section-label"> П.4 · Отзывы и обращения </span>
         <h2 className="section-title"> Отзывы и обращения </h2>
         <p className="section-sub"> Выдержки из гостевой книги и официальная переписка. Сообщения авторов публикуются отдельно от производственной документации. </p>
-        <p
-          className="section-sub"
-          style={{ fontSize: 12, marginTop: 6, fontFamily: "var(--mono)" }}
-        > Авторы личных обращений обозначены именем или инициалами. </p>
+        <p className="review-disclosure">Портреты авторов и иллюстрации к письмам созданы нейросетью.</p>
         <div className="reviews-grid">
           {testimonials.reviews.map((r) => (
             <article key={r.id} className="glass review-card">
               <div className="review-card__head">
-                <div className="review-card__avatar">
-                  <span aria-hidden="true">{r.name.split(/[\s,]+/).slice(0, 2).map((part) => part[0]).join("")}</span>
-                </div>
+                <ReviewPortrait avatar={r.avatar} name={r.name} />
                 <div>
                   <div className="review-card__name">{r.name}</div>
                   <div className="review-card__city">{r.city}</div>
                 </div>
-                <div style={{ marginLeft: "auto" }}>
+                <div className="review-card__rating">
                   <Stars n={r.stars} />
                 </div>
               </div>

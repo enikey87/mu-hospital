@@ -1868,3 +1868,7 @@
   .sol-faq__item summary { padding: 20px 0; }
   .sol-section[id] { scroll-margin-top: 24px; }
 }
+
+.sol-review__head { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 16px; align-items: start; }
+.sol-review__head b, .sol-review__head span { display: block; }
+.sol-review__head span { margin-top: 5px; font-size: 11px; font-weight: 400; color: var(--sol-muted); }

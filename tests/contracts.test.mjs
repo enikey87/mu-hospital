@@ -41,7 +41,8 @@ test('коллекционный выпуск согласован с FAQ и н�
   const answer = FAQ.find(f => f.q.includes('коллекцион')).a;
   assert.ok(!answer.includes('$'));
   assert.match(answer, /2024/);
-  assert.match(answer, /закрыт/);
+  assert.match(answer, /Выпуск реализован на аукционе/);
+  assert.doesNotMatch(JSON.stringify([rare, answer]), /2374|Следующ/);
   assert.ok(!PLANS.some(p => /II Сан/.test(JSON.stringify(p))));
 });
 
