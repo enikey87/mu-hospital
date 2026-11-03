@@ -22,7 +22,8 @@ function SolFooter() {
           </div>
           <div className="sol-footer__col">
             <b>Документы</b>
-            <p> Категория пансионата — три звезды. Разработка калофореза ведётся по заявке №1246-К. Реквизиты приведены в разделе «Документы». </p>
+            <a className="sol-link" href="#/solnyshko?section=sol-documents" onClick={() => document.getElementById("sol-documents")?.scrollIntoView({ behavior: "smooth" })}>Опись документов →</a>
+            <p> Категория пансионата — три звезды. Разработка калофореза ведётся по заявке №1246-К. Медицинская лицензия здравнице не выдавалась. </p>
           </div>
         </div>
         <p className="sol-footer__disclaimer">

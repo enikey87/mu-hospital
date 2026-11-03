@@ -1,9 +1,15 @@
 import { observer } from "mobx-react-lite";
 import { useStore } from "../../stores/RootStore";
 import BrandMark from "../BrandMark";
+import { SOL_PROGRAMS } from "../../data/solPrograms";
 
 function SolHeader() {
-  const { router } = useStore();
+  const { router, solnyshko } = useStore();
+  const book = () => {
+    const program = SOL_PROGRAMS.find(p => p.id === router.program);
+    if (program) solnyshko.chooseProgram(program.booking);
+    router.goSolnyshko("sol-booking");
+  };
 
   return (
     <header className="sol-header">
@@ -16,8 +22,10 @@ function SolHeader() {
           className="sol-header__brand"
           href="#/solnyshko"
           onClick={(e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: "smooth" });
+            if (!router.program && !router.section) {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
           }}
         >
           <BrandMark size={46} />
@@ -33,9 +41,7 @@ function SolHeader() {
           </button>
           <button
             className="sol-btn"
-            onClick={() =>
-              document.getElementById("sol-booking")?.scrollIntoView({ behavior: "smooth" })
-            }
+            onClick={book}
           >
             Записаться на курс
           </button>
@@ -43,14 +49,15 @@ function SolHeader() {
       </div>
       <nav className="sol-nav" aria-label="Разделы пансионата">
         {[
-          ["sol-services", "Программы"], ["sol-roots", "Исконный"],
-          ["sol-rooms", "Проживание"], ["sol-dining", "Питание"],
-          ["sol-staff", "Специалисты"], ["sol-documents", "Документы"],
-          ["sol-faq", "Вопросы"],
-        ].map(([id, label]) => (
-          <button key={id} className="sol-link" onClick={() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })}>
-            {label}
-          </button>
+          ["#/solnyshko?section=sol-services", "Направления"], ["#/solnyshko/roots", "Исконный"],
+          ["#/solnyshko?section=sol-rooms", "Проживание"], ["#/solnyshko?section=sol-dining", "Питание"],
+          ["#/solnyshko?section=sol-staff", "Сотрудники"], ["#/solnyshko?section=sol-documents", "Документы"],
+          ["#/solnyshko?section=sol-faq", "Вопросы"],
+        ].map(([href, label]) => (
+          <a key={href} className="sol-link" href={href} onClick={() => {
+            const section = new URLSearchParams(href.split("?")[1]).get("section");
+            if (section) document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
+          }}>{label}</a>
         ))}
       </nav>
     </header>

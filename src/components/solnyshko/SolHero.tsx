@@ -17,7 +17,7 @@ function SolHero() {
         <span className="sol-label">Пансионат «Солнышко» · Учреждение ООО «УринаТех»</span>
         <h1 className="sol-hero__title">Здоровье —<br />в стакане</h1>
         <div className="sol-hero__location"><span aria-hidden="true">↗</span> Республика Алтай</div>
-        <p className="sol-hero__sub">Стационарные программы уринотерапии, клизмотроники и калофореза. Закрытая территория, круглосуточное наблюдение, режим тишины. Приём отдыхающих ведётся с 1246 года.</p>
+        <p className="sol-hero__sub">Стационар, клизмотроника, калофорез и комплекс «Исконный». Приём с 1246 года. От Горно-Алтайска — конная доставка до территории здравницы.</p>
         <div className="sol-hero__cta">
           <button className="sol-btn sol-btn--big" onClick={() => document.getElementById("sol-services")?.scrollIntoView({ behavior: "smooth" })}>
             Программы здравницы <span aria-hidden="true">↗</span>

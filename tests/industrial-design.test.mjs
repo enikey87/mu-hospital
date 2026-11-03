@@ -13,7 +13,7 @@ import BrandMark from '../src/components/BrandMark.tsx';
 const render = Component => renderToStaticMarkup(React.createElement(Component));
 
 test('фотографии поставляются вместе с сайтом, в формате WebP', async () => {
-  assert.equal(Object.keys(MEDIA).length, 4);
+  assert.equal(Object.keys(MEDIA).length, 8);
   for (const url of Object.values(MEDIA)) {
     const data = await readFile(new URL(`../public${url}`, import.meta.url));
     assert.equal(data.toString('ascii', 0, 4), 'RIFF');
@@ -43,21 +43,13 @@ test('первые экраны имеют один заголовок и фот
   assert.match(brand, /focusable="false"/);
 });
 
-test('направления здравницы ведут к своим программам и допускают отсутствие целевого раздела', t => {
-  const before = globalThis.document;
-  const visited = [];
-  globalThis.document = { getElementById: id => { return { scrollIntoView: options => visited.push([id, options]) }; } };
-  t.after(() => { if (before === undefined) delete globalThis.document; else globalThis.document = before; });
-  const buttons = [];
+test('направления здравницы открывают отдельные страницы обычными ссылками', () => {
+  const links = [];
   const walk = node => {
     if (!React.isValidElement(node)) return;
-    if (node.type === 'button') buttons.push(node);
+    if (node.type === 'a' && node.props.className?.includes('sol-btn')) links.push(node.props.href);
     React.Children.forEach(node.props.children, walk);
   };
   walk(SolServices());
-  assert.equal(buttons.length, 3);
-  for (const button of buttons) button.props.onClick();
-  assert.deepEqual(visited, ['sol-station', 'sol-enemas', 'sol-kalofores'].map(id => [id, { behavior: 'smooth' }]));
-  globalThis.document.getElementById = () => null;
-  for (const button of buttons) assert.doesNotThrow(() => button.props.onClick());
+  assert.deepEqual(links, ['#/solnyshko/station', '#/solnyshko/enemas', '#/solnyshko/kalofores', '#/solnyshko/roots']);
 });

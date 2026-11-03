@@ -113,12 +113,17 @@ test('старый ответ верификатора не перезаписы
   assert.equal(detector.verdict.kind, 'idle');
 });
 
-test('при равенстве голосов квиз предлагает комплекс и все результаты доступны в записи', () => {
-  assert.equal(recommendQuizResult(['bear', 'kalofores', 'week']).key, 'complex');
+test('квиз учитывает выбранное направление, а для стационара — срок; результаты доступны в записи', () => {
   for (const result of QUIZ_RESULTS)
     assert.ok(PROGRAM_OPTIONS.some(p => p.value === result.key), result.key);
-  for (const [answers, expected] of [[['horse', 'enema', 'week'], 'morning'], [['deer', 'kalofores', 'month'], 'safety'], [['bear', 'station', 'long'], 'second'], [['taiga', 'committee', 'asis'], 'complex']])
-    assert.equal(recommendQuizResult(answers).key, expected);
+  for (const [method, expected] of [['enema', 'enema'], ['kalofores', 'kalofores'], ['roots', 'roots']]) {
+    for (const duration of ['week', 'month', 'long', 'asis'])
+      assert.equal(recommendQuizResult(['horse', method, duration]).key, expected);
+  }
+  for (const [duration, expected] of [['week', 'morning'], ['month', 'safety'], ['long', 'second'], ['asis', 'complex']])
+    assert.equal(recommendQuizResult(['bear', 'station', duration]).key, expected);
+  for (const answers of [[], ['unknown', 'unknown', 'unknown'], [null, null, null], ['bear', 'station', 'unknown']])
+    assert.equal(recommendQuizResult(answers).key, 'complex');
 });
 
 test('квиз не принимает неизвестный ответ, позволяет вернуться и начать заново', () => {

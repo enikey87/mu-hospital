@@ -1,12 +1,11 @@
+import { observer } from "mobx-react-lite";
+import { useStore } from "../stores/RootStore";
+import SolProgramPage from "./solnyshko/SolProgramPage";
 import SolHeader from "./solnyshko/SolHeader";
 import SolHero from "./solnyshko/SolHero";
 import SolQuiz from "./solnyshko/SolQuiz";
 import SolServices from "./solnyshko/SolServices";
 import SolProfiles from "./solnyshko/SolProfiles";
-import SolStation from "./solnyshko/SolStation";
-import SolEnemas from "./solnyshko/SolEnemas";
-import SolKalofores from "./solnyshko/SolKalofores";
-import SolRoots from "./solnyshko/SolRoots";
 import SolRooms from "./solnyshko/SolRooms";
 import SolDining from "./solnyshko/SolDining";
 import SolPromos from "./solnyshko/SolPromos";
@@ -17,7 +16,9 @@ import SolDocuments from "./solnyshko/SolDocuments";
 import SolFaq from "./solnyshko/SolFaq";
 import SolFooter from "./solnyshko/SolFooter";
 
-export default function SolnyshkoApp() {
+function SolnyshkoApp() {
+  const { router } = useStore();
+  if (router.program) return <SolProgramPage id={router.program} />;
   return (
     <>
       <SolHeader />
@@ -26,10 +27,6 @@ export default function SolnyshkoApp() {
         <SolServices />
         <SolQuiz />
         <SolProfiles />
-        <SolStation />
-        <SolEnemas />
-        <SolKalofores />
-        <SolRoots />
         <SolRooms />
         <SolDining />
         <SolPromos />
@@ -43,3 +40,5 @@ export default function SolnyshkoApp() {
     </>
   );
 }
+
+export default observer(SolnyshkoApp);

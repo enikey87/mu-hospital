@@ -5,8 +5,8 @@ function SolPromos() {
     <section className="sol-section">
       <div className="sol-container">
         <span className="sol-label">Специальные предложения</span>
-        <h2 className="sol-title">Акции здравницы</h2>
-        <p className="sol-sub"> Сезонные условия размещения и предложения для постоянных отдыхающих. </p>
+        <h2 className="sol-title">Заезды и сезонные условия</h2>
+        <p className="sol-sub"> Стационар принимает круглый год. Для медвежьих и оленьих курсов даты привязаны к сезону сырья. </p>
         <div className="sol-promos">
           {PROMOS.map((p) => (
             <article key={p.name} className="sol-card sol-card--sm sol-card--accent">

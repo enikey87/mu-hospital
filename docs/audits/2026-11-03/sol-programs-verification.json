@@ -1,0 +1,230 @@
+{
+  "environment": "Headless Chrome through Playwright, production preview at /urinatech/; not physical devices.",
+  "browser": [
+    {
+      "state": "resort-home",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "state": "station",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "state": "booking-station",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "state": "enemas",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "state": "booking-enemas",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "state": "kalofores",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "state": "booking-kalofores",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "state": "roots",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "state": "booking-roots",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "state": "quiz-all-results",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "state": "console",
+      "width": 1440,
+      "errors": []
+    },
+    {
+      "state": "resort-home",
+      "width": 768,
+      "scrollWidth": 768
+    },
+    {
+      "state": "station",
+      "width": 768,
+      "scrollWidth": 768
+    },
+    {
+      "state": "booking-station",
+      "width": 768,
+      "scrollWidth": 768
+    },
+    {
+      "state": "enemas",
+      "width": 768,
+      "scrollWidth": 768
+    },
+    {
+      "state": "booking-enemas",
+      "width": 768,
+      "scrollWidth": 768
+    },
+    {
+      "state": "kalofores",
+      "width": 768,
+      "scrollWidth": 768
+    },
+    {
+      "state": "booking-kalofores",
+      "width": 768,
+      "scrollWidth": 768
+    },
+    {
+      "state": "roots",
+      "width": 768,
+      "scrollWidth": 768
+    },
+    {
+      "state": "booking-roots",
+      "width": 768,
+      "scrollWidth": 768
+    },
+    {
+      "state": "console",
+      "width": 768,
+      "errors": []
+    },
+    {
+      "state": "resort-home",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "state": "station",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "state": "booking-station",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "state": "enemas",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "state": "booking-enemas",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "state": "kalofores",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "state": "booking-kalofores",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "state": "roots",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "state": "booking-roots",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "state": "quiz-all-results",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "state": "console",
+      "width": 390,
+      "errors": []
+    },
+    {
+      "state": "resort-home",
+      "width": 320,
+      "scrollWidth": 320
+    },
+    {
+      "state": "station",
+      "width": 320,
+      "scrollWidth": 320
+    },
+    {
+      "state": "booking-station",
+      "width": 320,
+      "scrollWidth": 320
+    },
+    {
+      "state": "enemas",
+      "width": 320,
+      "scrollWidth": 320
+    },
+    {
+      "state": "booking-enemas",
+      "width": 320,
+      "scrollWidth": 320
+    },
+    {
+      "state": "kalofores",
+      "width": 320,
+      "scrollWidth": 320
+    },
+    {
+      "state": "booking-kalofores",
+      "width": 320,
+      "scrollWidth": 320
+    },
+    {
+      "state": "roots",
+      "width": 320,
+      "scrollWidth": 320
+    },
+    {
+      "state": "booking-roots",
+      "width": 320,
+      "scrollWidth": 320
+    },
+    {
+      "state": "console",
+      "width": 320,
+      "errors": []
+    }
+  ],
+  "unit_tests": 21,
+  "build": "tsc -b && vite build: pass, 109 modules",
+  "lint": "not configured",
+  "graphics": {
+    "count": 4,
+    "total_bytes": 594656
+  },
+  "negative_controls": [
+    "Invalid program route lookup: unit test fails",
+    "Missing booking reset: state-transition test fails",
+    "Enema mapped to morning: quiz test fails",
+    "Missing full program content: rendering test fails",
+    "Corrupt M2 image: asset test fails",
+    "Wrong booking value on station page: browser probe fails with roots != morning"
+  ]
+}

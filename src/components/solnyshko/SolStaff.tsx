@@ -5,8 +5,8 @@ function SolStaff() {
     <section id="sol-staff" className="sol-section">
       <div className="sol-container">
         <span className="sol-label">Персонал</span>
-        <h2 className="sol-title"> Специалисты и поставщики </h2>
-        <p className="sol-sub"> Процедуры и производственный контроль ведут специалисты здравницы. Консультанты и внешние поставщики указаны отдельно. </p>
+        <h2 className="sol-title"> Сотрудники и поставщики </h2>
+        <p className="sol-sub"> Калинин ведёт аппаратные программы, Стаканова — кабинеты и журналы. Зинаида консультирует московскую линию, Потапыч поставляет сырьё. В штат здравницы входят первые двое. </p>
         <div className="sol-staff">
           {SOL_STAFF.map((s) => (
             <article key={s.name} className="sol-card sol-card--sm">

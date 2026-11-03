@@ -1570,3 +1570,5 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .review-card__head { column-gap: 12px; }
   .review-card__stars { font-size: 12px; letter-spacing: 2px; }
 }
+
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
