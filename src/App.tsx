@@ -24,10 +24,12 @@ export default observer(function App({ initialNotFound }: { initialNotFound: boo
   const { router } = useStore();
 
   useEffect(() => {
-    window.scrollTo({ top: 0 });
-  }, [router.route]);
+    const target = router.section ? document.getElementById(router.section) : null;
+    if (target) target.scrollIntoView({ behavior: "instant" });
+    else window.scrollTo({ top: 0 });
+  }, [router.route, router.program, router.section]);
 
-  if (initialNotFound) {
+  if (initialNotFound || router.route === "notFound") {
     return (
       <div className="noise">
         <NotFound />

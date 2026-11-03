@@ -15,21 +15,16 @@ function SolQuiz() {
       <div className="sol-container">
         <span className="sol-label">Анкетирование при поступлении</span>
         <h2 className="sol-title">
-          Подберём <em>путь к силе</em>
+          Выбор <em>курса</em>
         </h2>
-        <p className="sol-sub"> Выберите желаемый результат, способ прохождения курса и срок. По ответам будет предложена программа пребывания. </p>
+        <p className="sol-sub"> Укажите пожелания к курсу. Анкета предложит программу; окончательный выбор остаётся за вами. </p>
 
         {result ? (
           <div className="sol-quiz__result">
             <span className="sol-quiz__stamp"> Предлагаемая программа </span>
-            <div className="sol-quiz__result-no">
-              {result.no} · результат подбора </div>
             <h3>{result.name}</h3>
             <div className="sol-quiz__result-days">{result.days}</div>
             <p className="sol-quiz__result-desc">{result.desc}</p>
-            <p className="sol-quiz__verdict">
-              По результатам анкетирования {result.verdict}
-            </p>
             <dl className="sol-quiz__record">
               {quiz.record.map((row) => (
                 <div key={row.no}>
@@ -40,15 +35,9 @@ function SolQuiz() {
                 </div>
               ))}
             </dl>
-            <p className="sol-quiz__result-note"> При равенстве предпочтений предлагается комплекс «Всё сразу». Программу можно изменить при записи. </p>
+            <p className="sol-quiz__result-note"> Программу можно изменить при записи. </p>
             <div className="sol-quiz__actions">
-              <button
-                className="sol-btn"
-                type="button"
-                onClick={() => scrollTo(result.anchor)}
-              >
-                {result.anchorLabel}
-              </button>
+              <a className="sol-btn sol-btn--ghost" href={result.anchor === "sol-services" ? "#/solnyshko?section=sol-services" : `#/solnyshko/${result.anchor === "sol-station" ? "station" : result.anchor}`}>{result.anchorLabel}</a>
               <button
                 className="sol-btn"
                 type="button"

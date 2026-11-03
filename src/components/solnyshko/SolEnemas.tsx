@@ -6,9 +6,9 @@ function SolEnemas() {
       <div className="sol-container">
         <span className="sol-label">Клизмотроника™ · двенадцать рецептур</span>
         <h2 className="sol-title">
-          Гидратация природными богатствами <em>России</em>
+          Географический <em>каталог</em>
         </h2>
-        <p className="sol-sub"> Рецептуры на основе природного сырья. Для каждой указаны место происхождения и состав. Подбор рецептуры производится при назначении курса. </p>
+        <p className="sol-sub"> Рецептуру записывают в путёвку под её полным названием. Регион и состав различают даже внутри минеральной, соляной и лесной групп. </p>
         <div className="sol-enemas">
           {ENEMAS.map((e) => (
             <article key={e.id} className="sol-card sol-card--sm">

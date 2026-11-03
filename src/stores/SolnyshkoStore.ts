@@ -23,6 +23,12 @@ export class SolnyshkoStore {
     if (this.status === "form" && PROGRAM_OPTIONS.some((p) => p.value === v)) this.program = v;
   }
 
+  chooseProgram(v: string): void {
+    if (!PROGRAM_OPTIONS.some((p) => p.value === v)) return;
+    if (this.status !== "form") this.reset();
+    this.program = v;
+  }
+
   setPower(v: string): void {
     if (this.status === "form" && POWER_OPTIONS.some((p) => p.value === v)) this.power = v;
   }

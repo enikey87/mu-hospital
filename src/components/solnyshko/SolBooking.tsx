@@ -4,6 +4,7 @@ import { useStore } from "../../stores/RootStore";
 
 function SolBooking() {
   const { solnyshko } = useStore();
+  const withPower = solnyshko.program === "kalofores" || solnyshko.program === "complex";
 
   if (solnyshko.status === "done" && solnyshko.voucher) {
     const programLabel =
@@ -21,8 +22,7 @@ function SolBooking() {
               Отдыхающий: <b>{solnyshko.name.trim()}</b>
               <br />
               Программа: <b>{programLabel}</b>
-              <br />
-              Перенятие: <b>{powerLabel}</b>
+              {withPower && <><br />Пожелание к курсу: <b>{powerLabel}</b></>}
             </p>
             <p className="sol-voucher__note">
               Конная доставка от Горно-Алтайска включена. Просим захватить
@@ -58,7 +58,7 @@ function SolBooking() {
               disabled={solnyshko.status === "sending"}
               value={solnyshko.name}
               onChange={(e) => solnyshko.setName(e.target.value)}
-              placeholder="Иванов Потап Потапыч"
+              placeholder="Иванов Иван Иванович"
             />
           </label>
           <label>
@@ -76,8 +76,9 @@ function SolBooking() {
               ))}
             </select>
           </label>
+          {withPower && (
           <label>
-            Что хотите перенять
+            Пожелание к курсу
             <select
               className="sol-input"
               disabled={solnyshko.status === "sending"}
@@ -91,6 +92,7 @@ function SolBooking() {
               ))}
             </select>
           </label>
+          )}
           <button
             type="submit"
             className="sol-btn sol-btn--big"

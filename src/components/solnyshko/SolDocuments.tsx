@@ -6,9 +6,9 @@ function SolDocuments() {
       <div className="sol-container">
         <span className="sol-label">Документы</span>
         <h2 className="sol-title">
-          Лицензии и <em>документы</em>
+          Документы <em>здравницы</em>
         </h2>
-        <p className="sol-sub"> Реквизиты документов пансионата. Архивные оригиналы хранятся в приёмной и у старшей сестры. </p>
+        <p className="sol-sub"> Свидетельство о категории, архив переписки и внутренняя опись. Медицинская лицензия в перечне отмечена как невыданная. </p>
         <div className="sol-docs">
           {SOL_DOCUMENTS.map((d) => (
             <article className="sol-doc" key={d.title}>

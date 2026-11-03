@@ -4,7 +4,7 @@ function SolKalofores() {
   return (
     <section id="sol-kalofores" className="sol-section sol-section--wide">
       <div className="sol-container">
-        <span className="sol-label">Уникальная разработка · заявка на патент №1246-К</span>
+        <span className="sol-label">Разработка здравницы · заявка №1246-К</span>
         <h2 className="sol-title">
           Калофорез<sup>®</sup> — перенятие силы <em>зверя</em>
         </h2>
@@ -24,7 +24,7 @@ function SolKalofores() {
         <div className="sol-device">
           <div className="sol-device__head">
             <h3>Аппарат «Калофорез-Кедр М2»</h3>
-            <span className="sol-badge"> М2 · два режима субстанции </span>
+            <span className="sol-badge"> М2 · три режима работы </span>
           </div>
           <div className="sol-device__modes">
             {KALO_MODES.map((m) => (
@@ -46,7 +46,7 @@ function SolKalofores() {
         <div className="sol-ultimate">
           <div className="sol-ultimate__head">
             <h3>{KALO_ULTIMATE.name}</h3>
-            <span className="sol-badge">для особых случаев · {KALO_ULTIMATE.code}</span>
+            <span className="sol-badge">вспомогательное имущество · {KALO_ULTIMATE.code}</span>
           </div>
           <p className="sol-ultimate__intro">{KALO_ULTIMATE.intro}</p>
           <div className="sol-ultimate__nails">
@@ -65,7 +65,7 @@ function SolKalofores() {
               </p>
             </div>
           </div>
-          <p className="sol-ultimate__ban">⚠ {KALO_ULTIMATE.ban}</p>
+          <p className="sol-ultimate__ban">{KALO_ULTIMATE.ban}</p>
           <p className="sol-ultimate__last">{KALO_ULTIMATE.ifNotHelped}</p>
         </div>
       </div>

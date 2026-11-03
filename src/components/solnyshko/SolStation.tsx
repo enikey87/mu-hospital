@@ -8,7 +8,7 @@ function SolStation() {
         <h2 className="sol-title">
           Уринотерапия в условиях <em>стационара</em>
         </h2>
-        <p className="sol-sub"> Круглосуточное наблюдение и личный стакан с гравировкой. Приёмы продукции и питание проводятся по графику выбранной программы. </p>
+        <p className="sol-sub"> Три срока пребывания. В недельном курсе считают приёмы продукции, в длительном — партии. Именной стакан входит во все программы. </p>
         <div className="sol-station">
           {STATION_PROGRAMS.map((p) => (
             <article key={p.name} className="sol-card">
