@@ -35,7 +35,7 @@ function CartDrawer() {
                 Сумма: {cart.lastOrderTotal.toLocaleString("ru-RU")} ₽.
                 Спецификация носит справочный характер. Оплата и поставка
                 по ней не выполняются. Условия регулярных поставок приведены
-                в разделе «Обслуживание».
+                в разделе «Регулярные поставки».
               </p>
               <button
                 className="btn btn-primary btn-sm"
@@ -64,7 +64,7 @@ function CartDrawer() {
                   <div className="cart-item__info">
                     <div className="cart-item__name">{product.name}</div>
                     <div className="cart-item__price">
-                      {(product.price * qty).toLocaleString("ru-RU")} ₽
+                      {cart.lineTotal(product, qty).toLocaleString("ru-RU")} ₽
                     </div>
                   </div>
                   <div className="qty-controls">

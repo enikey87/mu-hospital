@@ -8,6 +8,7 @@ export interface Product {
   unit: string;
   tag?: "Бестселлер" | "Эксклюзив" | "Нет в наличии" | "Новинка" | "Умное устройство" | "Особая серия";
   soldOut?: boolean;
+  bulkDiscount?: { minQuantity: number; percent: number };
   tech: string[];
 }
 
@@ -89,6 +90,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "stakan",
+    bulkDiscount: { minQuantity: 10, percent: 50 },
     emoji: "🥃",
     name: "УТ-С1 «Стакан 2.0»",
     subtitle: "устройство консервации",

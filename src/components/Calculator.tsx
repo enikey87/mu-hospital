@@ -9,11 +9,11 @@ function Calculator() {
   return (
     <section id="calculator">
       <div className="container">
-        <span className="section-label">Прил. Б · Система «УТ-Интеллект» · бета</span>
+        <span className="section-label">Система «УТ-Интеллект»</span>
         <h2 className="section-title">
-          Расчёт <span className="grad-text">дозировки</span>
+          Расчёт <span className="grad-text">потребности</span>
         </h2>
-        <p className="section-sub"> Расчёт продукта и потребности на курс по параметрам пациента. Используется внутренняя методика компании. </p>
+        <p className="section-sub"> Объём на курс и количество тары по внутреннему протоколу компании. Расчёт предназначен для совершеннолетних. </p>
         <div className="glass calc-wrap">
           <div className="calc-form">
             <div className="calc-row">
@@ -32,7 +32,7 @@ function Calculator() {
                 <input
                   className="input"
                   type="number"
-                  min="0"
+                  min="18"
                   value={calc.age}
                   onChange={(e) => calc.setAge(e.target.value)}
                 />
@@ -52,13 +52,14 @@ function Calculator() {
             <p style={{ fontSize: 13, color: "var(--muted)" }}> Степень доверия учитывается при подборе серии и объёма продукции. </p>
           </div>
 
-          <div className="calc-result">
+          <div className="calc-result" aria-live="polite">
+            {r ? <>
             <div className="calc-result__row">
-              <span>Рекомендуемый продукт</span>
+              <span>Расчётная серия</span>
               <strong>{r.product}</strong>
             </div>
             <div className="calc-result__row">
-              <span>Схема приёма</span>
+              <span>Объём по протоколу</span>
               <strong>
                 по {quantity(r.cups, ["стакану", "стакана", "стаканов"])} × 3 раза в день
               </strong>
@@ -70,9 +71,11 @@ function Calculator() {
             <div className="calc-result__row">
               <span>Потребность на курс</span>
               <strong>
-                {r.liters.toLocaleString("ru-RU")} л ({r.canisters} × УТ-БК-10)
+                {r.liters.toLocaleString("ru-RU")} л
               </strong>
             </div>
+            <div className="calc-result__row"><span>Фасовка к поставке</span><strong>{r.canisters} × 10 л — {r.canisters * 10} л</strong></div>
+            </> : <p>Для расчёта укажите вес от 1 кг и возраст от 18 лет.</p>}
             <p style={{ fontSize: 12, color: "var(--muted)", marginTop: 8 }}> Расчёт не является медицинской рекомендацией. Имеются противопоказания. Необходима консультация специалиста. 18+. </p>
           </div>
         </div>

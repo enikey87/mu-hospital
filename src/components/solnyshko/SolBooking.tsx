@@ -14,23 +14,21 @@ function SolBooking() {
       <section id="sol-booking" className="sol-section">
         <div className="sol-container">
           <span className="sol-label">Отделение путёвок</span>
-          <h2 className="sol-title">Заявка зарегистрирована</h2>
+          <h2 className="sol-title">Бланк путёвки готов</h2>
           <div className="sol-voucher">
-            <div className="sol-voucher__stamp">Зарегистрировано</div>
+            <div className="sol-voucher__stamp">Бланк сформирован</div>
             <div className="sol-voucher__num">{solnyshko.voucher}</div>
             <p>
               Отдыхающий: <b>{solnyshko.name.trim()}</b>
               <br />
               Программа: <b>{programLabel}</b>
-              {withPower && <><br />Пожелание к курсу: <b>{powerLabel}</b></>}
+              {withPower && <><br />Режим калофореза: <b>{powerLabel}</b></>}
             </p>
             <p className="sol-voucher__note">
-              Конная доставка от Горно-Алтайска включена. Просим захватить
-              тёплые носки. Номер заявки предъявляется при заезде.
-              Заявка не подтверждает оплату путёвки.
+              Справочный бланк для оформления путёвки. Он не бронирует место и не подтверждает оплату. Конная доставка от Горно-Алтайска входит в условия пребывания.
             </p>
             <button className="sol-btn sol-btn--ghost" onClick={solnyshko.reset}>
-              Подать новую заявку
+              Составить новый бланк
             </button>
           </div>
         </div>
@@ -42,8 +40,8 @@ function SolBooking() {
     <section id="sol-booking" className="sol-section">
       <div className="sol-container">
         <span className="sol-label">Отделение путёвок</span>
-        <h2 className="sol-title">Запись на курс</h2>
-        <p className="sol-sub"> Укажите имя и выберите программу. После регистрации будет сформирован номер заявки. Оплата на сайте не производится. </p>
+        <h2 className="sol-title">Бланк путёвки</h2>
+        <p className="sol-sub"> Выберите курс и укажите имя для бланка. Бланк не является подтверждением заезда; оплата на сайте не производится. </p>
         <form
           className="sol-form"
           onSubmit={(e) => {
@@ -78,7 +76,7 @@ function SolBooking() {
           </label>
           {withPower && (
           <label>
-            Пожелание к курсу
+            Режим калофореза
             <select
               className="sol-input"
               disabled={solnyshko.status === "sending"}
@@ -98,7 +96,7 @@ function SolBooking() {
             className="sol-btn sol-btn--big"
             disabled={!solnyshko.canSubmit || solnyshko.status === "sending"}
           >
-            {solnyshko.status === "sending" ? "Регистрация…" : "Подать заявку"}
+            {solnyshko.status === "sending" ? "Оформление…" : "Сформировать бланк"}
           </button>
         </form>
       </div>

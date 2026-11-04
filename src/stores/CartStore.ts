@@ -45,8 +45,14 @@ export class CartStore {
     return this.items.reduce((sum, i) => sum + i.qty, 0);
   }
 
+  lineTotal(product: Product, qty: number): number {
+    const discount = product.bulkDiscount;
+    const rate = discount && qty >= discount.minQuantity ? 1 - discount.percent / 100 : 1;
+    return product.price * qty * rate;
+  }
+
   get total(): number {
-    return this.items.reduce((sum, i) => sum + i.qty * i.product.price, 0);
+    return this.items.reduce((sum, i) => sum + this.lineTotal(i.product, i.qty), 0);
   }
 
   open(): void {

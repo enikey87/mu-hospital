@@ -15,21 +15,22 @@ export class DonorStore {
   dinner = "";
   status: DonorStatus = "form";
   submitted: DonorApplication | null = null;
+  private revision = 0;
 
   constructor() {
     makeAutoObservable(this, {}, { autoBind: true });
   }
 
   setName(v: string): void {
-    this.name = v;
+    if (this.status === "form") this.name = v;
   }
 
   setCity(v: string): void {
-    this.city = v;
+    if (this.status === "form") this.city = v;
   }
 
   setDinner(v: string): void {
-    this.dinner = v;
+    if (this.status === "form") this.dinner = v;
   }
 
   get canSubmit(): boolean {
@@ -41,10 +42,12 @@ export class DonorStore {
   }
 
   async submit(): Promise<void> {
-    if (!this.canSubmit || this.status === "sending") return;
+    if (!this.canSubmit || this.status !== "form") return;
+    const revision = this.revision;
     this.status = "sending";
     await new Promise((r) => setTimeout(r, 1200));
     runInAction(() => {
+      if (revision !== this.revision) return;
       this.status = "done";
       this.submitted = {
         name: this.name.trim(),
@@ -56,6 +59,7 @@ export class DonorStore {
   }
 
   reset(): void {
+    this.revision += 1;
     this.name = "";
     this.city = "";
     this.dinner = "";

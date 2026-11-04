@@ -530,6 +530,7 @@ export const PROGRAM_OPTIONS = [
     value: "second",
     label: "«Второе пришествие II Сан» — 1246 дней"
   },
+  { value: "station", label: "Стационар — срок по согласованию" },
   {
     value: "enema",
     label: "Клизмотроника™"
@@ -549,22 +550,9 @@ export const PROGRAM_OPTIONS = [
 ];
 
 export const POWER_OPTIONS = [
-  {
-    value: "bear",
-    label: "Силу медведя"
-  },
-  {
-    value: "deer",
-    label: "Выносливость оленя"
-  },
-  {
-    value: "horse",
-    label: "Спокойствие лошади"
-  },
-  {
-    value: "taiga",
-    label: "Дыхание тайги"
-  }
+  { value: "bear", label: "Медвежий режим" },
+  { value: "deer", label: "Олений режим" },
+  { value: "taiga", label: "Смешанный таёжный режим" },
 ];
 
 /** Разрешительная документация здравницы: реквизиты, срок действия, состояние. */
@@ -643,29 +631,21 @@ export const SOL_DOCUMENTS: SolDocument[] = [
   }
 ];
 
-export type QuizProgram = "morning" | "safety" | "second" | "enema" | "kalofores" | "roots" | "complex";
+export type QuizProgram = "morning" | "safety" | "second" | "station" | "enema" | "kalofores" | "roots" | "complex";
 
-export interface QuizOption {
-  value: string;
-  label: string;
-}
-
-/** Пункт анкеты при поступлении. */
+export interface QuizOption { value: string; label: string; }
 export interface QuizQuestion {
-  /** Номер пункта по описи анкетирования. */
   no: string;
   title: string;
-  /** Канцелярское уточнение порядка заполнения. */
   note: string;
+  when?: string;
   options: QuizOption[];
 }
-
 export interface QuizResult {
   key: QuizProgram;
   name: string;
   days: string;
   desc: string;
-  /** Раздел, в котором программа разъяснена полностью. */
   anchor: string;
   anchorLabel: string;
 }
@@ -673,124 +653,55 @@ export interface QuizResult {
 export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     no: "п. 1246-А/1",
-    title: "Что намерены перенять?",
-    note: "Выберите основной желаемый результат.",
+    title: "Выберите направление",
+    note: "Можно оформить отдельный курс или комплекс на один заезд.",
     options: [
-      {
-        value: "bear",
-        label: "Силу медведя — со спячкой и берлогой",
-        },
-      {
-        value: "deer",
-        label: "Выносливость оленя — с миграцией по графику",
-        },
-      {
-        value: "horse",
-        label: "Спокойствие лошади",
-        },
-      {
-        value: "taiga",
-        label: "Дыхание тайги",
-        }
-    ]
+      { value: "station", label: "Стационарная уринотерапия" },
+      { value: "enema", label: "Клизмотроника" },
+      { value: "kalofores", label: "Калофорез" },
+      { value: "roots", label: "Комплекс «Исконный»" },
+      { value: "complex", label: "Комплекс «Всё сразу»" },
+    ],
   },
   {
-    no: "п. 1246-А/2",
-    title: "Какое направление вам ближе?",
-    note: "Укажите предпочтительный способ прохождения курса.",
+    no: "п. 1246-А/2", when: "station",
+    title: "Срок пребывания",
+    note: "Для стационара предусмотрены три курса. Другой срок можно согласовать отдельно.",
     options: [
-      {
-        value: "kalofores",
-        label: "Калофорез — перенятие силы зверя",
-        },
-      {
-        value: "enema",
-        label: "Клизмотроника — география рецептур",
-        },
-      {
-        value: "station",
-        label: "Стационар — курс с личным стаканом",
-        },
-      {
-        value: "roots",
-        label: "Обретение корней — комплекс «Исконный»",
-        }
-    ]
+      { value: "week", label: "7 дней" }, { value: "month", label: "21 день" },
+      { value: "long", label: "1246 дней" }, { value: "asis", label: "Срок по согласованию" },
+    ],
   },
   {
-    no: "п. 1246-А/3",
-    title: "Срок стационара",
-    note: "Для стационара выберите срок. В остальных направлениях его уточняют при оформлении путёвки.",
-    options: [
-      {
-        value: "week",
-        label: "7 дней",
-        },
-      {
-        value: "month",
-        label: "21 день",
-        },
-      {
-        value: "long",
-        label: "1246 дней",
-        },
-      {
-        value: "asis",
-        label: "По согласованной программе",
-        }
-    ]
-  }
+    no: "п. 1246-А/3", when: "kalofores",
+    title: "Режим калофореза",
+    note: "Медвежьи курсы проводят с ноября по март, оленьи — в период миграции.",
+    options: POWER_OPTIONS,
+  },
 ];
 
 export const QUIZ_RESULTS: QuizResult[] = [
-  {
-    key: "morning",
-    name: "«Утренний круг»",
-    days: "7 дней",
-    desc: "Наблюдение в течение недели. Личный стакан с гравировкой. Учёт приёмов и цвета партии трижды в день.",
-    anchor: "sol-station",
-    anchorLabel: "Программы стационара",
-  },
-  {
-    key: "safety",
-    name: "«Полная Сохранность»",
-    days: "21 день",
-    desc: "Курс продукции трёхступенчатой очистки. Круглосуточное наблюдение и ведение индивидуальной карты.",
-    anchor: "sol-station",
-    anchorLabel: "Программы стационара",
-  },
-  {
-    key: "second",
-    name: "«Второе пришествие II Сан»",
-    days: "1246 дней",
-    desc: "Длительное пребывание с переводом отдыхающего в статус собственной партии. Личная учётная карточка на весь срок.",
-    anchor: "sol-station",
-    anchorLabel: "Программы стационара",
-  },
-  { key: "enema", name: "Клизмотроника™", days: "по выбранной рецептуре", desc: "Географический каталог природного сырья: место происхождения и название рецептуры вносятся в карту курса.", anchor: "enemas", anchorLabel: "О клизмотронике" },
-  { key: "kalofores", name: "Калофорез®", days: "по сезонной программе", desc: "Медвежья или оленья субстанция, аппарат М2 и наблюдение за перенятыми свойствами.", anchor: "kalofores", anchorLabel: "О калофорезе" },
-  { key: "roots", name: "Комплекс «Исконный»", days: "по ступени комплекса", desc: "Репофорез по регламенту №1246-У: от знакомства с репой до личного севооборота.", anchor: "roots", anchorLabel: "О комплексе «Исконный»" },
-  {
-    key: "complex",
-    name: "Комплекс «Всё сразу»",
-    days: "по согласованию",
-    desc: "Уринотерапия, клизмотроника и калофорез в течение одного заезда.",
-    anchor: "sol-services",
-    anchorLabel: "Флагманские направления",
-  }
+  { key: "morning", name: "«Утренний круг»", days: "7 дней", desc: "Первое знакомство с методом. Именной стакан и три приёма в день.", anchor: "sol-station", anchorLabel: "Программы стационара" },
+  { key: "safety", name: "«Полная Сохранность»", days: "21 день", desc: "Курс продукции трёхступенчатой очистки с круглосуточным наблюдением.", anchor: "sol-station", anchorLabel: "Программы стационара" },
+  { key: "second", name: "«Второе пришествие II Сан»", days: "1246 дней", desc: "Полный цикл пребывания с переводом отдыхающего в собственную партию.", anchor: "sol-station", anchorLabel: "Программы стационара" },
+  { key: "station", name: "Стационарная уринотерапия", days: "срок по согласованию", desc: "Стационарный курс. Продолжительность уточняется при оформлении путёвки.", anchor: "sol-station", anchorLabel: "Программы стационара" },
+  { key: "enema", name: "Клизмотроника™", days: "по выбранной рецептуре", desc: "Процедурный маршрут по природным рецептурам: от алтайского сбора до дальневосточной ламинарии.", anchor: "enemas", anchorLabel: "О клизмотронике" },
+  { key: "kalofores", name: "Калофорез®", days: "по сезонной программе", desc: "Перенятие силы зверя вместе с его повадками. Выбранный режим будет указан в бланке.", anchor: "kalofores", anchorLabel: "О калофорезе" },
+  { key: "roots", name: "Комплекс «Исконный»", days: "по ступени комплекса", desc: "От знакомства с репой до личного севооборота.", anchor: "roots", anchorLabel: "О комплексе «Исконный»" },
+  { key: "complex", name: "Комплекс «Всё сразу»", days: "по согласованию", desc: "Уринотерапия, клизмотроника и калофорез в течение одного заезда. «Исконный» оформляется отдельно.", anchor: "sol-services", anchorLabel: "Направления здравницы" },
 ];
 
-export function recommendQuizResult(answers: (string | null)[]): QuizResult {
-  const method = answers[1];
-  const duration = answers[2];
-  let key: QuizProgram = "complex";
-  if (method === "enema") key = "enema";
-  else if (method === "kalofores") key = "kalofores";
-  else if (method === "roots") key = "roots";
-  else if (method === "station") {
-    if (duration === "week") key = "morning";
-    else if (duration === "month") key = "safety";
-    else if (duration === "long") key = "second";
-  }
-  return QUIZ_RESULTS.find(r => r.key === key) ?? QUIZ_RESULTS[0];
+export function recommendQuizResult(answers: (string | null)[]): QuizResult | null {
+  const [direction, detail] = answers;
+  let key: QuizProgram;
+  if (direction === "station") {
+    const terms: Record<string, QuizProgram> = { week: "morning", month: "safety", long: "second", asis: "station" };
+    if (!detail || !Object.hasOwn(terms, detail)) return null;
+    key = terms[detail];
+  } else if (direction === "kalofores") {
+    if (!POWER_OPTIONS.some(p => p.value === detail)) return null;
+    key = "kalofores";
+  } else if (direction === "enema" || direction === "roots" || direction === "complex") key = direction;
+  else return null;
+  return QUIZ_RESULTS.find(r => r.key === key) ?? null;
 }

@@ -99,7 +99,7 @@ test('выбор направления сохраняет черновик, с�
   store.chooseProgram('enema');
   assert.equal(store.name, 'Иванов');
   assert.equal(store.program, 'enema');
-  assert.doesNotMatch(render(SolBooking, { solnyshko: store }), /Пожелание к курсу/);
+  assert.doesNotMatch(render(SolBooking, { solnyshko: store }), /Режим калофореза/);
   const first = store.submit();
   store.chooseProgram('missing');
   assert.equal(store.status, 'sending');
@@ -119,5 +119,5 @@ test('выбор направления сохраняет черновик, с�
   assert.equal(store.name, '');
   assert.equal(store.voucher, null);
   assert.equal(store.program, 'kalofores');
-  assert.match(render(SolBooking, { solnyshko: store }), /Пожелание к курсу/);
+  assert.match(render(SolBooking, { solnyshko: store }), /Режим калофореза/);
 });
