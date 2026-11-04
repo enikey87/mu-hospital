@@ -12,15 +12,23 @@ const TAG_CLASS: Record<NonNullable<Product["tag"]>, string> = {
   "Особая серия": "tag--molecule",
 };
 
+const PRODUCT_IMAGES: Record<string, string> = {
+  morning: MEDIA.morningProduct,
+  horse: MEDIA.horseProduct,
+};
+
 function ProductCard({ product }: { product: Product }) {
   const { cart } = useStore();
 
   return (
-    <article className="glass product-card">
+    <article className={`glass product-card${PRODUCT_IMAGES[product.id] ? " product-card--featured" : ""}`}>
       <div className="product-card__top">
         <span className="product-card__code">{product.name.split(" «")[0]}</span>
         {product.tag && <span className={`tag ${TAG_CLASS[product.tag]}`}>{product.tag}</span>}
       </div>
+      {PRODUCT_IMAGES[product.id] && <figure className="product-card__photo">
+        <img src={PRODUCT_IMAGES[product.id]} alt={`${product.name} — заводская стеклянная тара с красной маркировкой`} width="1199" height="1312" loading="lazy" />
+      </figure>}
       <h3 className="product-card__name">{product.name}</h3>
       <div className="product-card__subtitle">{product.subtitle}</div>
       <p className="product-card__desc">{product.description}</p>
@@ -31,6 +39,12 @@ function ProductCard({ product }: { product: Product }) {
           </span>
         ))}
       </div>
+      {product.id === "morning" && <dl className="catalog-spec">
+        <div><dt>Форма</dt><dd>Раствор для внутреннего применения</dd></div>
+        <div><dt>Сбор сырья</dt><dd>04:00–05:40 МСК</dd></div>
+        <div><dt>Стандарт</dt><dd>ГОСТ Р 1246-2002</dd></div>
+        <div><dt>Рецептура</dt><dd>По записи 1246 года</dd></div>
+      </dl>}
       <div className="product-card__bottom">
         <div className="price">
           {product.price.toLocaleString("ru-RU")} ₽ <span>/ {product.unit}</span>
@@ -52,22 +66,8 @@ function Products() {
     <section id="products">
       <div className="container">
         <span className="section-label"> Каталог продукции · с 2002 года </span>
-        <h2 className="section-title">Продукция</h2>
+        <h2 className="section-title">Серийная продукция</h2>
         <p className="section-sub"> Продукция на основе донорского сырья. В каталоге приведены серии, варианты фасовки и стоимость единицы. Номер партии и условия хранения указаны на этикетке. </p>
-        <div className="catalog-feature">
-          <div className="catalog-feature__copy">
-            <span className="catalog-feature__series">Серия УТ / Базовый продукт</span>
-            <h3>УТ-01 «Утренний»</h3>
-            <p>От сбора сырья до паспорта партии — единый производственный цикл.</p>
-            <dl className="catalog-spec">
-              <div><dt>Форма</dt><dd>Раствор для внутреннего применения</dd></div>
-              <div><dt>Сбор сырья</dt><dd>04:00–05:40 МСК</dd></div>
-              <div><dt>Стандарт</dt><dd>ГОСТ Р 1246-2002</dd></div>
-              <div><dt>Рецептура</dt><dd>По записи 1246 года</dd></div>
-            </dl>
-          </div>
-          <img src={MEDIA.products} alt="Стеклянная тара с продукцией серии УТ" width="1536" height="1024" loading="lazy" />
-        </div>
         <div className="products-grid">
           {PRODUCTS.map((p) => (
             <ProductCard key={p.id} product={p} />

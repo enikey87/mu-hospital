@@ -72,6 +72,7 @@ test('путь к поставщику проходит через уринот�
   const env = browser(t);
   const store = createRootStore();
   const home = render(store);
+  assert.match(home, /^<div class="sol">/);
   assert.match(home, /<h1[^>]*>Пансионат/);
   assert.match(home, /href="#\/solnyshko\/station"[^>]*>Уринотерапия/);
   assert.doesNotMatch(home, /основной сайт|href="#\/urinatech/);
@@ -89,6 +90,7 @@ test('путь к поставщику проходит через уринот�
   }
   env.navigate('#/urinatech');
   const manufacturer = render(store);
+  assert.match(manufacturer, /^<div class="ut">/);
   assert.match(manufacturer, /<h1[^>]*>Производство/);
   assert.match(manufacturer, /id="products"/);
   assert.match(manufacturer, /href="#\/solnyshko\/station"[^>]*>Уринотерапия/);

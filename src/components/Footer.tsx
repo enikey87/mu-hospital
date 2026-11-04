@@ -1,4 +1,4 @@
-import BrandMark from "./BrandMark";
+import IndustrialMark from "./IndustrialMark";
 
 function Footer() {
   return (
@@ -6,7 +6,7 @@ function Footer() {
       <div className="container">
         <div className="footer__grid">
           <div className="footer__col" id="company">
-            <div className="footer__brand"><BrandMark /><span>УринаТех</span></div>
+            <div className="footer__brand"><IndustrialMark /><span>УринаТех</span></div>
             <div className="footer__heading">История компании</div>
             <p className="footer__text">
               Московский Институт Обогащения Урины — первое название компании,

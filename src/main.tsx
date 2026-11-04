@@ -7,6 +7,7 @@ import {
 } from "./stores/RootStore";
 import "./styles/global.css";
 import "./styles/solnyshko.css";
+import "./styles/urinatech.css";
 
 const store = createRootStore();
 
