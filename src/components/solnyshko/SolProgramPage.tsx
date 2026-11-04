@@ -26,7 +26,7 @@ function SolProgramPage({ id }: { id: SolProgramId }) {
         <section className="sol-detail__hero">
           <div className="sol-container">
             <nav className="sol-breadcrumbs" aria-label="Хлебные крошки">
-              <a href="#/solnyshko">Пансионат «Солнышко»</a><span aria-hidden="true">/</span><span aria-current="page">{program.label}</span>
+              <a href="#/">Пансионат «Солнышко»</a><span aria-hidden="true">/</span><span aria-current="page">{program.label}</span>
             </nav>
             <div className="sol-detail__hero-grid">
               <div>

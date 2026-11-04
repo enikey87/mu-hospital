@@ -13,7 +13,7 @@ const baseURL = process.env.SITE_URL || 'http://127.0.0.1:5188/urinatech/';
   try {
     const fallback = await browser.newPage();
     await fallback.route('**/avatars/kovalchuk-review.webp', route => route.abort());
-    await fallback.goto(baseURL);
+    await fallback.goto(baseURL + '#/urinatech');
     const failedPortrait = fallback.locator('.review-portrait').first();
     await failedPortrait.scrollIntoViewIfNeeded();
     await fallback.waitForFunction(() => document.querySelector('.review-portrait span'), null, { timeout: 5000 });
@@ -26,7 +26,7 @@ const baseURL = process.env.SITE_URL || 'http://127.0.0.1:5188/urinatech/';
       const page = await browser.newPage({ viewport: { width, height: 1000 } });
       const errors = [];
       page.on('pageerror', error => errors.push(error.message));
-      await page.goto(baseURL, { waitUntil: 'networkidle' });
+      await page.goto(baseURL + '#/urinatech', { waitUntil: 'networkidle' });
       const cookie = page.getByRole('button', { name: 'Понятно', exact: true });
       if (await cookie.count()) await cookie.click();
       const text = await page.locator('body').innerText();
@@ -61,16 +61,16 @@ const baseURL = process.env.SITE_URL || 'http://127.0.0.1:5188/urinatech/';
       report.push({ state: 'main-reviews', images: 17, ...await verifyImages(17) });
       if (width < 1201) {
         await page.getByRole('button', { name: 'Открыть меню' }).click();
-        await page.locator('.mobile-nav a[href="#company"]').click();
+        await page.locator('.mobile-nav a[href="#/urinatech?section=company"]').click();
       } else {
-        await page.locator('.nav a[href="#company"]').click();
+        await page.locator('.nav a[href="#/urinatech?section=company"]').click();
       }
       await page.waitForFunction(() => {
         const r = document.getElementById('company').getBoundingClientRect();
         return r.top >= 0 && r.bottom <= innerHeight;
       });
       assert.match(await page.locator('footer #company').innerText(), /Московский Институт Обогащения Урины/);
-      await page.locator('.footer a[href="#/solnyshko"]').click();
+      await page.locator('.footer a[href="#/"]').click();
       await page.locator('.sol-review__head').first().waitFor();
       report.push({ state: 'resort-reviews', images: 4, ...await verifyImages(4) });
       assert.match(await page.locator('.sol main').innerText(), /созданы нейросетью/);

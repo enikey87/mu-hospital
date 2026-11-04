@@ -37,7 +37,7 @@ function SolQuiz() {
             </dl>
             <p className="sol-quiz__result-note"> Программу можно изменить при записи. </p>
             <div className="sol-quiz__actions">
-              <a className="sol-btn sol-btn--ghost" href={result.anchor === "sol-services" ? "#/solnyshko?section=sol-services" : `#/solnyshko/${result.anchor === "sol-station" ? "station" : result.anchor}`}>{result.anchorLabel}</a>
+              <a className="sol-btn sol-btn--ghost" href={result.anchor === "sol-services" ? "#/?section=sol-services" : `#/solnyshko/${result.anchor === "sol-station" ? "station" : result.anchor}`}>{result.anchorLabel}</a>
               <button
                 className="sol-btn"
                 type="button"

@@ -1,10 +1,6 @@
-import { observer } from "mobx-react-lite";
-import { useStore } from "../../stores/RootStore";
 import BrandMark from "../BrandMark";
 
 function SolFooter() {
-  const { router } = useStore();
-
   return (
     <footer className="sol-footer">
       <div className="sol-container">
@@ -22,7 +18,7 @@ function SolFooter() {
           </div>
           <div className="sol-footer__col">
             <b>Документы</b>
-            <a className="sol-link" href="#/solnyshko?section=sol-documents" onClick={() => document.getElementById("sol-documents")?.scrollIntoView({ behavior: "smooth" })}>Опись документов →</a>
+            <a className="sol-link" href="#/?section=sol-documents" onClick={() => document.getElementById("sol-documents")?.scrollIntoView({ behavior: "smooth" })}>Опись документов →</a>
             <p> Категория пансионата — три звезды. Разработка калофореза ведётся по заявке №1246-К. Медицинская лицензия здравнице не выдавалась. </p>
           </div>
         </div>
@@ -33,13 +29,11 @@ function SolFooter() {
         </p>
         <div className="sol-footer__bottom">
           <span> © 1246–2026 Пансионат «Солнышко». </span>
-          <button className="sol-link" onClick={() => router.goMain()}>
-            ← ООО «УринаТех» — основной сайт
-          </button>
+          <a className="sol-link" href="#/solnyshko/station">Программы уринотерапии →</a>
         </div>
       </div>
     </footer>
   );
 }
 
-export default observer(SolFooter);
+export default SolFooter;

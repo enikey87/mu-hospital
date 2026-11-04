@@ -13,8 +13,8 @@ export default function Hero() {
           Контроль качества каждой партии по рецептурам с 1246 года.
         </p>
         <div className="hero-actions">
-          <a className="btn btn-primary" href="#products">Каталог продукции <span aria-hidden="true">↗</span></a>
-          <a className="hero-secondary" href="#donor">Донорская программа</a>
+          <a className="btn btn-primary" href="#/urinatech?section=products">Каталог продукции <span aria-hidden="true">↗</span></a>
+          <a className="hero-secondary" href="#/urinatech?section=donor">Донорская программа</a>
         </div>
       </div>
       <div className="hero-foot">

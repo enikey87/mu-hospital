@@ -17,8 +17,8 @@ function Footer() {
           <div className="footer__col">
             <div className="footer__heading"> Пансионат «Солнышко» </div>
             <p className="footer__text"> Стационарная уринотерапия, клизмотроника и калофорез. Республика Алтай, 40 вёрст от асфальта. Конная доставка от Горно-Алтайска включена в путёвку. </p>
-            <a className="footer__link" href="#/solnyshko">
-              Перейти на сайт пансионата →
+            <a className="footer__link" href="#/">
+              На главную здравницы →
             </a>
           </div>
           <div className="footer__col">

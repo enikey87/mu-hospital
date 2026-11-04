@@ -26,7 +26,7 @@ const programs = [
         assert.deepEqual(overflow, [], state);
         report.push({ state, ...actual });
       };
-      await page.goto(base + '#/solnyshko', { waitUntil: 'networkidle' });
+      await page.goto(base, { waitUntil: 'networkidle' });
       assert.equal(await page.locator('.sol-services article').count(), 4);
       await layout('resort-home');
       for (const [id, title, booking] of programs) {
@@ -71,7 +71,7 @@ const programs = [
         await layout('booking-' + id);
         await page.locator('.sol-voucher button').click();
         await page.locator('.sol-header__brand').click();
-        await page.waitForURL(url => url.hash === '#/solnyshko');
+        await page.waitForURL(url => url.hash === '#/');
       }
       if (width === 1440 || width === 390) {
         for (const [method, duration, expected, target] of [
@@ -82,7 +82,7 @@ const programs = [
           await page.locator('.sol-quiz__option').nth(method).click();
           await page.locator('.sol-quiz__option').nth(duration).click();
           const link = page.locator('.sol-quiz__actions a');
-          assert.equal(await link.getAttribute('href'), target ? `#/solnyshko/${target}` : '#/solnyshko?section=sol-services');
+          assert.equal(await link.getAttribute('href'), target ? `#/solnyshko/${target}` : '#/?section=sol-services');
           await page.getByRole('button', { name: 'Записаться на эту программу', exact: true }).click();
           assert.equal(await page.locator('.sol-form select').first().inputValue(), expected);
           await page.getByRole('button', { name: 'Заполнить повторно', exact: true }).click();
@@ -92,7 +92,7 @@ const programs = [
       await page.goto(base + '#/solnyshko/missing');
       await page.getByRole('heading', { name: 'Страница не найдена' }).waitFor();
       await page.getByRole('button', { name: 'Вернуться на главную' }).click();
-      await page.waitForFunction(() => document.querySelector('h1')?.textContent.includes('Производство'));
+      await page.waitForFunction(() => document.querySelector('h1')?.textContent.includes('Здоровье'));
       assert.deepEqual(errors, []);
       report.push({ state: 'console', width, errors });
       console.log('PASS', width);

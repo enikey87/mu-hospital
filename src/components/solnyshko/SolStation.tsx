@@ -18,6 +18,17 @@ function SolStation() {
             </article>
           ))}
         </div>
+        <aside className="sol-supplier" aria-label="Поставщик продукции для уринотерапии">
+          <div>
+            <span className="sol-label">Производитель продукции — ООО «УринаТех»</span>
+            <h3>От производственной линии до именного стакана</h3>
+            <p>Для стационарных курсов используют продукцию серии УТ. «УринаТех» ведёт сбор, фильтрацию и консервацию, присваивает каждой партии номер. В каталоге производителя приведены составы, серии и условия поставки; в реестре можно проверить номер партии.</p>
+          </div>
+          <div className="sol-supplier__links">
+            <a className="sol-btn" href="#/urinatech">О производителе — УринаТех <span aria-hidden="true">↗</span></a>
+            <a className="sol-link" href="#/urinatech?section=products">Каталог продукции →</a>
+          </div>
+        </aside>
       </div>
     </section>
   );

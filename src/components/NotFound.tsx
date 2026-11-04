@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 function NotFound() {
   useEffect(() => {
-    document.title = "404 — УринаТех";
+    document.title = "404 — пансионат «Солнышко»";
   }, []);
 
   return (

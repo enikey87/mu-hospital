@@ -59,14 +59,14 @@ test('прямые адреса направлений, разделы глав�
     assert.equal(router.program, null);
     assert.match(document.title, /404/);
   }
-  for (const hash of ['#/', '#products', '']) {
+  for (const hash of ['#/', '']) {
     env.navigate(hash);
-    assert.equal(router.route, 'main');
+    assert.equal(router.route, 'solnyshko');
     assert.equal(router.program, null);
-    assert.match(document.title, /УринаТех/);
+    assert.match(document.title, /Солнышко/);
   }
   router.goSolnyshko('not-a-section');
-  assert.equal(window.location.hash, '#/solnyshko');
+  assert.equal(window.location.hash, '#/');
 });
 
 test('страницы содержат один заголовок, графику, канонические гэги и ограничения; главная не повторяет полный каталог', t => {

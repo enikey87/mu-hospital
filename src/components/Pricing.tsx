@@ -21,7 +21,7 @@ function Pricing() {
                   <li key={f}>{f}</li>
                 ))}
               </ul>
-              <a href="#products" className={`btn btn-sm ${plan.accent ? "btn-primary" : "btn-ghost"}`}>
+              <a href="#/urinatech?section=products" className={`btn btn-sm ${plan.accent ? "btn-primary" : "btn-ghost"}`}>
                 Выбрать продукцию
               </a>
             </div>
