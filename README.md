@@ -10,6 +10,9 @@
 
 > Имеются противопоказания. Необходима консультация специалиста. 18+
 
+Репозиторий: [enikey87/mu-hospital](https://github.com/enikey87/mu-hospital).
+Сайт: [enikey87.github.io/mu-hospital](https://enikey87.github.io/mu-hospital/).
+
 ## Навигация
 
 - `/` и `#/` — главная пансионата; `#/solnyshko` сохранён как старый адрес.

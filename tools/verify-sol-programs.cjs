@@ -1,7 +1,7 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
-const base = process.env.SITE_URL || 'http://127.0.0.1:5188/urinatech/';
+const base = process.env.SITE_URL || 'http://127.0.0.1:5188/mu-hospital/';
 const programs = [
   ['station', 'Стационарная уринотерапия', 'morning'],
   ['enemas', 'Клизмотроника™', 'enema'],

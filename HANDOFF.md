@@ -1,8 +1,8 @@
 # HANDOFF: УринаТех — ключевые идеи и know-how
 
 **Дата:** 25.10.2026 · **Статус:** прод живой и стабильный · **Аудитория:** агент, который продолжит работу на другой машине
-**Репозиторий:** https://github.com/enikey87/urinatech (публичный)
-**Прод:** https://enikey87.github.io/urinatech/ · Подсайт: `/#/solnyshko`
+**Репозиторий:** https://github.com/enikey87/mu-hospital (переименован 04.11.2026)
+**Прод:** https://enikey87.github.io/mu-hospital/ · Производитель: `#/urinatech`. Описание ниже — историческое; актуальная структура в README.
 
 ---
 
@@ -189,7 +189,7 @@ Web 1.0 «Русская моча против скальпеля врача» (
 ## 9. Чек-лист новой машины
 
 ```bash
-git clone git@github.com:enikey87/urinatech.git && cd urinatech
+git clone git@github.com:enikey87/mu-hospital.git && cd mu-hospital
 npm install
 npm run dev          # localhost:5173
 npm run build        # типы + прод-сборка; base подхватится сам
