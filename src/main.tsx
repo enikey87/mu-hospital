@@ -17,8 +17,8 @@ const notFound = (() => {
   try {
     const r = sessionStorage.getItem("ut-redirect");
     if (r) sessionStorage.removeItem("ut-redirect");
-    const path = (r ?? "").split("?")[0].replace(/\/+$/, "");
-    return path !== "" && path !== "/urinatech";
+    const path = (r ?? "").split(/[?#]/)[0].replace(/\/+$/, "");
+    return path !== "" && path !== import.meta.env.BASE_URL.replace(/\/+$/, "");
   } catch {
     return false;
   }

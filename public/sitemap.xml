@@ -10,14 +10,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Пансионат «Солнышко» — лист основной -->
   <url>
-    <loc>https://enikey87.github.io/urinatech/</loc>
+    <loc>https://enikey87.github.io/mu-hospital/</loc>
     <lastmod>1246-01-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>1.0</priority>
   </url>
   <!-- УринаТех — производитель продукции для уринотерапии -->
   <url>
-    <loc>https://enikey87.github.io/urinatech/#/urinatech</loc>
+    <loc>https://enikey87.github.io/mu-hospital/#/urinatech</loc>
     <lastmod>1246-01-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>

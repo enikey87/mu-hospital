@@ -4,4 +4,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://enikey87.github.io/urinatech/sitemap.xml
+Sitemap: https://enikey87.github.io/mu-hospital/sitemap.xml

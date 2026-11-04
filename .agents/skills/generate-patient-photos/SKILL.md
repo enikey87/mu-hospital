@@ -24,8 +24,8 @@ description: Генерация фотореалистичных ИИ-авата
 2. В `src/stores/TestimonialsStore.ts` у персонажа задать `avatar: "<slug>.jpg"`
    (SVG-заглушки — `"<slug>.svg"`, генератор: `tools/gen_placeholders.py`).
 3. `src/components/Testimonials.tsx` рендерит `<img src={BASE_URL + "avatars/" + avatar}>` —
-   путь уже учитывает GitHub Pages base (`/urinatech/`).
-4. Прод-проверка после деплоя: `curl -I https://enikey87.github.io/urinatech/avatars/<slug>.jpg`.
+   путь уже учитывает GitHub Pages base (`/mu-hospital/`).
+4. Прод-проверка после деплоя: `curl -I https://enikey87.github.io/mu-hospital/avatars/<slug>.jpg`.
 
 ## Вариант A: Hugging Face Spaces, FLUX.1-schnell (лучшее качество, бесплатно)
 

@@ -1,7 +1,7 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
-const baseURL = process.env.SITE_URL || 'http://127.0.0.1:5188/urinatech/';
+const baseURL = process.env.SITE_URL || 'http://127.0.0.1:5188/mu-hospital/';
 
 (async () => {
   const browser = await chromium.launch({
@@ -47,7 +47,7 @@ const baseURL = process.env.SITE_URL || 'http://127.0.0.1:5188/urinatech/';
           await img.scrollIntoViewIfNeeded();
           await img.evaluate(image => image.decode());
           assert.deepEqual(await img.evaluate(image => [image.naturalWidth, image.naturalHeight]), [256, 256]);
-          assert.ok((await img.getAttribute('src')).startsWith('/urinatech/avatars/'));
+          assert.ok((await img.getAttribute('src')).startsWith(new URL('avatars/', baseURL).pathname));
         }
         const dimensions = await page.evaluate(() => ({ width: innerWidth, scrollWidth: document.documentElement.scrollWidth }));
         assert.equal(dimensions.scrollWidth, width);
