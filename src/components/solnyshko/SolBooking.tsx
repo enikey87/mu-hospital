@@ -50,7 +50,7 @@ function SolBooking() {
           }}
         >
           <label>
-            ФИО отдыхающего
+            Имя отдыхающего
             <input
               className="sol-input"
               disabled={solnyshko.status === "sending"}

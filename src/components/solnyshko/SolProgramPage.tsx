@@ -33,7 +33,7 @@ function SolProgramPage({ id }: { id: SolProgramId }) {
                 <span className="sol-label">Направление здравницы</span>
                 <h1>{program.title}</h1>
                 <p className="sol-detail__lead">{program.summary}</p>
-                <button className="sol-btn" onClick={book}>Записаться на это направление <span aria-hidden="true">↗</span></button>
+                <button className="sol-btn" onClick={book}>Бланк путёвки <span aria-hidden="true">↗</span></button>
               </div>
               <img src={program.image} alt={program.imageAlt} width="1536" height="1024" loading="eager" />
             </div>
@@ -56,8 +56,8 @@ function SolProgramPage({ id }: { id: SolProgramId }) {
         <Content />
         <section className="sol-section sol-detail__booking">
           <div className="sol-container">
-            <div><span className="sol-label">Отделение путёвок</span><h2 className="sol-title">Выбрать курс</h2><p>Направление будет указано в форме заявки.</p></div>
-            <button className="sol-btn" onClick={book}>Перейти к записи</button>
+            <div><span className="sol-label">Отделение путёвок</span><h2 className="sol-title">Оформить бланк путёвки</h2><p>Выбранное направление будет перенесено в бланк.</p></div>
+            <button className="sol-btn" onClick={book}>Составить бланк</button>
             <p className="sol-detail__disclaimer">Имеются противопоказания. Необходима консультация специалиста. Продукция не является лекарственным средством. 18+</p>
           </div>
         </section>

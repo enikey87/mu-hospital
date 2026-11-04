@@ -23,7 +23,7 @@ test('фотографии поставляются вместе с сайтом
 });
 
 test('первые экраны имеют один заголовок и фотографию без отложенной загрузки; номера загружаются отложенно', () => {
-  for (const [Component, title, photo] of [[Hero, 'Производство', MEDIA.production], [SolHero, 'Здоровье', MEDIA.resort]]) {
+  for (const [Component, title, photo] of [[Hero, 'Производство', MEDIA.production], [SolHero, 'Пансионат', MEDIA.resort]]) {
     const html = render(Component);
     assert.equal((html.match(/<h1\b/g) ?? []).length, 1);
     assert.match(html, new RegExp(`<h1[^>]*>${title}`));

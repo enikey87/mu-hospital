@@ -75,7 +75,7 @@ test('страницы содержат один заголовок, графи�
   const home = render(App, store, { initialNotFound: false });
   for (const program of SOL_PROGRAMS) assert.ok(home.includes(`href="#/solnyshko/${program.id}"`));
   assert.doesNotMatch(home, /id="sol-station"|id="sol-enemas"|id="sol-kalofores"|id="sol-roots"/);
-  const canon = { station: ['1246 дней', 'Именной стакан'], enemas: ['Алтайский рассвет', 'Ламинария Дальняя'], kalofores: ['2007', 'Пробуждение в журнале не зарегистрировано', '4,2 мА', 'запрещено'], roots: ['1953', 'Груздев', 'выдаче не подлежит', 'Дачник', 'Агроном'] };
+  const canon = { station: ['1246 дней', 'Именной стакан'], enemas: ['Алтайский рассвет', 'Ламинария Дальняя'], kalofores: ['2007', 'Пробуждение в журнале не зарегистрировано', '4,2 мА', 'запрещено'], roots: ['1953', 'Груздев', 'Выдаче не подлежит', 'Дачник', 'Агроном'] };
   for (const program of SOL_PROGRAMS) {
     env.navigate(`#/solnyshko/${program.id}`);
     const html = render(App, store, { initialNotFound: false });

@@ -72,7 +72,7 @@ test('путь к поставщику проходит через уринот�
   const env = browser(t);
   const store = createRootStore();
   const home = render(store);
-  assert.match(home, /<h1[^>]*>Здоровье/);
+  assert.match(home, /<h1[^>]*>Пансионат/);
   assert.match(home, /href="#\/solnyshko\/station"[^>]*>Уринотерапия/);
   assert.doesNotMatch(home, /основной сайт|href="#\/urinatech/);
   env.navigate('#/solnyshko/station');

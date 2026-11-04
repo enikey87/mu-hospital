@@ -6,7 +6,6 @@ function SolStaff() {
       <div className="sol-container">
         <span className="sol-label">Персонал</span>
         <h2 className="sol-title"> Сотрудники и поставщики </h2>
-        <p className="sol-sub"> Калинин ведёт аппаратные программы, Стаканова — кабинеты и журналы. Зинаида консультирует московскую линию, Потапыч поставляет сырьё. В штат здравницы входят первые двое. </p>
         <div className="sol-staff">
           {SOL_STAFF.map((s) => (
             <article key={s.name} className="sol-card sol-card--sm">

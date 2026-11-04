@@ -4,7 +4,7 @@ function Instructions() {
   return (
     <section id="instructions">
       <div className="container">
-        <span className="section-label">Прил. В · Документация к продукции</span>
+        <span className="section-label">Документация к продукции</span>
         <h2 className="section-title">Инструкция по применению</h2>
         <p className="section-sub"> Вкладыш к продукции УТ-01 «Утренний». Для других серий применяются отдельные условия обработки и хранения. </p>
         <div className="insert">

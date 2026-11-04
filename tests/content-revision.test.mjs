@@ -2,13 +2,16 @@ import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { RootStoreContext } from '../src/stores/RootStore.ts';
+import { RootStoreContext, createRootStore } from '../src/stores/RootStore.ts';
 import { CartStore } from '../src/stores/CartStore.ts';
 import { QuizStore } from '../src/stores/QuizStore.ts';
 import { CalculatorStore } from '../src/stores/CalculatorStore.ts';
 import { SolnyshkoStore } from '../src/stores/SolnyshkoStore.ts';
 import { DonorStore } from '../src/stores/DonorStore.ts';
 import { PRODUCTS } from '../src/data/catalog.ts';
+import App from '../src/App.tsx';
+import Detector from '../src/components/Detector.tsx';
+import { ARCHIVE_BATCHES } from '../src/data/company.ts';
 import { POWER_OPTIONS, recommendQuizResult } from '../src/data/solnyshko.ts';
 import CartDrawer from '../src/components/CartDrawer.tsx';
 import Calculator from '../src/components/Calculator.tsx';
@@ -107,14 +110,24 @@ test('бланки не обещают регистрацию, оплату ил
     assert.match(html, /[Бб]ланк|[Кк]арточк/);
     assert.doesNotMatch(html, /Подать заявку|После регистрации/);
   }
+  await donor.submit();
+  assert.equal(donor.status, 'form');
+  assert.equal(donor.submitted, null);
   solnyshko.setName('Иванов');
   donor.setName('Петров'); donor.setCity('Кимры'); donor.setDinner('Зерно');
   const first = solnyshko.submit(); const second = donor.submit();
+  donor.setName('Подмена'); donor.setCity('Другой город'); donor.setDinner('Подмена');
+  assert.deepEqual([donor.name, donor.city, donor.dinner], ['Петров', 'Кимры', 'Зерно']);
   t.mock.timers.runAll(); await Promise.all([first, second]);
   for (const html of [render(SolBooking,{solnyshko}), render(Donor,{donor})]) {
     assert.doesNotMatch(html, /[Зз]арегистрирован|предъявляется при заезде|с момента регистрации/);
     assert.match(html, /[Бб]ланк|[Кк]арточк/);
   }
+  const submitted = donor.submitted;
+  const repeated = donor.submit();
+  assert.equal(donor.status, 'done');
+  await repeated;
+  assert.equal(donor.submitted, submitted);
   donor.reset(); donor.setName('Петров'); donor.setCity('Кимры'); donor.setDinner('Зерно');
   const pending = donor.submit();
   donor.reset();
@@ -122,4 +135,35 @@ test('бланки не обещают регистрацию, оплату ил
   assert.equal(donor.status, 'form');
   assert.equal(donor.submitted, null);
   assert.equal(donor.name, '');
+});
+
+
+test('главная представляет здравницу, канонические гэги сохранены, а реестр честно описывает доступный архив', t => {
+  const oldWindow = globalThis.window, oldDocument = globalThis.document;
+  const events = new EventTarget();
+  globalThis.window = { location: {hash:''}, addEventListener: events.addEventListener.bind(events) };
+  globalThis.document = { title:'', querySelector:()=>null };
+  t.after(()=>{
+    if(oldWindow === undefined) delete globalThis.window; else globalThis.window=oldWindow;
+    if(oldDocument === undefined) delete globalThis.document; else globalThis.document=oldDocument;
+  });
+  const store=createRootStore();
+  const html=renderToStaticMarkup(React.createElement(RootStoreContext.Provider,{value:store},React.createElement(App,{initialNotFound:false})));
+  assert.match(html, /<h1[^>]*>Пансионат<br\/>«Солнышко»/);
+  assert.match(html, /Условия пребывания/);
+  assert.doesNotMatch(html, /cookie-banner|Ближайшие заезды|В заявке можно указать сезон/);
+  window.location.hash='#/solnyshko/roots'; events.dispatchEvent(new Event('hashchange'));
+  const roots=renderToStaticMarkup(React.createElement(RootStoreContext.Provider,{value:store},React.createElement(App,{initialNotFound:false})));
+  for(const text of ['признан урожаем','Внешние наблюдатели','считающих репу западной','1953','Груздев','Имеются противопоказания']) assert.ok(roots.includes(text),text);
+  const archive=render(Detector,store);
+  assert.equal(Object.keys(ARCHIVE_BATCHES).length,3);
+  for(const code of ['УТ-2002-0417','УТ-2003-0004','УТ-2024-0001']) assert.ok(archive.includes(code));
+  assert.match(archive,/архивные записи/);
+  assert.doesNotMatch(archive,/Чистота/);
+  window.location.hash='#/urinatech'; events.dispatchEvent(new Event('hashchange'));
+  const manufacturer=renderToStaticMarkup(React.createElement(RootStoreContext.Provider,{value:store},React.createElement(App,{initialNotFound:false})));
+  assert.doesNotMatch(manufacturer,/cookie-banner|plan__price">0 ₽/);
+  assert.match(manufacturer,/Лошадь|лошадь/);
+  assert.doesNotMatch(manufacturer,/регистрация в разделе «Донорам»/);
+  assert.match(manufacturer,/карточка в разделе «Донорам»/);
 });

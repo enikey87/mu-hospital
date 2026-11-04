@@ -4,8 +4,8 @@ function Licenses() {
   return (
     <section id="licenses">
       <div className="container">
-        <span className="section-label">П.8 · Разрешительные документы</span>
-        <h2 className="section-title">Лицензии и сертификаты</h2>
+        <span className="section-label">Документы компании</span>
+        <h2 className="section-title">Документы компании</h2>
         <p className="section-sub"> В реестре указаны разрешительные документы, архивная переписка и текущие заявки. Оригиналы хранятся в конюшне №4. </p>
         <div className="license-list">
           {LICENSES.map((l) => (

@@ -14,15 +14,15 @@ function SolHero() {
     <section className="sol-hero">
       <img className="sol-hero__photo" src={MEDIA.resort} alt="Корпус пансионата среди сосен в горах Алтая" width="1536" height="1024" loading="eager" />
       <div className="sol-container sol-hero__content">
-        <span className="sol-label">Пансионат «Солнышко» · Учреждение ООО «УринаТех»</span>
-        <h1 className="sol-hero__title">Здоровье —<br />в стакане</h1>
+        <span className="sol-label">Здравница закрытого типа · Республика Алтай</span>
+        <h1 className="sol-hero__title">Пансионат<br />«Солнышко»</h1>
         <div className="sol-hero__location"><span aria-hidden="true">↗</span> Республика Алтай</div>
-        <p className="sol-hero__sub">Стационар, клизмотроника, калофорез и комплекс «Исконный». Приём с 1246 года. От Горно-Алтайска — конная доставка до территории здравницы.</p>
+        <p className="sol-hero__sub">Проживание, питание и четыре направления оздоровительных практик. Приём с 1246 года. От Горно-Алтайска — конная доставка до территории пансионата.</p>
         <div className="sol-hero__cta">
           <button className="sol-btn sol-btn--big" onClick={() => document.getElementById("sol-services")?.scrollIntoView({ behavior: "smooth" })}>
             Программы здравницы <span aria-hidden="true">↗</span>
           </button>
-          <button className="hero-secondary" onClick={() => document.getElementById("sol-booking")?.scrollIntoView({ behavior: "smooth" })}>Запись на курс</button>
+          <button className="hero-secondary" onClick={() => document.getElementById("sol-booking")?.scrollIntoView({ behavior: "smooth" })}>Бланк путёвки</button>
         </div>
       </div>
       <div className="sol-hero__foot">

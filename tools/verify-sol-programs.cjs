@@ -67,24 +67,27 @@ const programs = [
         await page.locator('.sol-form input').fill('Проверка направления');
         await page.locator('.sol-form button').click();
         await page.locator('.sol-voucher').waitFor();
-        assert.match(await page.locator('.sol-voucher').innerText(), /Зарегистрировано/i);
+        assert.match(await page.locator('.sol-voucher').innerText(), /Бланк сформирован/i);
         await layout('booking-' + id);
         await page.locator('.sol-voucher button').click();
         await page.locator('.sol-header__brand').click();
         await page.waitForURL(url => url.hash === '#/');
       }
       if (width === 1440 || width === 390) {
-        for (const [method, duration, expected, target] of [
-          [0, 0, 'kalofores', 'kalofores'], [1, 0, 'enema', 'enemas'], [3, 0, 'roots', 'roots'],
-          [2, 0, 'morning', 'station'], [2, 1, 'safety', 'station'], [2, 2, 'second', 'station'], [2, 3, 'complex', null],
+        for (const [direction, detail, expected, target] of [
+          [0, 0, 'morning', 'station'], [0, 1, 'safety', 'station'],
+          [0, 2, 'second', 'station'], [0, 3, 'station', 'station'],
+          [1, null, 'enema', 'enemas'], [2, 0, 'kalofores', 'kalofores'],
+          [2, 1, 'kalofores', 'kalofores'], [2, 2, 'kalofores', 'kalofores'],
+          [3, null, 'roots', 'roots'], [4, null, 'complex', null],
         ]) {
-          await page.locator('.sol-quiz__option').nth(0).click();
-          await page.locator('.sol-quiz__option').nth(method).click();
-          await page.locator('.sol-quiz__option').nth(duration).click();
+          await page.locator('.sol-quiz__option').nth(direction).click();
+          if (detail !== null) await page.locator('.sol-quiz__option').nth(detail).click();
           const link = page.locator('.sol-quiz__actions a');
           assert.equal(await link.getAttribute('href'), target ? `#/solnyshko/${target}` : '#/?section=sol-services');
-          await page.getByRole('button', { name: 'Записаться на эту программу', exact: true }).click();
+          await page.getByRole('button', { name: 'Выбрать эту программу', exact: true }).click();
           assert.equal(await page.locator('.sol-form select').first().inputValue(), expected);
+          if (direction === 2) assert.equal(await page.locator('.sol-form select').nth(1).inputValue(), ['bear', 'deer', 'taiga'][detail]);
           await page.getByRole('button', { name: 'Заполнить повторно', exact: true }).click();
         }
         await layout('quiz-all-results');
@@ -92,7 +95,7 @@ const programs = [
       await page.goto(base + '#/solnyshko/missing');
       await page.getByRole('heading', { name: 'Страница не найдена' }).waitFor();
       await page.getByRole('button', { name: 'Вернуться на главную' }).click();
-      await page.waitForFunction(() => document.querySelector('h1')?.textContent.includes('Здоровье'));
+      await page.waitForFunction(() => document.querySelector('h1')?.textContent.includes('Пансионат'));
       assert.deepEqual(errors, []);
       report.push({ state: 'console', width, errors });
       console.log('PASS', width);

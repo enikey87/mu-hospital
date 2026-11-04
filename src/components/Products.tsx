@@ -51,7 +51,7 @@ function Products() {
   return (
     <section id="products">
       <div className="container">
-        <span className="section-label"> П.2 · Каталог продукции · с 2002 года </span>
+        <span className="section-label"> Каталог продукции · с 2002 года </span>
         <h2 className="section-title">Продукция</h2>
         <p className="section-sub"> Продукция на основе донорского сырья. В каталоге приведены серии, варианты фасовки и стоимость единицы. Номер партии и условия хранения указаны на этикетке. </p>
         <div className="catalog-feature">

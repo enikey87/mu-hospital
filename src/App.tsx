@@ -16,7 +16,6 @@ import Partners from "./components/Partners";
 import Faq from "./components/Faq";
 import Footer from "./components/Footer";
 import CartDrawer from "./components/CartDrawer";
-import CookiesBanner from "./components/CookiesBanner";
 import NotFound from "./components/NotFound";
 import SolnyshkoApp from "./components/SolnyshkoApp";
 
@@ -64,7 +63,6 @@ export default observer(function App({ initialNotFound }: { initialNotFound: boo
       </main>
       <Footer />
       <CartDrawer />
-      <CookiesBanner />
     </div>
   );
 });

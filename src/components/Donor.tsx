@@ -9,7 +9,7 @@ function Donor() {
     return (
       <section id="donor">
         <div className="container">
-          <span className="section-label">П.6 · Донорская программа УТ-Донор</span>
+          <span className="section-label">Донорская программа УТ-Донор</span>
           <h2 className="section-title">Карточка донора готова</h2>
           <div className="donor-ticket">
             <div className="donor-ticket__id">{app.id}</div>
@@ -36,7 +36,7 @@ function Donor() {
   return (
     <section id="donor">
       <div className="container">
-        <span className="section-label">П.6 · Донорская программа УТ-Донор</span>
+        <span className="section-label">Донорская программа УТ-Донор</span>
         <h2 className="section-title">
           Компания <span className="grad-text">закупает сырьё</span> у физических лиц
         </h2>
@@ -101,7 +101,7 @@ function Donor() {
             <p>
               <strong>Диетический протокол «Проросшее зерно»:</strong> Подготовка — два-три дня на проросшем зерне. По протоколу такое сырьё допускается к передаче другим лицам. Надбавка к выплате — 12,46%. </p>
             <p>
-              <strong>Эмоциональный режим:</strong> Спокойное состояние донора — условие допуска к сбору. Контроль осуществляет старшая сестра. Эталон состояния — консультант Зинаида. </p>
+              <strong>Эмоциональный режим:</strong> Донор обязан пребывать в согласии с собой и конюшней. Старшая сестра проверяет состояние взглядом. Эталон спокойствия — консультант Зинаида. </p>
             <p style={{ fontSize: 13, opacity: 0.8 }}> Карточка не направляется в компанию. Условия приёма и расчёт согласуются отдельно. </p>
           </div>
         </div>

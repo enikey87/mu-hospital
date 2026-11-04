@@ -1,0 +1,561 @@
+{
+  "recorded_at": "2026-11-04T03:45:39.512356+00:00",
+  "baseline": "e0986b3333c39260e999dd609e10072c19508b6e",
+  "mechanism_commit": "04a7149fe04fa7e505f68ba1a4362f17c68be953",
+  "revision": "editorial changes accompanying this record; final source bundle index-Dw7TRbT7.js",
+  "tests": {
+    "pass": 28,
+    "fail": 0
+  },
+  "typecheck_build": {
+    "status": "passed",
+    "modules": 107,
+    "javascript": "index-Dw7TRbT7.js",
+    "css": "index-ZSX48FCB.css"
+  },
+  "lint": {
+    "status": "unavailable",
+    "reason": "No lint script or configuration in repository"
+  },
+  "browser": {
+    "engine": "headless Chrome via Playwright",
+    "base_url": "http://127.0.0.1:5188/urinatech/",
+    "physical_devices_tested": false,
+    "screenshots_attached": false,
+    "checks": {
+      "hierarchy": [
+        {
+          "state": "landing",
+          "width": 1440,
+          "scrollWidth": 1440
+        },
+        {
+          "state": "urinotherapy",
+          "width": 1440,
+          "scrollWidth": 1440
+        },
+        {
+          "state": "manufacturer",
+          "width": 1440,
+          "scrollWidth": 1440
+        },
+        {
+          "state": "navigation-legacy-cart-404",
+          "width": 1440,
+          "errors": []
+        },
+        {
+          "state": "landing",
+          "width": 768,
+          "scrollWidth": 768
+        },
+        {
+          "state": "urinotherapy",
+          "width": 768,
+          "scrollWidth": 768
+        },
+        {
+          "state": "manufacturer",
+          "width": 768,
+          "scrollWidth": 768
+        },
+        {
+          "state": "navigation-legacy-cart-404",
+          "width": 768,
+          "errors": []
+        },
+        {
+          "state": "landing",
+          "width": 390,
+          "scrollWidth": 390
+        },
+        {
+          "state": "urinotherapy",
+          "width": 390,
+          "scrollWidth": 390
+        },
+        {
+          "state": "manufacturer",
+          "width": 390,
+          "scrollWidth": 390
+        },
+        {
+          "state": "navigation-legacy-cart-404",
+          "width": 390,
+          "errors": []
+        },
+        {
+          "state": "landing",
+          "width": 320,
+          "scrollWidth": 320
+        },
+        {
+          "state": "urinotherapy",
+          "width": 320,
+          "scrollWidth": 320
+        },
+        {
+          "state": "manufacturer",
+          "width": 320,
+          "scrollWidth": 320
+        },
+        {
+          "state": "navigation-legacy-cart-404",
+          "width": 320,
+          "errors": []
+        }
+      ],
+      "programs": [
+        {
+          "state": "resort-home",
+          "width": 1440,
+          "scrollWidth": 1440
+        },
+        {
+          "state": "station",
+          "width": 1440,
+          "scrollWidth": 1440
+        },
+        {
+          "state": "booking-station",
+          "width": 1440,
+          "scrollWidth": 1440
+        },
+        {
+          "state": "enemas",
+          "width": 1440,
+          "scrollWidth": 1440
+        },
+        {
+          "state": "booking-enemas",
+          "width": 1440,
+          "scrollWidth": 1440
+        },
+        {
+          "state": "kalofores",
+          "width": 1440,
+          "scrollWidth": 1440
+        },
+        {
+          "state": "booking-kalofores",
+          "width": 1440,
+          "scrollWidth": 1440
+        },
+        {
+          "state": "roots",
+          "width": 1440,
+          "scrollWidth": 1440
+        },
+        {
+          "state": "booking-roots",
+          "width": 1440,
+          "scrollWidth": 1440
+        },
+        {
+          "state": "quiz-all-results",
+          "width": 1440,
+          "scrollWidth": 1440
+        },
+        {
+          "state": "console",
+          "width": 1440,
+          "errors": []
+        },
+        {
+          "state": "resort-home",
+          "width": 768,
+          "scrollWidth": 768
+        },
+        {
+          "state": "station",
+          "width": 768,
+          "scrollWidth": 768
+        },
+        {
+          "state": "booking-station",
+          "width": 768,
+          "scrollWidth": 768
+        },
+        {
+          "state": "enemas",
+          "width": 768,
+          "scrollWidth": 768
+        },
+        {
+          "state": "booking-enemas",
+          "width": 768,
+          "scrollWidth": 768
+        },
+        {
+          "state": "kalofores",
+          "width": 768,
+          "scrollWidth": 768
+        },
+        {
+          "state": "booking-kalofores",
+          "width": 768,
+          "scrollWidth": 768
+        },
+        {
+          "state": "roots",
+          "width": 768,
+          "scrollWidth": 768
+        },
+        {
+          "state": "booking-roots",
+          "width": 768,
+          "scrollWidth": 768
+        },
+        {
+          "state": "console",
+          "width": 768,
+          "errors": []
+        },
+        {
+          "state": "resort-home",
+          "width": 390,
+          "scrollWidth": 390
+        },
+        {
+          "state": "station",
+          "width": 390,
+          "scrollWidth": 390
+        },
+        {
+          "state": "booking-station",
+          "width": 390,
+          "scrollWidth": 390
+        },
+        {
+          "state": "enemas",
+          "width": 390,
+          "scrollWidth": 390
+        },
+        {
+          "state": "booking-enemas",
+          "width": 390,
+          "scrollWidth": 390
+        },
+        {
+          "state": "kalofores",
+          "width": 390,
+          "scrollWidth": 390
+        },
+        {
+          "state": "booking-kalofores",
+          "width": 390,
+          "scrollWidth": 390
+        },
+        {
+          "state": "roots",
+          "width": 390,
+          "scrollWidth": 390
+        },
+        {
+          "state": "booking-roots",
+          "width": 390,
+          "scrollWidth": 390
+        },
+        {
+          "state": "quiz-all-results",
+          "width": 390,
+          "scrollWidth": 390
+        },
+        {
+          "state": "console",
+          "width": 390,
+          "errors": []
+        },
+        {
+          "state": "resort-home",
+          "width": 320,
+          "scrollWidth": 320
+        },
+        {
+          "state": "station",
+          "width": 320,
+          "scrollWidth": 320
+        },
+        {
+          "state": "booking-station",
+          "width": 320,
+          "scrollWidth": 320
+        },
+        {
+          "state": "enemas",
+          "width": 320,
+          "scrollWidth": 320
+        },
+        {
+          "state": "booking-enemas",
+          "width": 320,
+          "scrollWidth": 320
+        },
+        {
+          "state": "kalofores",
+          "width": 320,
+          "scrollWidth": 320
+        },
+        {
+          "state": "booking-kalofores",
+          "width": 320,
+          "scrollWidth": 320
+        },
+        {
+          "state": "roots",
+          "width": 320,
+          "scrollWidth": 320
+        },
+        {
+          "state": "booking-roots",
+          "width": 320,
+          "scrollWidth": 320
+        },
+        {
+          "state": "console",
+          "width": 320,
+          "errors": []
+        }
+      ],
+      "portraits": [
+        {
+          "state": "broken-image-fallback",
+          "initials": "КМ"
+        },
+        {
+          "state": "main-reviews",
+          "images": 17,
+          "width": 1440,
+          "scrollWidth": 1440
+        },
+        {
+          "state": "resort-reviews",
+          "images": 4,
+          "width": 1440,
+          "scrollWidth": 1440
+        },
+        {
+          "state": "console",
+          "width": 1440,
+          "errors": []
+        },
+        {
+          "state": "main-reviews",
+          "images": 17,
+          "width": 768,
+          "scrollWidth": 768
+        },
+        {
+          "state": "resort-reviews",
+          "images": 4,
+          "width": 768,
+          "scrollWidth": 768
+        },
+        {
+          "state": "console",
+          "width": 768,
+          "errors": []
+        },
+        {
+          "state": "main-reviews",
+          "images": 17,
+          "width": 390,
+          "scrollWidth": 390
+        },
+        {
+          "state": "resort-reviews",
+          "images": 4,
+          "width": 390,
+          "scrollWidth": 390
+        },
+        {
+          "state": "console",
+          "width": 390,
+          "errors": []
+        },
+        {
+          "state": "main-reviews",
+          "images": 17,
+          "width": 320,
+          "scrollWidth": 320
+        },
+        {
+          "state": "resort-reviews",
+          "images": 4,
+          "width": 320,
+          "scrollWidth": 320
+        },
+        {
+          "state": "console",
+          "width": 320,
+          "errors": []
+        }
+      ],
+      "content": [
+        {
+          "width": 1440,
+          "state": "cart-boundaries"
+        },
+        {
+          "width": 1440,
+          "state": "specification"
+        },
+        {
+          "width": 1440,
+          "state": "calculator-invalid"
+        },
+        {
+          "width": 1440,
+          "state": "donor-card"
+        },
+        {
+          "width": 1440,
+          "state": "archive"
+        },
+        {
+          "width": 1440,
+          "state": "voucher-blank"
+        },
+        {
+          "width": 1440,
+          "state": "console",
+          "errors": []
+        },
+        {
+          "width": 768,
+          "state": "cart-boundaries"
+        },
+        {
+          "width": 768,
+          "state": "specification"
+        },
+        {
+          "width": 768,
+          "state": "calculator-invalid"
+        },
+        {
+          "width": 768,
+          "state": "donor-card"
+        },
+        {
+          "width": 768,
+          "state": "archive"
+        },
+        {
+          "width": 768,
+          "state": "voucher-blank"
+        },
+        {
+          "width": 768,
+          "state": "console",
+          "errors": []
+        },
+        {
+          "width": 390,
+          "state": "cart-boundaries"
+        },
+        {
+          "width": 390,
+          "state": "specification"
+        },
+        {
+          "width": 390,
+          "state": "calculator-invalid"
+        },
+        {
+          "width": 390,
+          "state": "donor-card"
+        },
+        {
+          "width": 390,
+          "state": "archive"
+        },
+        {
+          "width": 390,
+          "state": "voucher-blank"
+        },
+        {
+          "width": 390,
+          "state": "console",
+          "errors": []
+        },
+        {
+          "width": 320,
+          "state": "cart-boundaries"
+        },
+        {
+          "width": 320,
+          "state": "specification"
+        },
+        {
+          "width": 320,
+          "state": "calculator-invalid"
+        },
+        {
+          "width": 320,
+          "state": "donor-card"
+        },
+        {
+          "width": 320,
+          "state": "archive"
+        },
+        {
+          "width": 320,
+          "state": "voucher-blank"
+        },
+        {
+          "width": 320,
+          "state": "console",
+          "errors": []
+        }
+      ]
+    }
+  },
+  "negative_controls": [
+    {
+      "mutation": "discount > instead of >= at threshold (automated test and browser)",
+      "result": "failed as expected; original restored"
+    },
+    {
+      "mutation": "negotiated station falls back to complex",
+      "result": "failed as expected; original restored"
+    },
+    {
+      "mutation": "calculator allows age 17",
+      "result": "failed as expected; original restored"
+    },
+    {
+      "mutation": "voucher promises registration",
+      "result": "failed as expected; original restored"
+    },
+    {
+      "mutation": "donor reset fails to cancel pending completion",
+      "result": "failed as expected; original restored"
+    },
+    {
+      "mutation": "donor allows changing fields during formation",
+      "result": "failed as expected; original restored"
+    },
+    {
+      "mutation": "donor allows repeating completed submission",
+      "result": "failed as expected; original restored"
+    },
+    {
+      "mutation": "remove recognized-as-harvest gag",
+      "result": "failed as expected; original restored"
+    },
+    {
+      "mutation": "archive hint omits two available records",
+      "result": "failed as expected; original restored"
+    },
+    {
+      "mutation": "restore cookie notification",
+      "result": "failed as expected; original restored"
+    },
+    {
+      "mutation": "footer still promises donor registration",
+      "result": "failed as expected; original restored"
+    }
+  ],
+  "limits": "Editorial quality is a judgment; browser checks prove only the executed scenarios. Pages deployment is verified after merge separately."
+}

@@ -1,3 +1,4 @@
+import { ARCHIVE_BATCHES } from "../data/company";
 import { observer } from "mobx-react-lite";
 import { useStore } from "../stores/RootStore";
 
@@ -8,9 +9,9 @@ function Detector() {
   return (
     <section id="detector">
       <div className="container">
-        <span className="section-label">П.5 · Верификация продукции</span>
-        <h2 className="section-title"> Проверка партии </h2>
-        <p className="section-sub"> Введите номер с этикетки. Сервис сверяет его с опубликованным реестром компании и показывает происхождение партии. </p>
+        <span className="section-label">Архив продукции</span>
+        <h2 className="section-title"> Проверка архивной партии </h2>
+        <p className="section-sub"> Сервис проверяет доступные архивные записи. Отсутствие номера в этом архиве не означает, что продукция поддельная. </p>
         <div className="glass detector-wrap">
           <div>
             <div className="detector-form">
@@ -28,7 +29,7 @@ function Detector() {
                 {v.kind === "checking" ? <span className="spinner" /> : "Проверить"}
               </button>
             </div>
-            <p className="detector-hint"> Формат номера: УТ-ГГГГ-НННН. Для проверки можно использовать архивную запись УТ-2002-0417. Префикс сам по себе не подтверждает происхождение. </p>
+            <p className="detector-hint"> Формат номера: УТ-ГГГГ-НННН. Доступные записи: {Object.keys(ARCHIVE_BATCHES).join(", ")}. </p>
           </div>
 
           <div aria-live="polite">
@@ -47,11 +48,11 @@ function Detector() {
             {v.kind === "genuine" && (
               <div className="verdict verdict--genuine">
                 <div className="verdict__title">Партия внесена в реестр: {v.batch}</div>
-                Чистота {v.purity}%. Происхождение: {v.origin} . Происхождение партии подтверждено записью. </div>
+                Происхождение: {v.origin}. </div>
             )}
             {v.kind === "fake" && (
               <div className="verdict verdict--fake">
-                <div className="verdict__title">Запись в реестре отсутствует: {v.batch}</div> Основание: {v.reason} . Происхождение партии компанией не подтверждено. </div>
+                <div className="verdict__title">Запись в реестре отсутствует: {v.batch}</div> Основание: {v.reason}. Происхождение партии компанией не подтверждено. </div>
             )}
             {v.kind === "error" && (
               <div className="verdict verdict--error">

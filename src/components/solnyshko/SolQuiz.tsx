@@ -60,8 +60,7 @@ function SolQuiz() {
         ) : current ? (
           <div className="sol-quiz">
             <div className="sol-quiz__progress" role="status">
-              Пункт {quiz.step + 1} из {quiz.total} · заполнено: {quiz.answered}{" "}
-              из {quiz.total}
+              {quiz.step === 0 ? "Выбор направления" : "Уточнение выбранного курса"}
             </div>
             <div className="sol-quiz__bar" aria-hidden="true">
               {quiz.questions.map((q, i) => (
