@@ -1889,6 +1889,7 @@
 .sol-detail__hero-grid > div { min-width: 0; padding-bottom: 40px; }
 .sol-detail__hero-grid img { display: block; width: 100%; height: 440px; object-fit: cover; }
 .sol-detail__lead { color: var(--sol-muted); font-size: 17px; max-width: 500px; margin-bottom: 28px; }
+.sol-detail__actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
 .sol-detail__facts { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--sol-line); margin-top: 40px; }
 .sol-detail__facts > div { padding: 24px 20px 24px 0; }
 .sol-detail__facts dt { font-size: 11px; color: var(--sol-muted); margin-bottom: 6px; }

@@ -7,7 +7,7 @@ const base = process.env.SITE_URL || 'http://127.0.0.1:5188/urinatech/';
   const report = [];
   try {
     for (const width of [1440, 768, 390, 320]) {
-      const page = await browser.newPage({ viewport: { width, height: 1000 } });
+      const page = await browser.newPage({ viewport: { width, height: 800 } });
       const errors = [];
       page.on('pageerror', e => errors.push(e.message));
       const layout = async state => {
@@ -39,7 +39,15 @@ const base = process.env.SITE_URL || 'http://127.0.0.1:5188/urinatech/';
       await heading('Стационарная уринотерапия');
       assert.equal(await page.locator('.sol-supplier a').count(), 2);
       await layout('urinotherapy');
-      await page.locator('.sol-supplier a[href="#/urinatech"]').click();
+      const supplierLink = page.locator('.sol-detail__hero a[href="#/urinatech"]');
+      assert.equal(await supplierLink.count(), 1);
+      assert.match(await supplierLink.innerText(), /Сайт «УринаТех»/);
+      await page.waitForFunction(() => scrollY === 0);
+      const linkBox = await supplierLink.boundingBox();
+      assert.ok(linkBox && linkBox.x >= 0 && linkBox.x + linkBox.width <= width && linkBox.y >= 0 && linkBox.y + linkBox.height <= 800, 'supplier link is in the initial viewport');
+      assert.notEqual(await supplierLink.evaluate(a => getComputedStyle(a).backgroundColor), 'rgba(0, 0, 0, 0)');
+      report.push({ state: 'visible-supplier-link', width, linkBox });
+      await supplierLink.click();
       await heading(/Производство/);
       assert.match(await page.title(), /^УринаТех/);
       const cookie = page.getByRole('button', { name: 'Понятно', exact: true });

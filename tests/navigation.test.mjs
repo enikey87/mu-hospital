@@ -77,12 +77,15 @@ test('путь к поставщику проходит через уринот�
   assert.doesNotMatch(home, /основной сайт|href="#\/urinatech/);
   env.navigate('#/solnyshko/station');
   const station = render(store);
+  const hero = station.match(/<section class="sol-detail__hero">([\s\S]*?)<\/section>/)?.[1];
+  assert.ok(hero);
+  assert.match(hero, /class="sol-btn" href="#\/urinatech">Сайт «УринаТех»/);
   assert.match(station, /href="#\/urinatech"[^>]*>О производителе/);
   assert.match(station, /href="#\/urinatech\?section=products"/);
   assert.match(station, /Производитель продукции.*УринаТех/);
   for (const id of ['enemas', 'kalofores', 'roots']) {
     env.navigate(`#/solnyshko/${id}`);
-    assert.doesNotMatch(render(store), /О производителе/);
+    assert.doesNotMatch(render(store), /О производителе|Сайт «УринаТех»/);
   }
   env.navigate('#/urinatech');
   const manufacturer = render(store);
