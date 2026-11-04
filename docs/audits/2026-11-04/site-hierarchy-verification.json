@@ -1,0 +1,389 @@
+{
+  "baseRevision": "3810a5694d4f997d3c7555b70044398d0774b220",
+  "environment": "local production build, headless Chrome",
+  "bundle": "index-BKQNxW_G.js",
+  "automatedTests": {
+    "passed": 23,
+    "failed": 0
+  },
+  "build": {
+    "modules": 109,
+    "typecheck": "passed"
+  },
+  "lint": "not configured",
+  "negativeControls": [
+    "Initial implementation fails new root/hierarchy/static metadata contracts",
+    "Removing legacy route support fails navigation contract",
+    "Breaking supplier href fails rendered hierarchy contract"
+  ],
+  "browser": {
+    "hierarchy": [
+      {
+        "state": "landing",
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "state": "urinotherapy",
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "state": "manufacturer",
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "state": "navigation-legacy-cart-404",
+        "width": 1440,
+        "errors": []
+      },
+      {
+        "state": "landing",
+        "width": 768,
+        "scrollWidth": 768
+      },
+      {
+        "state": "urinotherapy",
+        "width": 768,
+        "scrollWidth": 768
+      },
+      {
+        "state": "manufacturer",
+        "width": 768,
+        "scrollWidth": 768
+      },
+      {
+        "state": "navigation-legacy-cart-404",
+        "width": 768,
+        "errors": []
+      },
+      {
+        "state": "landing",
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "state": "urinotherapy",
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "state": "manufacturer",
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "state": "navigation-legacy-cart-404",
+        "width": 390,
+        "errors": []
+      },
+      {
+        "state": "landing",
+        "width": 320,
+        "scrollWidth": 320
+      },
+      {
+        "state": "urinotherapy",
+        "width": 320,
+        "scrollWidth": 320
+      },
+      {
+        "state": "manufacturer",
+        "width": 320,
+        "scrollWidth": 320
+      },
+      {
+        "state": "navigation-legacy-cart-404",
+        "width": 320,
+        "errors": []
+      }
+    ],
+    "programs": [
+      {
+        "state": "resort-home",
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "state": "station",
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "state": "booking-station",
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "state": "enemas",
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "state": "booking-enemas",
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "state": "kalofores",
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "state": "booking-kalofores",
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "state": "roots",
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "state": "booking-roots",
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "state": "quiz-all-results",
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "state": "console",
+        "width": 1440,
+        "errors": []
+      },
+      {
+        "state": "resort-home",
+        "width": 768,
+        "scrollWidth": 768
+      },
+      {
+        "state": "station",
+        "width": 768,
+        "scrollWidth": 768
+      },
+      {
+        "state": "booking-station",
+        "width": 768,
+        "scrollWidth": 768
+      },
+      {
+        "state": "enemas",
+        "width": 768,
+        "scrollWidth": 768
+      },
+      {
+        "state": "booking-enemas",
+        "width": 768,
+        "scrollWidth": 768
+      },
+      {
+        "state": "kalofores",
+        "width": 768,
+        "scrollWidth": 768
+      },
+      {
+        "state": "booking-kalofores",
+        "width": 768,
+        "scrollWidth": 768
+      },
+      {
+        "state": "roots",
+        "width": 768,
+        "scrollWidth": 768
+      },
+      {
+        "state": "booking-roots",
+        "width": 768,
+        "scrollWidth": 768
+      },
+      {
+        "state": "console",
+        "width": 768,
+        "errors": []
+      },
+      {
+        "state": "resort-home",
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "state": "station",
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "state": "booking-station",
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "state": "enemas",
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "state": "booking-enemas",
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "state": "kalofores",
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "state": "booking-kalofores",
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "state": "roots",
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "state": "booking-roots",
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "state": "quiz-all-results",
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "state": "console",
+        "width": 390,
+        "errors": []
+      },
+      {
+        "state": "resort-home",
+        "width": 320,
+        "scrollWidth": 320
+      },
+      {
+        "state": "station",
+        "width": 320,
+        "scrollWidth": 320
+      },
+      {
+        "state": "booking-station",
+        "width": 320,
+        "scrollWidth": 320
+      },
+      {
+        "state": "enemas",
+        "width": 320,
+        "scrollWidth": 320
+      },
+      {
+        "state": "booking-enemas",
+        "width": 320,
+        "scrollWidth": 320
+      },
+      {
+        "state": "kalofores",
+        "width": 320,
+        "scrollWidth": 320
+      },
+      {
+        "state": "booking-kalofores",
+        "width": 320,
+        "scrollWidth": 320
+      },
+      {
+        "state": "roots",
+        "width": 320,
+        "scrollWidth": 320
+      },
+      {
+        "state": "booking-roots",
+        "width": 320,
+        "scrollWidth": 320
+      },
+      {
+        "state": "console",
+        "width": 320,
+        "errors": []
+      }
+    ],
+    "portraits": [
+      {
+        "state": "broken-image-fallback",
+        "initials": "КМ"
+      },
+      {
+        "state": "main-reviews",
+        "images": 17,
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "state": "resort-reviews",
+        "images": 4,
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      {
+        "state": "console",
+        "width": 1440,
+        "errors": []
+      },
+      {
+        "state": "main-reviews",
+        "images": 17,
+        "width": 768,
+        "scrollWidth": 768
+      },
+      {
+        "state": "resort-reviews",
+        "images": 4,
+        "width": 768,
+        "scrollWidth": 768
+      },
+      {
+        "state": "console",
+        "width": 768,
+        "errors": []
+      },
+      {
+        "state": "main-reviews",
+        "images": 17,
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "state": "resort-reviews",
+        "images": 4,
+        "width": 390,
+        "scrollWidth": 390
+      },
+      {
+        "state": "console",
+        "width": 390,
+        "errors": []
+      },
+      {
+        "state": "main-reviews",
+        "images": 17,
+        "width": 320,
+        "scrollWidth": 320
+      },
+      {
+        "state": "resort-reviews",
+        "images": 4,
+        "width": 320,
+        "scrollWidth": 320
+      },
+      {
+        "state": "console",
+        "width": 320,
+        "errors": []
+      }
+    ]
+  }
+}

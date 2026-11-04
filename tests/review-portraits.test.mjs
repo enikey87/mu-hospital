@@ -65,10 +65,10 @@ test('весь архив загружается последовательно 
   assert.equal(byName('Красного Креста'), SOL_REVIEWS.find(r => r.name.includes('Красного Креста')).avatar);
 });
 
-test('главная страница не содержит удалённых блоков; история Института доступна по ссылке меню', t => {
+test('страница производителя не содержит удалённых блоков; история Института доступна по ссылке меню', t => {
   const previousWindow = globalThis.window;
   const previousDocument = globalThis.document;
-  globalThis.window = { location: { hash: '' }, addEventListener() {} };
+  globalThis.window = { location: { hash: '#/urinatech' }, addEventListener() {} };
   globalThis.document = { title: '', querySelector: () => null };
   t.after(() => {
     if (previousWindow === undefined) delete globalThis.window; else globalThis.window = previousWindow;
@@ -79,7 +79,7 @@ test('главная страница не содержит удалённых �
   const html = render(App, store, { initialNotFound: false });
   assert.equal(interval.mock.callCount(), 0);
   assert.doesNotMatch(html, /2374|Корпоративное управление|id="queue"|team-card/);
-  assert.match(html, /href="#company"[^>]*>История/);
+  assert.match(html, /href="#\/urinatech\?section=company"[^>]*>История/);
   assert.match(html, /<footer[\s\S]*id="company"[\s\S]*Московский Институт Обогащения Урины/);
   assert.match(html, /id="products"/);
   assert.match(html, /id="reviews"/);

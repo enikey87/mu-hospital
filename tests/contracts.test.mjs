@@ -48,7 +48,7 @@ test('коллекционный выпуск согласован с FAQ и н�
 
 test('тарифы ведут к доступному каталогу', () => {
   const html = renderToStaticMarkup(React.createElement(Pricing));
-  assert.equal((html.match(/href="#products"/g) || []).length, PLANS.length);
+  assert.equal((html.match(/href="#\/urinatech\?section=products"/g) || []).length, PLANS.length);
   assert.ok(!html.includes('Подключить'));
 });
 
