@@ -3,25 +3,28 @@ import { MEDIA } from "../data/media";
 export default function Hero() {
   return (
     <section className="hero" id="top">
-      <img className="hero-photo" src={MEDIA.production} alt="Стеклянная ёмкость с продукцией на линии фильтрации" width="1536" height="1024" loading="eager" />
+      <img className="hero-photo" src={MEDIA.production} alt="Стальной резервуар с янтарной жидкостью в цехе фильтрации" width="1536" height="1024" loading="eager" />
       <div className="container hero-content">
-        <span className="section-label">УринаТех · Производственно-исследовательская компания</span>
-        <h1 className="hero-title">Производство<br />полного цикла</h1>
-        <p className="hero-motto">Русская моча против<br />скальпеля врача</p>
+        <span className="section-label">Производственно-исследовательская компания</span>
+        <h1 className="hero-title">Производство<br />полного<br />цикла</h1>
+        <p className="hero-motto">Сбор сырья. Фильтрация. Консервация.</p>
         <p className="hero-sub">
-          Сбор сырья, фильтрация и консервация.
-          Контроль качества каждой партии по рецептурам с 1246 года.
+          Русская моча против скальпеля врача.
         </p>
         <div className="hero-actions">
           <a className="btn btn-primary" href="#/urinatech?section=products">Каталог продукции <span aria-hidden="true">↗</span></a>
           <a className="hero-secondary" href="#/urinatech?section=donor">Донорская программа</a>
         </div>
+        <p className="hero-disclaimer">18+ · Имеются противопоказания</p>
       </div>
       <div className="hero-foot">
-        <div className="container hero-badges">
-          <span className="hero-badge">Основана в 2002 году</span>
-          <span className="hero-badge">Производственная линия №4</span>
-          <span className="hero-badge">18+ · имеются противопоказания</span>
+        <div className="container">
+          <dl className="industrial-facts">
+            <div><dt>Производство</dt><dd>Полный цикл</dd></div>
+            <div><dt>Площадка</dt><dd>Линия №4</dd></div>
+            <div><dt>Технология</dt><dd>Живая фильтрация</dd></div>
+            <div><dt>Рецептуры</dt><dd>С 1246 года</dd></div>
+          </dl>
         </div>
       </div>
     </section>

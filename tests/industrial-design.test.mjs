@@ -9,11 +9,14 @@ import SolHero from '../src/components/solnyshko/SolHero.tsx';
 import SolRooms from '../src/components/solnyshko/SolRooms.tsx';
 import SolServices from '../src/components/solnyshko/SolServices.tsx';
 import BrandMark from '../src/components/BrandMark.tsx';
+import Products from '../src/components/Products.tsx';
+import { RootStoreContext } from '../src/stores/RootStore.ts';
+import { CartStore } from '../src/stores/CartStore.ts';
 
 const render = Component => renderToStaticMarkup(React.createElement(Component));
 
 test('фотографии поставляются вместе с сайтом, в формате WebP', async () => {
-  assert.equal(Object.keys(MEDIA).length, 8);
+  assert.equal(Object.keys(MEDIA).length, 9);
   for (const url of Object.values(MEDIA)) {
     const data = await readFile(new URL(`../public${url}`, import.meta.url));
     assert.equal(data.toString('ascii', 0, 4), 'RIFF');
@@ -52,4 +55,22 @@ test('направления здравницы открывают отдель�
   };
   walk(SolServices());
   assert.deepEqual(links, ['#/solnyshko/station', '#/solnyshko/enemas', '#/solnyshko/kalofores', '#/solnyshko/roots']);
+});
+
+
+test('промышленный первый экран использует согласованные факты, а каталог показывает две отдельные фотографии продукции', () => {
+  const hero = render(Hero);
+  assert.match(hero, /class="industrial-facts"/);
+  for (const fact of ['Полный цикл', 'Живая фильтрация', '1246']) assert.ok(hero.includes(fact), fact);
+  assert.doesNotMatch(hero, /120.?000|Линий.*4/);
+  assert.match(hero, /href="#\/urinatech\?section=products"/);
+  const products = renderToStaticMarkup(React.createElement(RootStoreContext.Provider, { value: { cart: new CartStore() } }, React.createElement(Products)));
+  for (const key of ['morningProduct', 'horseProduct']) {
+    assert.ok(MEDIA[key], key);
+    assert.ok(products.includes(`src="${MEDIA[key]}"`), key);
+  }
+  assert.equal((products.match(/class="product-card__photo"/g) ?? []).length, 2);
+  assert.match(products, /0,5 л/);
+  assert.match(products, /ГОСТ Р 1246-2002/);
+  assert.match(products, /Серийная продукция/);
 });

@@ -1,0 +1,166 @@
+{
+  "recorded_at": "2026-11-04T08:28:09.678071+00:00",
+  "baseline": "5166cb834822dd1330776e7b4b150106c45191f5",
+  "tests": {
+    "passed": 29,
+    "failed": 0
+  },
+  "build": {
+    "status": "passed",
+    "modules": 109,
+    "js": "index--2vJghSD.js",
+    "css": "index-BuHDCfdS.css"
+  },
+  "lint": "not configured",
+  "browser": {
+    "engine": "headless Chrome",
+    "url": "http://127.0.0.1:5188/urinatech/",
+    "checks": {
+      "design": {
+        "observations": 48,
+        "states": [
+          "calculator",
+          "catalog",
+          "detector",
+          "donor",
+          "faq",
+          "faq-open",
+          "instructions",
+          "licenses",
+          "manufacturer-hero",
+          "pricing",
+          "reviews",
+          "theme-boundary-and-console"
+        ],
+        "widths": [
+          1440,
+          768,
+          390,
+          320
+        ],
+        "js_errors": 0,
+        "theme_boundaries": [
+          {
+            "width": 1440,
+            "state": "theme-boundary-and-console",
+            "font": {
+              "family": "\"Oswald UT\", \"Arial Narrow\", sans-serif",
+              "loaded": true,
+              "accent": "#c73522"
+            },
+            "resort": {
+              "accent": "#003cdb",
+              "font": "Inter, system-ui, sans-serif"
+            },
+            "errors": []
+          },
+          {
+            "width": 768,
+            "state": "theme-boundary-and-console",
+            "font": {
+              "family": "\"Oswald UT\", \"Arial Narrow\", sans-serif",
+              "loaded": true,
+              "accent": "#c73522"
+            },
+            "resort": {
+              "accent": "#003cdb",
+              "font": "Inter, system-ui, sans-serif"
+            },
+            "errors": []
+          },
+          {
+            "width": 390,
+            "state": "theme-boundary-and-console",
+            "font": {
+              "family": "\"Oswald UT\", \"Arial Narrow\", sans-serif",
+              "loaded": true,
+              "accent": "#c73522"
+            },
+            "resort": {
+              "accent": "#003cdb",
+              "font": "Inter, system-ui, sans-serif"
+            },
+            "errors": []
+          },
+          {
+            "width": 320,
+            "state": "theme-boundary-and-console",
+            "font": {
+              "family": "\"Oswald UT\", \"Arial Narrow\", sans-serif",
+              "loaded": true,
+              "accent": "#c73522"
+            },
+            "resort": {
+              "accent": "#003cdb",
+              "font": "Inter, system-ui, sans-serif"
+            },
+            "errors": []
+          }
+        ]
+      },
+      "hierarchy": {
+        "observations": 20,
+        "states": [
+          "landing",
+          "manufacturer",
+          "navigation-legacy-cart-404",
+          "urinotherapy",
+          "visible-supplier-link"
+        ],
+        "widths": [
+          1440,
+          768,
+          390,
+          320
+        ],
+        "js_errors": 0
+      },
+      "content": {
+        "observations": 28,
+        "states": [
+          "archive",
+          "calculator-invalid",
+          "cart-boundaries",
+          "console",
+          "donor-card",
+          "specification",
+          "voucher-blank"
+        ],
+        "widths": [
+          1440,
+          768,
+          390,
+          320
+        ],
+        "js_errors": 0
+      },
+      "portraits": {
+        "observations": 13,
+        "states": [
+          "broken-image-fallback",
+          "console",
+          "main-reviews",
+          "resort-reviews"
+        ],
+        "widths": [
+          1440,
+          768,
+          390,
+          320
+        ],
+        "js_errors": 0
+      }
+    }
+  },
+  "negative_controls": [
+    "Previous version fails new design and theme SSR tests",
+    "Broadening manufacturer CSS variables to .sol fails browser resort-color assertion",
+    "Heading overflow probe caught initial clipped desktop/mobile title; corrected size and all widths passed"
+  ],
+  "limits": [
+    "No physical-device claims",
+    "Visual quality assessed separately from automated contracts",
+    "Public deployment is verified after merge"
+  ],
+  "screenshots_attached": false
+}

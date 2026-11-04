@@ -1,4 +1,4 @@
-import BrandMark from "./BrandMark";
+import IndustrialMark from "./IndustrialMark";
 import { useState } from "react";
 import { observer } from "mobx-react-lite";
 import { useStore } from "../stores/RootStore";
@@ -31,7 +31,7 @@ function Header() {
       </nav>
       <div className="header__inner">
         <a className="logo" href="#/urinatech?section=top" onClick={() => navigate("#/urinatech?section=top")}>
-          <BrandMark />
+          <IndustrialMark />
           УринаТех
         </a>
         <nav className="nav" aria-label="Основная навигация">

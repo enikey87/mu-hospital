@@ -45,7 +45,7 @@ export default observer(function App({ initialNotFound }: { initialNotFound: boo
   }
 
   return (
-    <div className="noise">
+    <div className="ut">
       <Header />
       <main>
         <Hero />

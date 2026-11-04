@@ -52,7 +52,7 @@ const base = process.env.SITE_URL || 'http://127.0.0.1:5188/urinatech/';
       await donor.getByRole('button').click();
       assert.equal(await donor.locator('input:disabled').count(), 3);
       await page.locator('.donor-ticket').waitFor();
-      assert.match(await page.locator('#donor').innerText(), /Карточка донора готова/);
+      assert.match(await page.locator('#donor').innerText(), /Карточка донора готова/i);
       assert.doesNotMatch(await page.locator('#donor').innerText(), /зарегистрирован/i);
       await layout('donor-card');
       await page.getByRole('button', { name: 'Составить новую карточку' }).click();
