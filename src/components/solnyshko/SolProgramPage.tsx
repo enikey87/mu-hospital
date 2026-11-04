@@ -33,7 +33,10 @@ function SolProgramPage({ id }: { id: SolProgramId }) {
                 <span className="sol-label">Направление здравницы</span>
                 <h1>{program.title}</h1>
                 <p className="sol-detail__lead">{program.summary}</p>
-                <button className="sol-btn" onClick={book}>Бланк путёвки <span aria-hidden="true">↗</span></button>
+                <div className="sol-detail__actions">
+                  {id === "station" && <a className="sol-btn" href="#/urinatech">Сайт «УринаТех» <span aria-hidden="true">↗</span></a>}
+                  <button className={`sol-btn${id === "station" ? " sol-btn--ghost" : ""}`} onClick={book}>Бланк путёвки <span aria-hidden="true">↗</span></button>
+                </div>
               </div>
               <img src={program.image} alt={program.imageAlt} width="1536" height="1024" loading="eager" />
             </div>
