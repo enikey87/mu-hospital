@@ -77,7 +77,7 @@ const baseURL = process.env.SITE_URL || 'http://127.0.0.1:5188/urinatech/';
       await page.locator('.sol-form input').fill('Проверка портретов');
       await page.locator('.sol-form button').click();
       await page.locator('.sol-voucher').waitFor();
-      assert.match(await page.locator('.sol-voucher').innerText(), /Зарегистрировано/i);
+      assert.match(await page.locator('.sol-voucher').innerText(), /Бланк сформирован/i);
       await page.locator('.sol-voucher button').click();
       assert.equal(await page.locator('.sol-form input').inputValue(), '');
       assert.deepEqual(errors, []);

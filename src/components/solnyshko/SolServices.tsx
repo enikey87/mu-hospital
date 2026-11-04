@@ -6,7 +6,6 @@ function SolServices() {
       <div className="sol-container">
         <span className="sol-label">Программы пребывания</span>
         <h2 className="sol-title">Направления здравницы</h2>
-        <p className="sol-sub">Стационар, географический каталог клизмотроники, перенятие силы зверя и комплекс обретения корней.</p>
         <div className="sol-services">
           {SOL_PROGRAMS.map(p => (
             <article key={p.id} className={`sol-card sol-program-card--${p.id}`}>

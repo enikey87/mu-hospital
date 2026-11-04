@@ -1,5 +1,4 @@
 import { observer } from "mobx-react-lite";
-import { QUIZ_QUESTIONS } from "../../data/solnyshko";
 import { useStore } from "../../stores/RootStore";
 
 function SolQuiz() {
@@ -42,13 +41,12 @@ function SolQuiz() {
                 className="sol-btn"
                 type="button"
                 onClick={() => {
-                  solnyshko.reset();
-                  solnyshko.setProgram(result.key);
-                  solnyshko.setPower(quiz.answers[0] ?? "bear");
+                  solnyshko.chooseProgram(result.key);
+                  if (quiz.answers[0] === "kalofores") solnyshko.setPower(quiz.answers[1] ?? "bear");
                   scrollTo("sol-booking");
                 }}
               >
-                Записаться на эту программу
+                Выбрать эту программу
               </button>
               <button
                 className="sol-btn sol-btn--ghost"
@@ -62,11 +60,10 @@ function SolQuiz() {
         ) : current ? (
           <div className="sol-quiz">
             <div className="sol-quiz__progress" role="status">
-              Пункт {quiz.step + 1} из {quiz.total} · заполнено: {quiz.answered}{" "}
-              из {quiz.total}
+              {quiz.step === 0 ? "Выбор направления" : "Уточнение выбранного курса"}
             </div>
             <div className="sol-quiz__bar" aria-hidden="true">
-              {QUIZ_QUESTIONS.map((q, i) => (
+              {quiz.questions.map((q, i) => (
                 <span
                   key={q.no}
                   className={

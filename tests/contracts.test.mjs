@@ -113,38 +113,26 @@ test('старый ответ верификатора не перезаписы
   assert.equal(detector.verdict.kind, 'idle');
 });
 
-test('квиз учитывает выбранное направление, а для стационара — срок; результаты доступны в записи', () => {
-  for (const result of QUIZ_RESULTS)
-    assert.ok(PROGRAM_OPTIONS.some(p => p.value === result.key), result.key);
-  for (const [method, expected] of [['enema', 'enema'], ['kalofores', 'kalofores'], ['roots', 'roots']]) {
-    for (const duration of ['week', 'month', 'long', 'asis'])
-      assert.equal(recommendQuizResult(['horse', method, duration]).key, expected);
-  }
-  for (const [duration, expected] of [['week', 'morning'], ['month', 'safety'], ['long', 'second'], ['asis', 'complex']])
-    assert.equal(recommendQuizResult(['bear', 'station', duration]).key, expected);
-  for (const answers of [[], ['unknown', 'unknown', 'unknown'], [null, null, null], ['bear', 'station', 'unknown']])
-    assert.equal(recommendQuizResult(answers).key, 'complex');
+test('результаты анкеты доступны в бланке и соответствуют выбранному направлению', () => {
+  for (const result of QUIZ_RESULTS) assert.ok(PROGRAM_OPTIONS.some(p => p.value === result.key), result.key);
+  for (const direction of ['enema', 'roots', 'complex']) assert.equal(recommendQuizResult([direction]).key, direction);
+  for (const mode of ['bear', 'deer', 'taiga']) assert.equal(recommendQuizResult(['kalofores', mode]).key, 'kalofores');
+  for (const [duration, key] of [['week','morning'],['month','safety'],['long','second'],['asis','station']])
+    assert.equal(recommendQuizResult(['station', duration]).key, key);
+  for (const answers of [[], ['unknown'], ['station', 'unknown'], ['kalofores', null]]) assert.equal(recommendQuizResult(answers), null);
 });
 
-test('квиз не принимает неизвестный ответ, позволяет вернуться и начать заново', () => {
+test('анкета не принимает неизвестный ответ, позволяет вернуться и начать заново', () => {
   const quiz = new QuizStore();
   assert.equal(quiz.result, null);
-  quiz.answer('missing');
-  assert.equal(quiz.step, 0);
-  quiz.answer('horse');
-  quiz.back();
-  assert.equal(quiz.step, 0);
-  quiz.answer('bear');
-  quiz.answer('station');
-  quiz.answer('long');
-  assert.equal(quiz.result.key, 'second');
+  quiz.answer('missing'); assert.equal(quiz.step, 0);
+  quiz.answer('station'); quiz.back(); assert.equal(quiz.step, 0);
+  quiz.answer('station'); quiz.answer('long'); assert.equal(quiz.result.key, 'second');
   quiz.reset();
-  assert.equal(quiz.step, 0);
-  assert.equal(quiz.answered, 0);
-  assert.equal(quiz.result, null);
+  assert.equal(quiz.step, 0); assert.equal(quiz.answered, 0); assert.equal(quiz.result, null);
 });
 
-test('запись регистрирует выбранную программу без утверждения об оплате и сбрасывается', async (t) => {
+test('бланк сохраняет выбранную программу без обещания регистрации и сбрасывается', async (t) => {
   t.mock.timers.enable({ apis: ['setTimeout'] });
   const solnyshko = new SolnyshkoStore();
   assert.equal(solnyshko.canSubmit, false);
@@ -156,7 +144,7 @@ test('запись регистрирует выбранную программ�
   assert.equal(solnyshko.program, 'kalofores');
   assert.equal(solnyshko.power, 'bear');
   solnyshko.setProgram('morning');
-  solnyshko.setPower('horse');
+  solnyshko.setPower('deer');
   const pending = solnyshko.submit();
   assert.equal(solnyshko.status, 'sending');
   solnyshko.setName('Другое имя');
@@ -168,7 +156,8 @@ test('запись регистрирует выбранную программ�
   await pending;
   assert.equal(solnyshko.status, 'done');
   const html = render(SolBooking, { solnyshko });
-  assert.match(html, /Зарегистрировано/);
+  assert.match(html, /Бланк сформирован/);
+  assert.doesNotMatch(html, /[Зз]арегистрирован/);
   assert.ok(!html.includes('Оплачено'));
   assert.match(html, /Утренний круг/);
   solnyshko.reset();

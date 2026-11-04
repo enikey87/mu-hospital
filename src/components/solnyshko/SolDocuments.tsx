@@ -8,7 +8,7 @@ function SolDocuments() {
         <h2 className="sol-title">
           Документы <em>здравницы</em>
         </h2>
-        <p className="sol-sub"> Свидетельство о категории, архив переписки и внутренняя опись. Медицинская лицензия в перечне отмечена как невыданная. </p>
+        <p className="sol-sub"> Свидетельство о категории, архив переписки и внутренняя опись здравницы. </p>
         <div className="sol-docs">
           {SOL_DOCUMENTS.map((d) => (
             <article className="sol-doc" key={d.title}>
@@ -30,7 +30,7 @@ function SolDocuments() {
               <p className="sol-doc__issuer">{d.issuer}</p>
               <p className="sol-doc__note">{d.note}</p>
               <div className="sol-doc__valid">
-                <span>Срок действия</span>
+                <span>{d.termLabel}</span>
                 {d.valid}
               </div>
             </article>

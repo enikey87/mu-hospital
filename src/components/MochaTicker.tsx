@@ -92,7 +92,7 @@ function MochaTicker() {
         <div className="glass mocha__row">
           <div className="mocha__head">
             <span className="mocha__sym">{MOCHA.symbol}</span>
-            <span className="mocha__stamp">биржа · сессия</span>
+            <span className="mocha__stamp">сырьевой индекс</span>
           </div>
           <div className="mocha__quote">
             <span className="mocha__price">{mocha.priceLabel} ₽</span>
@@ -113,7 +113,7 @@ function MochaTicker() {
               ref={canvasRef}
               className="mocha__canvas"
               role="img"
-              aria-label={`Спарклайн $MOCHA за сессию: ${mocha.priceLabel} ₽, ${mocha.changeLabel} к открытию`}
+              aria-label={`График индекса $MOCHA за сессию: ${mocha.priceLabel} ₽, ${mocha.changeLabel} к открытию`}
             />
           </div>
         </div>

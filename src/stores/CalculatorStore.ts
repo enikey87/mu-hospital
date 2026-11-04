@@ -29,9 +29,10 @@ export class CalculatorStore {
     this.trust = v;
   }
 
-  get result(): DosageResult {
-    const w = Math.max(1, Number(this.weight) || 1);
-    const a = Math.max(0, Number(this.age) || 0);
+  get result(): DosageResult | null {
+    const w = Number(this.weight);
+    const a = Number(this.age);
+    if (!this.weight.trim() || !this.age.trim() || !Number.isFinite(w) || !Number.isFinite(a) || w < 1 || a < 18) return null;
     const t = this.trust;
     const cups = Math.min(5, Math.max(1, Math.round(w / 25 + (100 - t) / 50)));
     const course = 21 + (a >= 60 ? 7 : 0);

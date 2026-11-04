@@ -39,7 +39,7 @@ function SolHeader() {
             className="sol-btn"
             onClick={book}
           >
-            Записаться
+            Путёвка
           </button>
         </div>
       </div>

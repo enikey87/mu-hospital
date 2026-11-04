@@ -5,7 +5,6 @@ import { DonorStore } from "./DonorStore";
 import { TestimonialsStore } from "./TestimonialsStore";
 import { CalculatorStore } from "./CalculatorStore";
 import { PollStore } from "./PollStore";
-import { CookiesStore } from "./CookiesStore";
 import { RouterStore } from "./RouterStore";
 import { SolnyshkoStore } from "./SolnyshkoStore";
 import { MochaStore } from "./MochaStore";
@@ -18,7 +17,6 @@ export interface RootStore {
   testimonials: TestimonialsStore;
   calc: CalculatorStore;
   poll: PollStore;
-  cookies: CookiesStore;
   router: RouterStore;
   solnyshko: SolnyshkoStore;
   mocha: MochaStore;
@@ -33,7 +31,6 @@ export function createRootStore(): RootStore {
     testimonials: new TestimonialsStore(),
     calc: new CalculatorStore(),
     poll: new PollStore(),
-    cookies: new CookiesStore(),
     router: new RouterStore(),
     solnyshko: new SolnyshkoStore(),
     mocha: new MochaStore(),

@@ -6,7 +6,7 @@ import { useStore } from "../stores/RootStore";
 const NAV_LINKS = [
   { href: "#/urinatech?section=products", label: "Продукция" },
   { href: "#/urinatech?section=instructions", label: "Инструкция" },
-  { href: "#/urinatech?section=pricing", label: "Обслуживание" },
+  { href: "#/urinatech?section=pricing", label: "Поставки" },
   { href: "#/urinatech?section=reviews", label: "Отзывы" },
   { href: "#/urinatech?section=detector", label: "Партии" },
   { href: "#/urinatech?section=donor", label: "Донорам" },

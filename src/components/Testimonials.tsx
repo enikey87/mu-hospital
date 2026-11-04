@@ -18,7 +18,7 @@ function Testimonials() {
   return (
     <section id="reviews">
       <div className="container">
-        <span className="section-label"> П.4 · Отзывы и обращения </span>
+        <span className="section-label"> Гостевая книга и переписка </span>
         <h2 className="section-title"> Отзывы и обращения </h2>
         <p className="section-sub"> Выдержки из гостевой книги и официальная переписка. Сообщения авторов публикуются отдельно от производственной документации. </p>
         <p className="review-disclosure">Портреты авторов и иллюстрации к письмам созданы нейросетью.</p>

@@ -837,7 +837,7 @@
 
 .sol-promos {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 14px;
   margin-top: 44px;
 }
@@ -1956,3 +1956,5 @@
   .sol-supplier { padding: 24px 16px; }
   .sol-supplier .sol-btn { padding: 13px 16px; font-size: 12px; }
 }
+
+.sol-roots__register { margin-top: 32px; font-size: 12px; color: var(--sol-muted); border-top: 1px solid var(--sol-line); padding-top: 20px; }
