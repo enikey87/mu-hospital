@@ -13,7 +13,7 @@ export default function Hero() {
         </p>
         <div className="hero-actions">
           <a className="btn btn-primary" href="#/urinatech?section=products">Каталог продукции <span aria-hidden="true">↗</span></a>
-          <a className="hero-secondary" href="#/urinatech?section=donor">Донорская программа</a>
+          <a className="hero-secondary" href="#/urinatech?section=ug9">УГ-9 · удержание до 12 атм →</a>
         </div>
         <p className="hero-disclaimer">18+ · Имеются противопоказания</p>
       </div>

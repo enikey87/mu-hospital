@@ -4,6 +4,7 @@ import { observer } from "mobx-react-lite";
 import { useStore } from "../stores/RootStore";
 
 const NAV_LINKS = [
+  { href: "#/urinatech?section=ug9", label: "УГ-9" },
   { href: "#/urinatech?section=products", label: "Продукция" },
   { href: "#/urinatech?section=instructions", label: "Инструкция" },
   { href: "#/urinatech?section=pricing", label: "Поставки" },
