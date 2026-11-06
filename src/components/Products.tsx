@@ -67,7 +67,7 @@ function Products() {
       <div className="container">
         <span className="section-label"> Каталог продукции · с 2002 года </span>
         <h2 className="section-title">Серийная продукция</h2>
-        <p className="section-sub"> Продукция на основе донорского сырья. В каталоге приведены серии, варианты фасовки и стоимость единицы. Номер партии и условия хранения указаны на этикетке. </p>
+        <p className="section-sub"> Продукция на основе донорского сырья и узлы удержания. В каталоге приведены серии, комплектация и стоимость единицы. Номер партии и условия хранения указаны на этикетке. </p>
         <div className="products-grid">
           {PRODUCTS.map((p) => (
             <ProductCard key={p.id} product={p} />

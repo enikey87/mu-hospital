@@ -12,6 +12,18 @@ export interface Product {
   tech: string[];
 }
 
+export const UG9_PRODUCT: Product = {
+  id: "ug9",
+  emoji: "⚙️",
+  name: "Анальное кольцо УГ-9",
+  subtitle: "узел герметизации · комплект замены",
+  description: "Замена стандартного анального кольца на промышленный узел удержания. Говно удерживается при давлении до 12 атм. Понос и пшеничное пиво не проходят. В комплекте — кольцо, сменная манжета и индивидуальный паспорт.",
+  price: 12460,
+  unit: "комплект",
+  tag: "Новинка",
+  tech: ["до 12 атм", "девять свойств", "ТУ УГ-09.12"],
+};
+
 export const PRODUCTS: Product[] = [
   {
     id: "morning",
@@ -117,7 +129,8 @@ export const PRODUCTS: Product[] = [
       "гравировка на заказ",
       "опт, кредит, рассрочка"
     ]
-  }
+  },
+  UG9_PRODUCT,
 ];
 
 export interface Plan {

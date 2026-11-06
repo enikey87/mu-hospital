@@ -52,7 +52,7 @@ const base = process.env.SITE_URL || 'http://127.0.0.1:5188/mu-hospital/';
       await layout('manufacturer-hero');
       if (process.env.CAPTURE_DIR) await page.screenshot({ path: `${process.env.CAPTURE_DIR}/hero-${width}.png` });
       await button.click();
-      assert.equal(await page.locator('.product-card').count(), 7);
+      assert.equal(await page.locator('.product-card').count(), 8);
       const photos = page.locator('.product-card__photo img');
       assert.equal(await photos.count(), 2);
       for (const img of await photos.all()) {

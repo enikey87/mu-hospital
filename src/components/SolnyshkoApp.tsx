@@ -1,6 +1,7 @@
 import { observer } from "mobx-react-lite";
 import { useStore } from "../stores/RootStore";
 import SolProgramPage from "./solnyshko/SolProgramPage";
+import SolFranchise from "./solnyshko/SolFranchise";
 import SolHeader from "./solnyshko/SolHeader";
 import SolHero from "./solnyshko/SolHero";
 import SolQuiz from "./solnyshko/SolQuiz";
@@ -18,6 +19,7 @@ import SolFooter from "./solnyshko/SolFooter";
 
 function SolnyshkoApp() {
   const { router } = useStore();
+  if (router.route === "franchise") return <SolFranchise />;
   if (router.program) return <SolProgramPage id={router.program} />;
   return (
     <>

@@ -3,6 +3,7 @@ import { observer } from "mobx-react-lite";
 import { useStore } from "./stores/RootStore";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Ug9Offer from "./components/Ug9Offer";
 import MochaTicker from "./components/MochaTicker";
 import Products from "./components/Products";
 import Calculator from "./components/Calculator";
@@ -36,7 +37,7 @@ export default observer(function App({ initialNotFound }: { initialNotFound: boo
     );
   }
 
-  if (router.route === "solnyshko") {
+  if (router.route === "solnyshko" || router.route === "franchise") {
     return (
       <div className="sol">
         <SolnyshkoApp />
@@ -49,6 +50,7 @@ export default observer(function App({ initialNotFound }: { initialNotFound: boo
       <Header />
       <main>
         <Hero />
+        <Ug9Offer />
         <MochaTicker />
         <Products />
         <Calculator />

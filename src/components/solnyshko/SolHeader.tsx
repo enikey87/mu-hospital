@@ -22,7 +22,7 @@ function SolHeader() {
           className="sol-header__brand"
           href="#/"
           onClick={(e) => {
-            if (!router.program && !router.section) {
+            if (router.route === "solnyshko" && !router.program && !router.section) {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
             }
