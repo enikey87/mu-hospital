@@ -16,7 +16,7 @@ import { CartStore } from '../src/stores/CartStore.ts';
 const render = Component => renderToStaticMarkup(React.createElement(Component));
 
 test('фотографии поставляются вместе с сайтом, в формате WebP', async () => {
-  assert.equal(Object.keys(MEDIA).length, 9);
+  assert.equal(Object.keys(MEDIA).length, 10);
   for (const url of Object.values(MEDIA)) {
     const data = await readFile(new URL(`../public${url}`, import.meta.url));
     assert.equal(data.toString('ascii', 0, 4), 'RIFF');
@@ -26,7 +26,7 @@ test('фотографии поставляются вместе с сайтом
 });
 
 test('первые экраны имеют один заголовок и фотографию без отложенной загрузки; номера загружаются отложенно', () => {
-  for (const [Component, title, photo] of [[Hero, 'Производство', MEDIA.production], [SolHero, 'Пансионат', MEDIA.resort]]) {
+  for (const [Component, title, photo] of [[Hero, 'Первый', MEDIA.production], [SolHero, 'Пансионат', MEDIA.resort]]) {
     const html = render(Component);
     assert.equal((html.match(/<h1\b/g) ?? []).length, 1);
     assert.match(html, new RegExp(`<h1[^>]*>${title}`));
@@ -58,18 +58,18 @@ test('направления здравницы открывают отдель�
 });
 
 
-test('промышленный первый экран использует согласованные факты, а каталог показывает две отдельные фотографии продукции', () => {
+test('промышленный первый экран использует согласованные факты, а каталог показывает три отдельные фотографии продукции', () => {
   const hero = render(Hero);
   assert.match(hero, /class="industrial-facts"/);
   for (const fact of ['Полный цикл', 'Живая фильтрация', '1246']) assert.ok(hero.includes(fact), fact);
   assert.doesNotMatch(hero, /120.?000|Линий.*4/);
   assert.match(hero, /href="#\/urinatech\?section=products"/);
   const products = renderToStaticMarkup(React.createElement(RootStoreContext.Provider, { value: { cart: new CartStore() } }, React.createElement(Products)));
-  for (const key of ['morningProduct', 'horseProduct']) {
+  for (const key of ['morningProduct', 'horseProduct', 'sunshineProduct']) {
     assert.ok(MEDIA[key], key);
     assert.ok(products.includes(`src="${MEDIA[key]}"`), key);
   }
-  assert.equal((products.match(/class="product-card__photo"/g) ?? []).length, 2);
+  assert.equal((products.match(/class="product-card__photo"/g) ?? []).length, 3);
   assert.match(products, /0,5 л/);
   assert.match(products, /ГОСТ Р 1246-2002/);
   assert.match(products, /Серийная продукция/);

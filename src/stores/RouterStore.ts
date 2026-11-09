@@ -4,7 +4,7 @@ import { SOL_PROGRAMS, type SolProgramId } from "../data/solPrograms";
 export type Route = "urinatech" | "solnyshko" | "franchise" | "notFound";
 const HOME_SECTIONS = ["sol-services", "sol-quiz", "sol-rooms", "sol-dining", "sol-staff", "sol-documents", "sol-faq", "sol-booking"];
 
-const MANUFACTURER_SECTIONS = ["top", "ug9", "products", "calculator", "pricing", "instructions", "reviews", "detector", "donor", "licenses", "company", "faq"];
+const MANUFACTURER_SECTIONS = ["top", "urinatorium", "ug9", "products", "calculator", "pricing", "instructions", "reviews", "detector", "donor", "licenses", "company", "faq"];
 
 export class RouterStore {
   route: Route = "solnyshko";
@@ -30,13 +30,13 @@ export class RouterStore {
       document.title = this.route === "franchise" ? "Франшиза калофореза — Калофорез-Кедр М2 · Солнышко"
         : program ? `${program.title} — пансионат «Солнышко»`
         : this.route === "solnyshko" ? "Пансионат «Солнышко» — программы пребывания"
-        : this.route === "notFound" ? "404 — пансионат «Солнышко»" : "УринаТех — производство и поставка продукции";
+        : this.route === "notFound" ? "404 — пансионат «Солнышко»" : "УринаТех — первый уринаторий в России";
       document.querySelector('meta[name="description"]')?.setAttribute("content", this.route === "franchise"
         ? "Франшиза калофореза с аппаратом «Калофорез-Кедр М2»: комплект кабинета, условия запуска и предварительный расчёт. 18+."
         : program?.meta
         ?? (this.route === "solnyshko" ? "Пансионат «Солнышко», Республика Алтай. Стационарные программы, проживание и питание. Имеются противопоказания. 18+."
           : this.route === "notFound" ? "Страница не найдена. Пансионат «Солнышко» и производитель «УринаТех»."
-          : "УринаТех — производство продукции серии УТ, донорская программа и учёт партий. Имеются противопоказания. 18+."));
+          : "УринаТех — первый уринаторий в России. Изолят отборной мочи, аппарат «Солнышко-У», донорская программа и учёт партий. Имеются противопоказания. 18+."));
     });
     window.addEventListener("hashchange", sync);
     sync();

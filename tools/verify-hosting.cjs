@@ -17,7 +17,7 @@ const base = process.env.SITE_URL || 'http://127.0.0.1:5188/mu-hospital/';
       await page.goto(base + '?ref=check#/urinatech', { waitUntil: 'networkidle' });
       await page.locator('.ut h1').waitFor();
       const images = page.locator('.hero-photo, .product-card__photo img');
-      assert.equal(await images.count(), 3);
+      assert.equal(await images.count(), 4);
       for (const img of await images.all()) {
         await img.scrollIntoViewIfNeeded(); await img.evaluate(n => n.decode());
         assert.ok((await img.getAttribute('src')).startsWith(new URL('images/', base).pathname));

@@ -70,6 +70,7 @@
 .ut .hero-motto { font-family: var(--mono); font-size: 15px; letter-spacing: 0; color: #efede6; max-width: 590px; margin-bottom: 12px; }
 .ut .hero-sub { font-size: 13px; color: #c5c4bb; margin-bottom: 28px; max-width: 500px; }
 .ut .hero-actions .btn { padding: 18px 24px; font-size: 16px; min-width: 260px; }
+.ut .hero-actions { max-width: 620px; }
 .ut .hero-secondary { color: #efede6; border-color: #aaa99e; }
 .ut .hero-secondary:hover { color: #ff8b74; }
 .ut .hero-disclaimer { color: #b5b5aa; font: 10px var(--mono); margin-top: 20px; }
@@ -106,6 +107,37 @@
 .ut .tech-chips .chip { padding: 4px 0; background: transparent; border-bottom: 1px solid var(--border-soft); margin-right: 12px; }
 .ut .tag { font-family: var(--mono); text-transform: uppercase; padding: 5px 8px; background: var(--bg-soft); }
 .ut .product-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+
+.ut .urinatorium { background: var(--paper); border-top: 4px solid var(--accent); }
+.ut .urinatorium-source { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.ut .urinatorium-source > div, .ut .urinatorium-device > *, .ut .urinatorium-refill > div { min-width: 0; }
+.ut .urinatorium-lead { font-size: 22px; line-height: 1.5; margin: 24px 0; max-width: 580px; }
+.ut .urinatorium-source__copy { padding-top: 32px; }
+.ut .urinatorium-source__copy p, .ut .urinatorium-device__copy > p:not(.urinatorium-lead):not(.urinatorium-price) { color: var(--muted); font-size: 15px; line-height: 1.9; margin-bottom: 20px; }
+.ut .urinatorium-source__copy .urinatorium-signature { font-family: var(--mono); font-size: 12px; color: var(--accent); border-top: 1px solid var(--border-soft); padding-top: 20px; }
+.ut .urinatorium-chain { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); list-style: none; padding: 24px 0; margin: 32px 0 56px; border-block: 1px solid var(--border); }
+.ut .urinatorium-chain li { font: 13px/1.6 var(--mono); padding: 0 16px; border-left: 1px solid var(--border-soft); }
+.ut .urinatorium-chain li:first-child { padding-left: 0; border: 0; }
+.ut .urinatorium-chain li span { color: var(--accent); margin-right: 16px; }
+.ut .urinatorium-device { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.ut .urinatorium-photo { margin: 0; background: var(--bg); }
+.ut .urinatorium-photo img { display: block; width: 100%; height: auto; }
+.ut .urinatorium-photo figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; padding: 16px 0; border-block: 1px solid var(--border); font: 10px/1.7 var(--mono); }
+.ut .urinatorium-device h3 { font: clamp(40px, 4.5vw, 68px)/1.15 var(--font-display); text-transform: uppercase; margin-top: 20px; }
+.ut .urinatorium-device .catalog-spec { margin-top: 28px; margin-bottom: 24px; }
+.ut .urinatorium-price { font: 38px/1.2 var(--font-display); margin: 24px 0; }
+.ut .urinatorium-price span { font: 12px/1.6 var(--font-body); color: var(--muted); }
+.ut .urinatorium .btn { white-space: normal; line-height: 1.5; text-align: left; }
+.ut .urinatorium-features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 48px; padding: 0; list-style: none; }
+.ut .urinatorium-feature { min-width: 0; padding-top: 24px; border-top: 1px solid var(--border-soft); }
+.ut .urinatorium-feature__number { font: 11px var(--mono); color: var(--accent); }
+.ut .urinatorium-feature h4 { font: 22px/1.4 var(--font-display); text-transform: uppercase; margin: 16px 0 12px; }
+.ut .urinatorium-feature p { font-size: 13px; line-height: 1.8; color: var(--muted); }
+.ut .urinatorium-refill { display: grid; grid-template-columns: 1.5fr 1fr; align-items: center; gap: 48px; margin-top: 48px; padding: 32px; background: var(--bg); }
+.ut .urinatorium-refill h3 { font: 28px/1.4 var(--font-display); text-transform: uppercase; margin-bottom: 16px; }
+.ut .urinatorium-refill p:not(.urinatorium-price) { color: var(--muted); font-size: 14px; line-height: 1.8; }
+.ut .urinatorium-refill > div:last-child { justify-self: end; }
+.ut .urinatorium-note { max-width: 850px; margin-top: 32px; font: 10px/1.9 var(--mono); color: var(--muted); }
 
 .ut .ug9 { border-top: 6px solid var(--accent); background: var(--paper); }
 .ut .ug9-heading { display: flex; justify-content: space-between; gap: 16px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
@@ -194,6 +226,8 @@
 }
 
 @media (max-width: 960px) {
+  .ut .urinatorium-source, .ut .urinatorium-device { gap: 32px; }
+  .ut .urinatorium-features { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .ut .ug9-overview { gap: 32px; }
   .ut .ug9-benefits { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .ut .ug9-tables { grid-template-columns: 1fr; gap: 32px; }
@@ -207,6 +241,14 @@
 }
 
 @media (max-width: 760px) {
+  .ut .urinatorium-source, .ut .urinatorium-device, .ut .urinatorium-refill { grid-template-columns: 1fr; gap: 24px; }
+  .ut .urinatorium-source__copy { padding-top: 0; }
+  .ut .urinatorium-lead { font-size: 19px; }
+  .ut .urinatorium-chain { grid-template-columns: 1fr; gap: 16px; margin-bottom: 32px; }
+  .ut .urinatorium-chain li { padding-left: 0; border: 0; }
+  .ut .urinatorium-features { grid-template-columns: 1fr; gap: 24px; }
+  .ut .urinatorium-refill { padding: 24px 16px; margin-top: 32px; }
+  .ut .urinatorium-refill > div:last-child { justify-self: start; }
   .ut .ug9-heading { flex-direction: column; gap: 10px; }
   .ut .ug9-overview { grid-template-columns: 1fr; margin-top: 28px; }
   .ut .ug9-lead { font-size: 19px; }

@@ -6,16 +6,18 @@ export default function Hero() {
       <img className="hero-photo" src={MEDIA.production} alt="Стальной резервуар с янтарной жидкостью в цехе фильтрации" width="1536" height="1024" loading="eager" />
       <div className="container hero-content">
         <span className="section-label">Производственно-исследовательская компания</span>
-        <h1 className="hero-title">Производство<br />полного<br />цикла</h1>
-        <p className="hero-motto">Сбор сырья. Фильтрация. Консервация.</p>
+        <h1 className="hero-title">Первый<br />уринаторий<br />в России</h1>
+        <p className="hero-motto">Инновационные составы для вашего здоровья.</p>
         <p className="hero-sub">
-          Русская моча против скальпеля врача.
+          Отбор доноров, обогащение сырья и собственное аппаратное направление.
+          Полный производственный цикл — от утреннего сбора до индивидуальной процедуры.
         </p>
         <div className="hero-actions">
           <a className="btn btn-primary" href="#/urinatech?section=products">Каталог продукции <span aria-hidden="true">↗</span></a>
+          <a className="hero-secondary" href="#/urinatech?section=urinatorium">Солнышко-У ↗</a>
           <a className="hero-secondary" href="#/urinatech?section=ug9">УГ-9 · удержание до 12 атм →</a>
         </div>
-        <p className="hero-disclaimer">18+ · Имеются противопоказания</p>
+        <p className="hero-disclaimer">Русская моча против скальпеля врача.<br />18+ · Имеются противопоказания</p>
       </div>
       <div className="hero-foot">
         <div className="container">

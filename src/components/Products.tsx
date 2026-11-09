@@ -12,22 +12,24 @@ const TAG_CLASS: Record<NonNullable<Product["tag"]>, string> = {
   "Особая серия": "tag--molecule",
 };
 
-const PRODUCT_IMAGES: Record<string, string> = {
-  morning: MEDIA.morningProduct,
-  horse: MEDIA.horseProduct,
+const PRODUCT_IMAGES: Record<string, { src: string; alt: string; width: number; height: number }> = {
+  morning: { src: MEDIA.morningProduct, alt: "УТ-01 «Утренний» — заводская стеклянная тара с красной маркировкой", width: 1199, height: 1312 },
+  horse: { src: MEDIA.horseProduct, alt: "УТ-02 «Эталон» — заводская стеклянная тара с красной маркировкой", width: 1199, height: 1312 },
+  "sunshine-u": { src: MEDIA.sunshineProduct, alt: "Солнышко-У — аппарат со сменной янтарной кассетой и двумя индивидуальными тубусами", width: 1254, height: 1254 },
 };
 
 function ProductCard({ product }: { product: Product }) {
   const { cart } = useStore();
+  const image = PRODUCT_IMAGES[product.id];
 
   return (
-    <article className={`glass product-card${PRODUCT_IMAGES[product.id] ? " product-card--featured" : ""}`}>
+    <article className={`glass product-card${image ? " product-card--featured" : ""}`}>
       <div className="product-card__top">
         <span className="product-card__code">{product.name.split(" «")[0]}</span>
         {product.tag && <span className={`tag ${TAG_CLASS[product.tag]}`}>{product.tag}</span>}
       </div>
-      {PRODUCT_IMAGES[product.id] && <figure className="product-card__photo">
-        <img src={PRODUCT_IMAGES[product.id]} alt={`${product.name} — заводская стеклянная тара с красной маркировкой`} width="1199" height="1312" loading="lazy" />
+      {image && <figure className="product-card__photo">
+        <img src={image.src} alt={image.alt} width={image.width} height={image.height} loading="lazy" />
       </figure>}
       <h3 className="product-card__name">{product.name}</h3>
       <div className="product-card__subtitle">{product.subtitle}</div>

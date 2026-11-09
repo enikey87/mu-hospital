@@ -91,7 +91,7 @@ test('путь к поставщику проходит через уринот�
   env.navigate('#/urinatech');
   const manufacturer = render(store);
   assert.match(manufacturer, /^<div class="ut">/);
-  assert.match(manufacturer, /<h1[^>]*>Производство/);
+  assert.match(manufacturer, /<h1[^>]*>Первый/);
   assert.match(manufacturer, /id="products"/);
   assert.match(manufacturer, /href="#\/solnyshko\/station"[^>]*>Уринотерапия/);
   assert.match(manufacturer, /href="#\/"[^>]*>Пансионат «Солнышко»/);
