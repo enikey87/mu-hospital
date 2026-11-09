@@ -8,6 +8,7 @@ export const MEDIA = {
   production: `${base}images/production-monument.webp`,
   morningProduct: `${base}images/ut-01-monument.webp`,
   horseProduct: `${base}images/ut-02-monument.webp`,
+  sunshineProduct: `${base}images/solnyshko-u.webp`,
   resort: `${base}images/resort.webp`,
   room: `${base}images/room.webp`,
 };

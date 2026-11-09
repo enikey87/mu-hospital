@@ -3,6 +3,7 @@ import { observer } from "mobx-react-lite";
 import { useStore } from "./stores/RootStore";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Urinatorium from "./components/Urinatorium";
 import Ug9Offer from "./components/Ug9Offer";
 import MochaTicker from "./components/MochaTicker";
 import Products from "./components/Products";
@@ -50,6 +51,7 @@ export default observer(function App({ initialNotFound }: { initialNotFound: boo
       <Header />
       <main>
         <Hero />
+        <Urinatorium />
         <Ug9Offer />
         <MochaTicker />
         <Products />

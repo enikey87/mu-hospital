@@ -52,12 +52,15 @@ const base = process.env.SITE_URL || 'http://127.0.0.1:5188/mu-hospital/';
       await layout('manufacturer-hero');
       if (process.env.CAPTURE_DIR) await page.screenshot({ path: `${process.env.CAPTURE_DIR}/hero-${width}.png` });
       await button.click();
-      assert.equal(await page.locator('.product-card').count(), 8);
+      assert.equal(await page.locator('.product-card').count(), 10);
       const photos = page.locator('.product-card__photo img');
-      assert.equal(await photos.count(), 2);
+      assert.equal(await photos.count(), 3);
+      const dimensions = { 'ut-01-monument.webp': [1199, 1312], 'ut-02-monument.webp': [1199, 1312], 'solnyshko-u.webp': [1254, 1254] };
       for (const img of await photos.all()) {
         await img.scrollIntoViewIfNeeded(); await img.evaluate(n => n.decode());
-        assert.deepEqual(await img.evaluate(n => [n.naturalWidth, n.naturalHeight]), [1199, 1312]);
+        const name = (await img.getAttribute('src')).split('/').pop();
+        assert.ok(dimensions[name], name);
+        assert.deepEqual(await img.evaluate(n => [n.naturalWidth, n.naturalHeight]), dimensions[name]);
       }
       await layout('catalog');
       if (process.env.CAPTURE_DIR) {

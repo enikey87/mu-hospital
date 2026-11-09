@@ -48,7 +48,7 @@ const base = process.env.SITE_URL || 'http://127.0.0.1:5188/mu-hospital/';
       assert.notEqual(await supplierLink.evaluate(a => getComputedStyle(a).backgroundColor), 'rgba(0, 0, 0, 0)');
       report.push({ state: 'visible-supplier-link', width, linkBox });
       await supplierLink.click();
-      await heading(/Производство/);
+      await heading(/Первый/);
       assert.match(await page.title(), /^УринаТех/);
       const cookie = page.getByRole('button', { name: 'Понятно', exact: true });
       if (await cookie.count()) await cookie.click();
@@ -71,14 +71,14 @@ const base = process.env.SITE_URL || 'http://127.0.0.1:5188/mu-hospital/';
       await page.locator('.topbar a[href="#/solnyshko/station"]').click();
       await heading('Стационарная уринотерапия');
       await page.goBack();
-      await heading(/Производство/);
+      await heading(/Первый/);
       await page.locator('.topbar a[href="#/"]').click();
       await heading(/Пансионат/);
       await page.locator('.sol-header__actions button').click();
       await sectionVisible('sol-booking');
       for (const hash of ['#products', '#company', '#/urinatech?section=products']) {
         await page.goto(base + hash, { waitUntil: 'networkidle' });
-        await heading(/Производство/);
+        await heading(/Первый/);
         await sectionVisible(hash.includes('company') ? 'company' : 'products');
       }
       await page.goto(base + '#/solnyshko', { waitUntil: 'networkidle' });
