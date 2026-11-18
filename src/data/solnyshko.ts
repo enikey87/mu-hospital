@@ -526,6 +526,8 @@ export const PROGRAM_OPTIONS = [
     value: "roots",
     label: "Комплекс «Исконный»"
   },
+  { value: "morozko", label: "Каловая криотерапия «Морозко»" },
+  { value: "golden-reserve", label: "Капельная уринотерапия «Золотой резерв»" },
   {
     value: "complex",
     label: "Комплекс «Всё сразу»"

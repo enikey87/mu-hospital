@@ -16,7 +16,7 @@ import { CartStore } from '../src/stores/CartStore.ts';
 const render = Component => renderToStaticMarkup(React.createElement(Component));
 
 test('фотографии поставляются вместе с сайтом, в формате WebP', async () => {
-  assert.equal(Object.keys(MEDIA).length, 10);
+  assert.equal(Object.keys(MEDIA).length, 12);
   for (const url of Object.values(MEDIA)) {
     const data = await readFile(new URL(`../public${url}`, import.meta.url));
     assert.equal(data.toString('ascii', 0, 4), 'RIFF');
@@ -54,7 +54,7 @@ test('направления здравницы открывают отдель�
     React.Children.forEach(node.props.children, walk);
   };
   walk(SolServices());
-  assert.deepEqual(links, ['#/solnyshko/station', '#/solnyshko/enemas', '#/solnyshko/kalofores', '#/solnyshko/roots']);
+  assert.deepEqual(links, ['#/solnyshko/station', '#/solnyshko/enemas', '#/solnyshko/kalofores', '#/solnyshko/roots', '#/solnyshko/morozko', '#/solnyshko/golden-reserve']);
 });
 
 

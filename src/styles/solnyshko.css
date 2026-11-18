@@ -1874,7 +1874,7 @@
 .sol-review__head span { margin-top: 5px; font-size: 11px; font-weight: 400; color: var(--sol-muted); }
 
 .sol-link { text-decoration: none; }
-.sol-programs .sol-services { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+.sol-programs .sol-services { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
 .sol-programs .sol-services .sol-card { padding: 0; border: 0; min-width: 0; }
 .sol-programs .sol-card h3 { font-size: 21px; min-height: 2.4em; }
 .sol-program-card__image { display: block; }
@@ -1984,4 +1984,39 @@
 @media (max-width: 760px) {
   .sol-franchise__grid, .sol-franchise__brief { grid-template-columns: 1fr; gap: 24px; }
   .sol-franchise__result { padding: 24px 16px; }
+}
+
+.sol-special { --special-tint: #edf4f8; }
+.sol-special--reserve { --special-tint: #f5f0e3; }
+.sol-special__cards { margin-top: 32px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.sol-special__cards .sol-card { min-width: 0; padding: 28px; background: var(--special-tint); }
+.sol-special__cards .sol-label { font-size: 10px; line-height: 1.6; }
+.sol-special__cards h3 { font-size: 23px; margin: 12px 0 18px; }
+.sol-special__cards p { font-size: 14px; color: var(--sol-muted); }
+.sol-special__cards .sol-special__clause { margin-top: 24px; color: var(--sol-navy); font-weight: 500; }
+.sol-special__register { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; padding: 56px 0; }
+.sol-special__register h3, .sol-special__notice h3, .sol-special__partner h3 { font-size: clamp(23px, 2.4vw, 32px); line-height: 1.2; margin-bottom: 18px; }
+.sol-special__register p, .sol-special__notice p, .sol-special__partner p { font-size: 15px; color: var(--sol-muted); }
+.sol-special__register dl { border-top: 1px solid var(--sol-line); }
+.sol-special__register dl > div { display: grid; grid-template-columns: 1fr 1.4fr; gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--sol-line); font-size: 13px; }
+.sol-special__register dt { color: var(--sol-muted); }
+.sol-special__register dd { margin: 0; }
+.sol-special__notice { padding: 32px; border-left: 3px solid var(--sol-navy); background: var(--special-tint); }
+.sol-special__notice p { max-width: 720px; }
+.sol-special__partner { display: flex; justify-content: space-between; align-items: center; gap: 32px; margin-top: 56px; padding: 32px 0; border-top: 1px solid var(--sol-line); border-bottom: 1px solid var(--sol-line); }
+.sol-special__partner > div { max-width: 680px; min-width: 0; }
+.sol-special__partner .sol-btn { flex-shrink: 0; }
+.sol-special__related { display: inline-block; margin-top: 24px; font-size: 14px; }
+.sol-detail--morozko .sol-detail__hero-grid img, .sol-detail--golden-reserve .sol-detail__hero-grid img { height: auto; }
+@media (max-width: 1100px) {
+  .sol-special__cards { grid-template-columns: 1fr; }
+  .sol-special__register { gap: 32px; }
+  .sol-special__partner { align-items: flex-start; flex-direction: column; }
+}
+@media (max-width: 640px) {
+  .sol-special__register { grid-template-columns: 1fr; padding: 32px 0; }
+  .sol-special__cards .sol-card, .sol-special__notice { padding: 24px; }
+  .sol-special__register dl > div { grid-template-columns: 1fr; gap: 6px; }
+  .sol-special__partner { margin-top: 32px; gap: 20px; }
+  .sol-special__partner .sol-btn { max-width: 100%; padding: 14px 16px; font-size: 12px; }
 }

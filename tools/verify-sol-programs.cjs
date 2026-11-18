@@ -7,6 +7,8 @@ const programs = [
   ['enemas', 'Клизмотроника™', 'enema'],
   ['kalofores', 'Калофорез®', 'kalofores'],
   ['roots', 'Комплекс «Исконный»', 'roots'],
+  ['morozko', 'Каловая криотерапия «Морозко»', 'morozko'],
+  ['golden-reserve', 'Капельная уринотерапия «Золотой резерв»', 'golden-reserve'],
 ];
 (async () => {
   const browser = await chromium.launch({ executablePath: process.env.CHROME_BIN || undefined, headless: true, args: ['--no-sandbox'] });
@@ -27,7 +29,7 @@ const programs = [
         report.push({ state, ...actual });
       };
       await page.goto(base, { waitUntil: 'networkidle' });
-      assert.equal(await page.locator('.sol-services article').count(), 4);
+      assert.equal(await page.locator('.sol-services article').count(), 6);
       await layout('resort-home');
       for (const [id, title, booking] of programs) {
         await page.locator(`.sol-services a.sol-btn[href="#/solnyshko/${id}"]`).click();
@@ -42,6 +44,16 @@ const programs = [
         await page.reload({ waitUntil: 'networkidle' });
         assert.equal(await page.locator('h1').innerText(), title);
         await layout(id);
+        if (id === 'morozko' || id === 'golden-reserve') {
+          const expected = id === 'morozko' ? 'Разморозка в стоимость программы не входит.' : 'В выписке указываются полученные средства';
+          assert.ok((await page.locator('.sol-special').innerText()).includes(expected));
+          assert.equal(await page.locator('.sol-special__cards article').count(), 3);
+          await page.locator('.sol-special__partner a').click();
+          await page.waitForURL(url => url.hash === '#/urinatech?section=urinatorium');
+          await page.getByRole('heading', { level: 2, name: 'Изолят отборной мочи', exact: true }).waitFor();
+          await page.goBack();
+          await page.getByRole('heading', { level: 1, name: title, exact: true }).waitFor();
+        }
         if (process.env.CAPTURE_DIR && (width === 1440 || width === 390)) {
           await page.screenshot({ path: `${process.env.CAPTURE_DIR}/${id}-${width}.png` });
         }
@@ -64,11 +76,15 @@ const programs = [
         await page.waitForURL(url => url.hash.includes('section=sol-booking'));
         assert.equal(await page.locator('.sol-form select').first().inputValue(), booking);
         assert.equal(await page.locator('.sol-form select').count(), id === 'kalofores' ? 2 : 1);
+        assert.equal(await page.locator('.sol-form button').isEnabled(), false);
+        await page.locator('.sol-form input').fill(' А ');
+        assert.equal(await page.locator('.sol-form button').isEnabled(), false);
         await page.locator('.sol-form input').fill('Проверка направления');
         await page.locator('.sol-form button').click();
         await page.locator('.sol-voucher').waitFor();
         assert.match(await page.locator('.sol-voucher').innerText(), /Бланк сформирован/i);
         await layout('booking-' + id);
+        assert.ok((await page.locator('.sol-voucher').innerText()).includes(title === 'Стационарная уринотерапия' ? 'Утренний круг' : title));
         await page.locator('.sol-voucher button').click();
         await page.locator('.sol-header__brand').click();
         await page.waitForURL(url => url.hash === '#/');
