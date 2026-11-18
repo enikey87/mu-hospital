@@ -4,6 +4,8 @@ export const MEDIA = {
   station: `${base}images/sol-station.webp`,
   enemas: `${base}images/sol-enemas.webp`,
   kalofores: `${base}images/sol-kalofores.webp`,
+  morozko: `${base}images/sol-morozko.webp`,
+  goldenReserve: `${base}images/sol-golden-reserve.webp`,
   roots: `${base}images/sol-roots.webp`,
   production: `${base}images/production-monument.webp`,
   morningProduct: `${base}images/ut-01-monument.webp`,

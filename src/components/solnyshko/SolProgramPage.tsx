@@ -7,8 +7,10 @@ import SolStation from "./SolStation";
 import SolEnemas from "./SolEnemas";
 import SolKalofores from "./SolKalofores";
 import SolRoots from "./SolRoots";
+import SolMorozko from "./SolMorozko";
+import SolGoldenReserve from "./SolGoldenReserve";
 
-const CONTENT = { station: SolStation, enemas: SolEnemas, kalofores: SolKalofores, roots: SolRoots };
+const CONTENT = { station: SolStation, enemas: SolEnemas, kalofores: SolKalofores, roots: SolRoots, morozko: SolMorozko, "golden-reserve": SolGoldenReserve };
 
 function SolProgramPage({ id }: { id: SolProgramId }) {
   const { router, solnyshko } = useStore();
