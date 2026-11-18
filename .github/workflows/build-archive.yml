@@ -1,0 +1,86 @@
+name: Build nginx archive
+
+on:
+  push:
+    branches: [main, 'feature/**']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install ansible-core==2.20.1
+      - run: python tools/test-deploy.py
+
+  build:
+    needs: test-deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run build -- --base=/
+
+      - name: Package static site
+        run: |
+          set -euo pipefail
+          printf '%s\n' "$GITHUB_SHA" > dist/version.txt
+          mkdir -p artifacts
+          tar -czf "artifacts/mu-hospital-${GITHUB_SHA}.tar.gz" -C dist .
+          cd artifacts
+          sha256sum "mu-hospital-${GITHUB_SHA}.tar.gz" > "mu-hospital-${GITHUB_SHA}.tar.gz.sha256"
+
+      - uses: actions/upload-artifact@v4
+        if: github.event_name != 'pull_request'
+        with:
+          name: mu-hospital-${{ github.sha }}
+          path: artifacts/*
+          if-no-files-found: error
+          retention-days: 90
+          compression-level: 0
+          overwrite: true
+
+  deploy-placeholder:
+    needs: build
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: mu-hospital-${{ github.sha }}
+      - name: Verify distribution; server deployment is not configured yet
+        run: |
+          set -euo pipefail
+          sha256sum --check "mu-hospital-${GITHUB_SHA}.tar.gz.sha256"
+          tar -tzf "mu-hospital-${GITHUB_SHA}.tar.gz" | grep -Fx './index.html'
+          printf '%s\n' 'Distribution verified. Deployment is a placeholder: no server is configured.' >> "$GITHUB_STEP_SUMMARY"
+
+  prune-archives:
+    needs: deploy-placeholder
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: write
+    concurrency:
+      group: mu-hospital-archive-retention
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const prune = require('./tools/prune-archives.cjs');
+            await prune({ github, context, core });

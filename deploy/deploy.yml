@@ -1,0 +1,83 @@
+---
+- name: Deploy a static mu-hospital archive
+  hosts: web
+  become: true
+  gather_facts: false
+  serial: 1
+  vars:
+    site_root: /var/www/mu-hospital
+    deploy_owner: root
+    deploy_group: root
+    release_dir: "{{ site_root }}-releases/{{ archive_stat.stat.checksum }}"
+
+  tasks:
+    - name: Require an absolute archive path on the controller
+      ansible.builtin.assert:
+        that:
+          - archive_path is defined
+          - archive_path is match('^/')
+        fail_msg: Pass -e archive_path=/absolute/path/to/mu-hospital-SHA.tar.gz
+
+    - name: Identify the archive by its SHA256
+      ansible.builtin.stat:
+        path: "{{ archive_path }}"
+        checksum_algorithm: sha256
+      delegate_to: localhost
+      become: false
+      register: archive_stat
+
+    - name: Require a local archive file
+      ansible.builtin.assert:
+        that: archive_stat.stat.isreg | default(false)
+
+    - name: Inspect the current document root
+      ansible.builtin.stat:
+        path: "{{ site_root }}"
+        follow: false
+      register: current_root
+
+    - name: Preserve existing directories and files
+      ansible.builtin.assert:
+        that: not current_root.stat.exists or current_root.stat.islnk | default(false)
+        fail_msg: "{{ site_root }} must be absent or a symlink; migrate the existing directory first."
+
+    - name: Create the release directory
+      ansible.builtin.file:
+        path: "{{ release_dir }}"
+        state: directory
+        owner: "{{ deploy_owner }}"
+        group: "{{ deploy_group }}"
+        mode: '0755'
+
+    - name: Upload and unpack the release before switching traffic
+      ansible.builtin.unarchive:
+        src: "{{ archive_path }}"
+        dest: "{{ release_dir }}"
+        owner: "{{ deploy_owner }}"
+        group: "{{ deploy_group }}"
+        mode: 'u=rwX,go=rX'
+        creates: "{{ release_dir }}/.complete"
+
+    - name: Check that the release contains index.html
+      ansible.builtin.stat:
+        path: "{{ release_dir }}/index.html"
+      register: release_index
+
+    - name: Reject an archive without a regular index.html
+      ansible.builtin.assert:
+        that: release_index.stat.isreg | default(false)
+
+    - name: Mark the fully extracted release
+      ansible.builtin.copy:
+        content: "{{ archive_stat.stat.checksum }}\n"
+        dest: "{{ release_dir }}/.complete"
+        owner: "{{ deploy_owner }}"
+        group: "{{ deploy_group }}"
+        mode: '0644'
+
+    - name: Atomically switch nginx to the prepared release
+      ansible.builtin.file:
+        src: "{{ release_dir }}"
+        dest: "{{ site_root }}"
+        state: link
+        follow: false
